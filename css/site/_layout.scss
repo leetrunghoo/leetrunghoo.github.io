@@ -1,0 +1,70 @@
+.brand-name {
+    font-size: 25px;
+    color: inherit;
+    cursor: pointer;
+    &:hover {
+        > span:nth-child(1)::before {
+            max-width: 0;
+        }
+        > span:nth-child(3)::before {
+            max-width: 100%;
+        }
+    }
+    > span {
+        position: relative;
+        display: inline-block;
+        outline: none;
+        text-decoration: none;
+        letter-spacing: 2px;
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            max-width: 0;
+            border-bottom: 2px solid #fff;
+            content: attr(data-hover);
+            -webkit-transition: max-width 0.5s;
+            -moz-transition: max-width 0.5s;
+            transition: max-width 0.5s;
+        }
+        &:nth-child(3)::before {
+            @extend .mdl-color-text--teal-A700;
+        }
+        &:nth-child(1) {
+            @extend .mdl-color-text--teal-A700;
+            &::before {
+                max-width: 100%;
+                color: black;
+            }
+        }
+    }
+    > span:nth-child(2) {
+        @extend .mdl-color-text--teal-A700;
+    }
+}
+
+.cursor-typing {
+    &:after {
+        content: "|";
+    }
+}
+
+.cursor-typed {
+    &:after {
+        content: "|";
+        @include animation_blink();
+    }
+}
+
+#pages {
+    .page {
+        height: calc(100vh - #{$layout-header-desktop-row-height});
+        .mdl-grid {
+            height: 100%;
+            box-sizing: border-box;
+        }
+    }
+    #page_hello {
+    }
+}
