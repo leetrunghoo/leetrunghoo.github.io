@@ -1,0 +1,99 @@
+.brand-name-container {
+    position: fixed;
+    z-index: 500;
+    top: 15px;
+    left: 15px;
+    width: auto;
+    cursor: pointer;
+    padding: 0px 10px;
+    border-radius: 20px;
+    &:hover {
+        .brand-name-bg {
+            opacity: 1;
+        }
+    }
+    .brand-name-bg {
+        background-color: #fff;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 20px;
+        opacity: 0.7;
+        -webkit-transition: opacity 0.3s;
+        -moz-transition: opacity 0.3s;
+        transition: opacity 0.3s;
+    }
+    .brand-name {
+        font-size: $font-XS;
+        font-weight: bold;
+        color: inherit;
+        cursor: pointer;
+        background: none;
+        font-family: $title-secondary-font;
+        &:hover {
+            > span:nth-child(1)::before {
+                max-width: 0;
+            }
+            > span:nth-child(3)::before {
+                max-width: 100%;
+            }
+        }
+        > span {
+            position: relative;
+            display: inline-block;
+            outline: none;
+            text-decoration: none;
+            letter-spacing: 2px;
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                overflow: hidden;
+                max-width: 0;
+                content: attr(data-hover);
+                -webkit-transition: max-width 0.5s;
+                -moz-transition: max-width 0.5s;
+                transition: max-width 0.5s;
+            }
+            &:nth-child(3)::before {
+                color: $green;
+            }
+            &:nth-child(1) {
+                color: $green;
+                &::before {
+                    max-width: 100%;
+                    color: black;
+                }
+            }
+        }
+        > span:nth-child(2) {
+            color: $green;
+        }
+    }
+}
+
+.cursor-typing {
+    &:after {
+        content: "|";
+    }
+}
+
+.cursor-typed {
+    &:after {
+        content: "|";
+        @include animation_blink();
+    }
+}
+
+#pages {
+    .page {
+        height: 100vh;
+        .mdl-grid {
+            height: 100%;
+            box-sizing: border-box;
+        }
+    }
+    #page_hello {}
+}

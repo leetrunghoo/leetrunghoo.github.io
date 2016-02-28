@@ -1,0 +1,52 @@
+
+# Syntax highlighting
+markdown:            redcarpet
+highlighter:         pygments
+
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:categories/:title/
+# relative_permalinks: true
+
+# Setup
+timezone:            Asia/Ho_Chi_Minh # eg. Asia/Kathmandu
+locale:              en_us # eg. en_us
+name:                Trung Ho
+title:               Just another blog
+tagline:             'tagline'
+description:         'description'
+url:                 
+rss:                 rss feed url
+baseurl:             /
+baseurl_posts_img:   '/assets/images/posts/'
+baseurl_featured_img: '/assets/images/hero/'
+baseurl_featured_thumbnail: '/assets/images/thumbnail/'
+baseurl_js: '/assets/js/'
+icon:                your site icon path # /assets/img/icon.png [best 300px X 300px]
+disqus:              disqus_shortname # get it on https://disqus.com/admin/
+
+author:
+  name:           	 Trung Ho
+  url:            	 www.leetrunghoo.com
+  facebook:          leetrunghoo
+  twitter:           leetrunghoo
+  google_plus:       leetrunghoo
+  linkedin:          trung-ho-quang-3a691797
+  dribbble:          
+  pinterest:         
+  kiva:              
+
+fb_admins:           your facebook profile id
+fb_appid:            your facebook app id
+
+# Server
+destination:      	 ./_site
+exclude:          	 [".editorconfig", ".gitignore", "bower.json", "composer.json", "CONTRIBUTING.md", "CNAME", "LICENSE", "Gruntfile.js", "package.json", "node_modules", "README.md", "sass", "haml"]
+port:             	 4001
+
+defaults:
+  -
+    scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "default"
