@@ -1,7 +1,21 @@
 
 # Syntax highlighting
-markdown:            redcarpet
+markdown:            kramdown
 highlighter:         pygments
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
+
+  coderay:
+    coderay_line_numbers: nil
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: class
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink:   /:categories/:title/
@@ -11,7 +25,7 @@ permalink:   /:categories/:title/
 timezone:            Asia/Ho_Chi_Minh # eg. Asia/Kathmandu
 locale:              en_us # eg. en_us
 name:                Trung Ho
-title:               Just another blog
+title:               Trung Ho
 tagline:             'tagline'
 description:         'description'
 url:                 
