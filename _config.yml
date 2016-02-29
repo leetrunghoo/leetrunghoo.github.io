@@ -24,9 +24,9 @@ permalink:   /:categories/:title/
 timezone:            Asia/Ho_Chi_Minh # eg. Asia/Kathmandu
 locale:              en_us # eg. en_us
 name:                Trung Ho
-title:               Trung Ho
+title:               leetrunghoo
 tagline:             'tagline'
-description:         'description'
+description:         'Software Developer - Music Lover'
 url:                 
 rss:                 rss feed url
 baseurl:             '/'
