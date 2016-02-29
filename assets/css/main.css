@@ -2402,6 +2402,7 @@ body {
     .brand-name-container .brand-name > span:nth-child(2) {
       color: #00BFA5; }
 
+/** typing animation **/
 .cursor-typing:after {
   content: "|"; }
 
@@ -2412,8 +2413,5 @@ body {
   -moz-animation: blink 0.7s infinite;
   animation: blink 0.7s infinite; }
 
-#pages .page {
-  height: 100vh; }
-  #pages .page .mdl-grid {
-    height: 100%;
-    box-sizing: border-box; }
+iframe {
+  border: 1px solid #ccc; }

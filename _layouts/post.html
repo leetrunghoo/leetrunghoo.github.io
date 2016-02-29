@@ -7,8 +7,8 @@ layout: default
 
       {% if page.image.feature %}
         <img class="post-featuredImage" src="{{ page.image.feature | prepend: site.baseurl_featured_img }}" style="
-        {% if page.image.topPosition %}
-          top:{{ page.image.topPosition }};
+        {% if page.image.style %}
+          {{ page.image.style }};
         {% endif %}
         " alt="">
       {% endif %}

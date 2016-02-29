@@ -74,6 +74,7 @@
     }
 }
 
+/** typing animation **/
 .cursor-typing {
     &:after {
         content: "|";
@@ -87,13 +88,6 @@
     }
 }
 
-#pages {
-    .page {
-        height: 100vh;
-        .mdl-grid {
-            height: 100%;
-            box-sizing: border-box;
-        }
-    }
-    #page_hello {}
+iframe {
+    border: 1px solid $gray;
 }
