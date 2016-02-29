@@ -1,21 +1,7 @@
 
 # Syntax highlighting
-markdown:            kramdown
+markdown:            redcarpet
 highlighter:         pygments
-
-kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  enable_coderay: false
-
-  coderay:
-    coderay_line_numbers: nil
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: class
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink:   /:categories/:title/
@@ -30,7 +16,7 @@ tagline:             'tagline'
 description:         'description'
 url:                 
 rss:                 rss feed url
-baseurl:             /
+baseurl:             '/'
 baseurl_posts_img:   '/assets/images/posts/'
 baseurl_featured_img: '/assets/images/hero/'
 baseurl_featured_thumbnail: '/assets/images/thumbnail/'
