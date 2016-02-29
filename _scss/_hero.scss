@@ -4,6 +4,9 @@
 
 .section--fullpage {
   height: 100vh;
+  .typingAnimation {
+    font-size: $font-L;
+  }
 }
 .u-table {
   &.section--fullpage {

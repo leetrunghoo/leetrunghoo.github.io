@@ -34,7 +34,7 @@ baseurl_posts_img:   '/assets/images/posts/'
 baseurl_featured_img: '/assets/images/hero/'
 baseurl_featured_thumbnail: '/assets/images/thumbnail/'
 baseurl_js: '/assets/js/'
-icon:                your site icon path # /assets/img/icon.png [best 300px X 300px]
+icon:                /assets/imgages/logo.png
 disqus:              disqus_shortname # get it on https://disqus.com/admin/
 
 author:
