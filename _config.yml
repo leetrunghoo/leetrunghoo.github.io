@@ -1,21 +1,3 @@
-future:      true
-highlighter: rouge
-markdown:    kramdown
-
-kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  enable_coderay: false
-
-  coderay:
-    coderay_line_numbers: nil
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: class
-
 # https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink:   /:categories/:title/
 # relative_permalinks: true
@@ -36,6 +18,26 @@ baseurl_featured_thumbnail: '/assets/images/thumbnail/'
 baseurl_js: '/assets/js/'
 icon:                /assets/imgages/logo.png
 disqus:              disqus_shortname # get it on https://disqus.com/admin/
+gems:
+  - jemoji
+  
+future:      true
+highlighter: rouge
+markdown:    kramdown
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
+
+  coderay:
+    coderay_line_numbers: nil
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: class
 
 author:
   name:           	 Trung Ho
