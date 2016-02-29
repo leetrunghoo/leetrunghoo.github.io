@@ -8,7 +8,7 @@ categories: history
 tags:  mickey
 image:
   feature: mickey-mouse.jpg
-  topPosition: -50px
+  style: "top: -50px
 bgContrast: dark
 bgGradientOpacity: darker
 syntaxHighlighter: no
