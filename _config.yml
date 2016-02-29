@@ -14,7 +14,7 @@ name:                Trung Ho
 title:               Trung Ho
 tagline:             'tagline'
 description:         'description'
-url:                 
+url:                 'http://leetrunghoo.com'
 rss:                 rss feed url
 baseurl:             '/'
 baseurl_posts_img:   '/assets/images/posts/'
