@@ -31,7 +31,6 @@
         color: inherit;
         cursor: pointer;
         background: none;
-        font-family: $title-secondary-font;
         &:hover {
             > span:nth-child(1)::before {
                 max-width: 0;
@@ -46,6 +45,8 @@
             outline: none;
             text-decoration: none;
             letter-spacing: 2px;
+            height: 1.25rem;
+            font-family: $title-secondary-font;
             &::before {
                 position: absolute;
                 top: 0;
@@ -74,7 +75,14 @@
     }
 }
 
+.top-0 {
+    top: 0;
+}
+
 /** typing animation **/
+.display-none, .typingAnimation {
+    display: none;
+}
 .cursor-typing {
     &:after {
         content: "|";
