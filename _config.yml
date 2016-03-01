@@ -1,6 +1,12 @@
 # https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink:   /:categories/:title/
 
+# Analytics and webmaster tools stuff goes here
+google_analytics:   UA-73537086-1
+google_verify:      
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:  
+
 # Setup
 timezone:            Asia/Ho_Chi_Minh # eg. Asia/Kathmandu
 locale:              en_us # eg. en_us
