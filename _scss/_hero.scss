@@ -11,6 +11,9 @@
 .u-table {
   &.section--fullpage {
     height: 100vh !important;
+    > div {
+      height: 100vh !important;
+    }
   }
 }
 
