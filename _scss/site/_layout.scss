@@ -1,12 +1,14 @@
 .brand-name-container {
+    font-size: $font-XS;
     position: fixed;
     z-index: 500;
     top: 15px;
     left: 15px;
     width: auto;
     cursor: pointer;
-    padding: 0px 10px;
     border-radius: 20px;
+    padding: 5px 10px;
+    font-family: $title-secondary-font;
     &:hover {
         .brand-name-bg {
             opacity: 1;
@@ -26,7 +28,6 @@
         transition: opacity 0.3s;
     }
     .brand-name {
-        font-size: $font-XS;
         font-weight: bold;
         color: inherit;
         cursor: pointer;
@@ -45,8 +46,6 @@
             outline: none;
             text-decoration: none;
             letter-spacing: 2px;
-            height: 1.25rem;
-            font-family: $title-secondary-font;
             &::before {
                 position: absolute;
                 top: 0;
@@ -79,10 +78,14 @@
     top: 0;
 }
 
+
 /** typing animation **/
-.display-none, .typingAnimation {
+
+.display-none,
+.typingAnimation {
     display: none;
 }
+
 .cursor-typing {
     &:after {
         content: "|";
