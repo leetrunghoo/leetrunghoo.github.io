@@ -1,6 +1,5 @@
 # https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink:   /:categories/:title/
-# relative_permalinks: true
 
 # Setup
 timezone:            Asia/Ho_Chi_Minh # eg. Asia/Kathmandu
@@ -20,7 +19,7 @@ icon:                /assets/imgages/logo.png
 disqus:              disqus_shortname # get it on https://disqus.com/admin/
 gems:
   - jemoji
-  
+
 future:      true
 highlighter: rouge
 markdown:    kramdown
