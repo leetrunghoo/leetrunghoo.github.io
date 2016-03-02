@@ -10,7 +10,7 @@ title: Trung Ho
     </a>
 </header>
 <article class="postWrapper">
-    <section class="section--first section--about section--fullpage u-table">
+    <section class="section--first section--about u-table section--fullpage">
         <div class="section-backgroundImage display-none">
             <img class="post-featuredImage" src="{{site.baseurl}}assets/images/hero/me.jpg" style="" alt="">
         </div>
@@ -28,6 +28,35 @@ title: Trung Ho
             </div>
         </div>
     </section>
+    <section class="section--postsWrapper">
+  <div class="container">
+    <div class="blockGroup">
+      <ul class="blockGroup-list">
+        {% for post in site.posts %}
+          <li class="block">
+            <div class="postArticle-wrapper">
+              <article class="postArticle postArticle--short">
+                {% if post.image.feature %}
+                  <a href="{{ post.url }}">
+                    <div class="postArticle-image desaturate" style="background-image:url('{{ post.image.feature | prepend: site.baseurl_featured_img }}')">
+                    </div>
+                  </a>
+                {% else %}
+                <a href="{{ post.url }}">
+                  <div class="postArticle-image" style="background-image:url('{{site.baseurl}}assets/images/logo-black.svg')">
+                  </div>
+                </a>
+                {% endif %}
+                <a class="postArticle-title" href="{{ post.url }}">{{ post.title }}</a>
+              </article>
+              <div class="block-postMeta">{{ post.date | date_to_string }}</div>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
     <section class="section--last">
         <div class="section-title">
             <div class="container">
