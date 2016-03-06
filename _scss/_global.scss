@@ -4,7 +4,7 @@
 
 html,
 body {
-  overflow-x: hidden;
+  // overflow-x: hidden;
 
   @media (max-width: $screen-xs-max) {
     padding-right: 0;
@@ -12,7 +12,7 @@ body {
 }
 
 .brandLogo {
-  background-image: url(../images/logo-white.svg);
+  background-image: url(../img/logo-white.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -27,12 +27,12 @@ body {
 }
 
 .brandLogo--black {
-  background-image: url(../images/logo-black.svg);
+  background-image: url(../img/logo-black.svg);
 }
 
 .textLogo {
   display: block;
-  background-image: url(../images/logo-text-black.svg);
+  background-image: url(../img/logo-text-black.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -42,7 +42,7 @@ body {
 }
 
 .textLogo--white {
-  background-image: url(../images/logo-text-white.svg);
+  background-image: url(../img/logo-text-white.svg);
 }
 
 .textLogo--sidebar {

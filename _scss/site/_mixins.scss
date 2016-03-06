@@ -1,9 +1,4 @@
 
-/* color  */
-$green: #00BFA5;
-$gray: #ccc;
-$gray-light: #e6e6e6;
-
 /* Animations */
 
 @mixin animation_blink() {
@@ -11,6 +6,13 @@ $gray-light: #e6e6e6;
     -webkit-animation: blink 0.7s infinite;
     -moz-animation: blink 0.7s infinite;
     animation: blink 0.7s infinite;
+}
+
+// .rounded(VALUE);
+@mixin rounded($radius:5px) {
+  -webkit-border-radius : $radius;
+  -moz-border-radius : $radius;
+  border-radius : $radius; 
 }
 
 @keyframes blink {

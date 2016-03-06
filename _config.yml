@@ -2,14 +2,14 @@
 permalink:   /:categories/:title/
 
 # Analytics and webmaster tools stuff goes here
-google_analytics:   UA-73537086-1
+google_analytics:    UA-73537086-1
 google_verify:      
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:  
 
 # Setup
-timezone:            Asia/Ho_Chi_Minh # eg. Asia/Kathmandu
-locale:              en_us # eg. en_us
+timezone:            asia/hanoi # eg. Asia/Kathmandu
+locale:              vi_VN # eg. en_us
 name:                Trung Ho
 title:               leetrunghoo
 tagline:             'tagline'
@@ -17,36 +17,28 @@ description:         'Software Developer - Music Lover'
 url:                 
 rss:                 rss feed url
 baseurl:             '/'
-baseurl_posts_img:   '/assets/images/posts/'
-baseurl_featured_img: '/assets/images/hero/'
-baseurl_featured_thumbnail: '/assets/images/thumbnail/'
-baseurl_js: '/assets/js/'
+baseurl_posts_img:   '/assets/img/posts/'
+baseurl_featured_img: '/assets/img/hero/'
+baseurl_featured_thumbnail: '/assets/img/thumbnail/'
+baseurl_js:          '/assets/js/'
 icon:                /assets/imgages/logo.png
 disqus:              disqus_shortname # get it on https://disqus.com/admin/
 gems:
   - jemoji
 
 future:      true
-highlighter: rouge
-markdown:    kramdown
+# highlighter: rouge
+# rouge:
+#   css_class: 'highlight'
+#   line_numbers: true
 
 kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  enable_coderay: false
-
-  coderay:
-    coderay_line_numbers: nil
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: class
+  input: GFM  # GitHub Flavored Markdown
+  syntax_highlighter: rouge
 
 author:
-  name:           	 Trung Ho
-  url:            	 www.leetrunghoo.com
+  name:              Trung Ho
+  url:               www.leetrunghoo.com
   facebook:          leetrunghoo
   twitter:           leetrunghoo
   google_plus:       leetrunghoo
@@ -59,9 +51,8 @@ fb_admins:           your facebook profile id
 fb_appid:            your facebook app id
 
 # Server
-destination:      	 ./_site
-exclude:          	 [".editorconfig", ".gitignore", "bower.json", "composer.json", "CONTRIBUTING.md", "CNAME", "LICENSE", "Gruntfile.js", "package.json", "node_modules", "README.md", "sass", "haml", "Gemfile", "Gemfile.lock"]
-port:             	 4001
+exclude:             [".editorconfig", ".gitignore", "bower.json", "composer.json", "CONTRIBUTING.md", "CNAME", "LICENSE", "Gruntfile.js", "package.json", "node_modules", "README.md", "sass", "haml", "Gemfile", "Gemfile.lock"]
+port:                4001
 
 defaults:
   -
