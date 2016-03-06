@@ -41,9 +41,9 @@ Yeah, that's so simple, isn't it? :smile: If you write in HTML, it could be like
 </blockquote>
 ```
 
-An advantage of writing content with Markdown is that it is free from the angle brackets and tags used in HTML, so it feels and looks more like "content" than "code". It is lightweight and superb easy to use therefore you don't need any [WYSIWYG editor](http://summernote.org/ "example WYSIWYG editor"){:target="_blank"} plugin. Markdown is a great choice when you focus on creating web content like blog or news.
+An advantage of writing content with Markdown is that it is free from the angle brackets and tags used in HTML, so it feels and looks more like "content" than "code". You can even write HTML code inside a Markdown file. It is lightweight and superb easy to use therefore you don't need any [WYSIWYG editor](http://summernote.org/ "example for WYSIWYG editor"){:target="_blank"} plugin. Markdown is a great choice when you focus on creating web content like blog or news.
 
-Who are using it? A lot, I can give you two names [Github](https://help.github.com/articles/about-writing-and-formatting-on-github/){:target="_blank"} and [Stackoverflow](http://stackoverflow.com/editing-help){:target="_blank"}.
+Who are using it? A lot, including [Github](https://help.github.com/articles/about-writing-and-formatting-on-github/){:target="_blank"} and [Stackoverflow](http://stackoverflow.com/editing-help){:target="_blank"}.
 
 GitHub uses Markdown with adding a few unique writing features for styling all forms of writing, called **GitHub Flavored Markdown** and this blog is talking about its cheatsheet.
 
@@ -222,6 +222,30 @@ var foo = function (bar) {
 console.log(foo(5));
 ```
 
+Another way to present syntax highlighting is using Liquid
+
+```text
+{% raw %}
+{% highlight js linenos %}
+// "linenos" argument for including line numbers
+var foo = function (bar) {
+  return bar++;
+};
+console.log(foo(5));
+{% endhighlight %}
+{% endraw %}
+```
+
+Output:
+
+{% highlight js linenos %}
+// `linenos` argument for including line numbers
+var foo = function (bar) {
+  return bar++;
+};
+console.log(foo(5));
+{% endhighlight %}
+
 ---
 
 ### Table
@@ -258,14 +282,38 @@ Markdown | Less | Pretty
 
 ### Horizontal Rule
 
+There are 3 ways to write a horizontal rule
+
     ---
     ***
     ___
 
 ---
-***
-___
 
-Sources:
+### Mentions
+
+Typing an @ symbol, followed by a username, will notify that person to come and view the comment. Ex: Hey @leetrunghoo - like your blog
+
+---
+
+### Task Lists
+
+    + [x] This is a complete item
+    + [ ] This is an incomplete item
+
+- [x] This is a complete item
+- [ ] This is an incomplete item
+
+---
+
+### Emoji
+
+GitHub Flavored Markdown supports Emoji :+1: :smile: :heart: 
+Let's check out the [Emoji Cheat Sheet](http://www.emoji-cheat-sheet.com/){:target="_blank"}.
+
+---
+
+Reference:
 : <https://help.github.com/categories/writing-on-github/>
+: <https://guides.github.com/features/mastering-markdown/>
 : <http://daringfireball.net/projects/markdown/>
