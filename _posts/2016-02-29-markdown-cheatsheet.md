@@ -15,7 +15,7 @@ syntaxHighlighter: yes
 
 ## Introduction
 
-[Markdown](http://daringfireball.net/projects/markdown/){:target="_blank"} was made by [John Gruber](https://en.wikipedia.org/wiki/John_Gruber){:target="_blank"}, and he says:
+[Markdown](http://daringfireball.net/projects/markdown/ "Markdown's homepage"){:target="_blank"} was made by [John Gruber](https://en.wikipedia.org/wiki/John_Gruber "Wikipedia"){:target="_blank"}, and he says:
 
 > "Markdown is a text-to-HTML conversion tool for web writers. Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid [XHTML (or HTML)](https://developer.mozilla.org/en-US/docs/Glossary/XHTML "HTML5 and HTML/XHTML"){:target="_blank"}".
 
@@ -43,7 +43,7 @@ Yeah, that's so simple, isn't it? :smile: If you write in HTML, it could be like
 
 An advantage of writing content with Markdown is that it is free from the angle brackets and tags used in HTML, so it feels and looks more like "content" than "code". You can even write HTML code inside a Markdown file. It is lightweight and superb easy to use therefore you don't need any [WYSIWYG editor](http://summernote.org/ "example for WYSIWYG editor"){:target="_blank"} plugin. Markdown is a great choice when you focus on creating web content like blog or news.
 
-Who are using it? A lot, including [Github](https://help.github.com/articles/about-writing-and-formatting-on-github/){:target="_blank"} and [Stackoverflow](http://stackoverflow.com/editing-help){:target="_blank"}.
+Who are using it? A lot, including [Github](https://help.github.com/articles/about-writing-and-formatting-on-github/ "about-writing-and-formatting-on-github"){:target="_blank"} and [Stackoverflow](http://stackoverflow.com/editing-help "editing-help"){:target="_blank"}.
 
 GitHub uses Markdown with adding a few unique writing features for styling all forms of writing, called **GitHub Flavored Markdown** and this blog is talking about its cheatsheet.
 

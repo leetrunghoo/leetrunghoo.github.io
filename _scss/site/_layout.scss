@@ -1,5 +1,5 @@
 .brand-name-container {
-    font-size: $font-XS;
+    font-size: $font-S;
     position: fixed;
     z-index: 500;
     top: 15px;
@@ -117,6 +117,25 @@ table {
     border: 1px solid $gray;
     padding: 5px 10px;
   }
+}
+
+a {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 3px;
+}
+a:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 1px;
+    width: 0px;
+    background: transparent;
+    transition: width .3s ease;
+}
+a:hover:after {
+    width: 100%;
+    background: $blue;
 }
 
 .top-0 {
