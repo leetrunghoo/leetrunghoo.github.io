@@ -6,7 +6,7 @@
 
 // Typesetting variables.
 $baseFontSize:       18; // in pixels. This would result in 22px on desktop
-$baseLineHeight:     1.3; // how large the line height is as a multiple of font size  
+$baseLineHeight:     1.5; // how large the line height is as a multiple of font size  
 $leading:            $baseLineHeight * 1rem;
 // Rate of growth for headings
 $scale:              1;
@@ -52,7 +52,7 @@ html {
 p {
   line-height: $leading;
   letter-spacing: .01rem;
-  margin-top: $leading;
+  margin-top: 1em;
   margin-bottom: 0;
 }
 

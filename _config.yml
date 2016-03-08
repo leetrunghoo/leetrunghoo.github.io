@@ -21,7 +21,7 @@ baseurl_posts_img:   '/assets/img/posts/'
 baseurl_featured_img: '/assets/img/hero/'
 baseurl_featured_thumbnail: '/assets/img/thumbnail/'
 baseurl_js:          '/assets/js/'
-icon:                /assets/imgages/logo.png
+icon:                /assets/img/logo.png
 disqus:              disqus_shortname # get it on https://disqus.com/admin/
 gems:
   - jemoji

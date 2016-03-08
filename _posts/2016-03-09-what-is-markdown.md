@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Markdown Cheatsheet
-date: 2016-02-28 12:00:00 
+title: What is Markdown?
+date: 2016-03-09 2:05:00 
 excerpt: "This is intended as a quick reference and showcase Markdown."
 categories: tech
 tags: code, markdown, jekyll
@@ -41,15 +41,31 @@ Yeah, that's so simple, isn't it? :smile: If you write in HTML, it could be like
 </blockquote>
 ```
 
-An advantage of writing content with Markdown is that it is free from the angle brackets and tags used in HTML, so it feels and looks more like "content" than "code". You can even write HTML code inside a Markdown file. It is lightweight and superb easy to use therefore you don't need any [WYSIWYG editor](http://summernote.org/ "example for WYSIWYG editor"){:target="_blank"} plugin. Markdown is a great choice when you focus on creating web content like blog or news.
+An advantage of writing content with Markdown is that it is free from the angle brackets and tags used in HTML, so it feels and looks more like "content" than "code". You can even write HTML code in a Markdown file. It is lightweight and superb easy to use therefore you don't need any [WYSIWYG editor](http://summernote.org/ "example for WYSIWYG editor"){:target="_blank"} plugin. Markdown is a great choice when you focus on creating web content like blog or news.
 
 Who are using it? A lot, including [Github](https://help.github.com/articles/about-writing-and-formatting-on-github/ "about-writing-and-formatting-on-github"){:target="_blank"} and [Stackoverflow](http://stackoverflow.com/editing-help "editing-help"){:target="_blank"}.
 
-GitHub uses Markdown with adding a few unique writing features for styling all forms of writing, called **GitHub Flavored Markdown** and this blog is talking about its cheatsheet.
+GitHub uses Markdown with adding a few unique writing features for styling all forms of writing, called **GitHub Flavored Markdown** and the next part of this blog is about its cheatsheet.
 
 ## Markdown Cheat Sheet
- 
-### Headers
+
+1. [Headers](#1)
+1. [Paragraphs](#2)
+1. [Emphasis](#3)
+1. [Blockquotes](#4)
+1. [Links](#5)
+1. [Images](#6)
+1. [Lists](#7)
+1. [Code and Syntax Highlighting](#8)
+1. [Table](#9)
+1. [Horizontal Rule](#10)
+1. [Mentions](#11)
+1. [Task Lists](#12)
+1. [Emoji](#13)
+
+---
+
+### Headers <a name="1"></a> [[back to list]](#markdown-cheat-sheet)
 
 ```
 # Level 1 Header (H1)
@@ -65,7 +81,7 @@ GitHub uses Markdown with adding a few unique writing features for styling all f
 
 ---
 
-### Paragraphs
+### Paragraphs <a name="2"></a> [[back to list]](#markdown-cheat-sheet)
 
 ```
 One or more consecutive lines of text separated by one or more blank lines.
@@ -85,19 +101,16 @@ end a line in a paragraph with two or more spaces.
 
 ---
 
-### Emphasis
+### Emphasis <a name="3"></a> [[back to list]](#markdown-cheat-sheet)
 
 ```
 **bold text**, __bold text__, *italic text*, _italic text_, ~~Strikethrough~~
 ```
 **bold text**, __bold text__, *italic text*, _italic text_, ~~Strikethrough~~
-
-    (c) (C) (r) (R) (tm) (TM) (p) (P) +-
-(c) (C) (r) (R) (tm) (TM) (p) (P) +-
 
 ---
 
-### Blockquotes
+### Blockquotes <a name="4"></a> [[back to list]](#markdown-cheat-sheet)
 
     > "Trung, you look like an famous actor"
     > *someone said*
@@ -107,7 +120,7 @@ end a line in a paragraph with two or more spaces.
 
 ---
 
-### Links
+### Links <a name="5"></a> [[back to list]](#markdown-cheat-sheet)
 
     <http://leetrunghoo.com>
     [This is my website](http://leetrunghoo.com)
@@ -129,7 +142,7 @@ This is [an example][id] reference-method link.
 
 ---
 
-### Images
+### Images <a name="6"></a> [[back to list]](#markdown-cheat-sheet)
 The syntaxt is almost the same with [Links](#links), just adding `!` at the beginning.
 
     ![Alt text](/assets/img/hero/trungho.jpg "Trung Ho")
@@ -138,7 +151,7 @@ The syntaxt is almost the same with [Links](#links), just adding `!` at the begi
 
 ---
 
-### Lists
+### Lists <a name="7"></a> [[back to list]](#markdown-cheat-sheet)
 
 ```
 - Create a list by starting a line with `+`, `-`, or `*`
@@ -185,7 +198,7 @@ Term 2
 
 ---
 
-## Code and Syntax Highlighting
+### Code and Syntax Highlighting <a name="8"></a> [[back to list]](#markdown-cheat-sheet)
 
 ```
 Inline `code`
@@ -248,7 +261,7 @@ console.log(foo(5));
 
 ---
 
-### Table
+### Table <a name="9"></a> [[back to list]](#markdown-cheat-sheet)
 
 Colons can be used to align columns.
 
@@ -280,7 +293,7 @@ Markdown | Less | Pretty
 
 ---
 
-### Horizontal Rule
+### Horizontal Rule <a name="10"></a> [[back to list]](#markdown-cheat-sheet)
 
 There are 3 ways to write a horizontal rule
 
@@ -290,13 +303,13 @@ There are 3 ways to write a horizontal rule
 
 ---
 
-### Mentions
+### Mentions <a name="11"></a> [[back to list]](#markdown-cheat-sheet)
 
 Typing an @ symbol, followed by a username, will notify that person to come and view the comment. Ex: Hey @leetrunghoo - like your blog
 
 ---
 
-### Task Lists
+### Task Lists <a name="12"></a> [[back to list]](#markdown-cheat-sheet)
 
     + [x] This is a complete item
     + [ ] This is an incomplete item
@@ -306,7 +319,7 @@ Typing an @ symbol, followed by a username, will notify that person to come and 
 
 ---
 
-### Emoji
+### Emoji <a name="13"></a> [[back to list]](#markdown-cheat-sheet)
 
 GitHub Flavored Markdown supports Emoji :+1: :smile: :heart: 
 Let's check out the [Emoji Cheat Sheet](http://www.emoji-cheat-sheet.com/){:target="_blank"}.
@@ -314,6 +327,6 @@ Let's check out the [Emoji Cheat Sheet](http://www.emoji-cheat-sheet.com/){:targ
 ---
 
 Reference:
-: <https://help.github.com/categories/writing-on-github/>
-: <https://guides.github.com/features/mastering-markdown/>
-: <http://daringfireball.net/projects/markdown/>
+<https://help.github.com/categories/writing-on-github/>{:target="_blank"}
+<https://guides.github.com/features/mastering-markdown/>{:target="_blank"}
+<http://daringfireball.net/projects/markdown/>{:target="_blank"}
