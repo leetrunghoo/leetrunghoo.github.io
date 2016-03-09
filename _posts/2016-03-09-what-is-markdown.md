@@ -2,7 +2,7 @@
 layout: post
 title: What is Markdown?
 date: 2016-03-09 2:05:00 
-excerpt: "This is intended as a quick reference and showcase Markdown."
+excerpt: "Quick reference and showcase Markdown."
 categories: tech
 tags: code, markdown, jekyll
 image:
@@ -145,7 +145,7 @@ This is [an example][id] reference-method link.
 ### Images <a name="6"></a> [[back to list]](#markdown-cheat-sheet)
 The syntaxt is almost the same with [Links](#5), just adding `!` at the beginning.
 
-    ![Alt text](/assets/img/hero/trungho.jpg "Trung Ho")
+    ![Alt text](/assets/img/trungho.jpg "Trung Ho")
 
 ![Alt text](/assets/img/trungho.jpg "Trung Ho")
 

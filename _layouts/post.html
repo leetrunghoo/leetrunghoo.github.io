@@ -12,12 +12,16 @@ layout: default
               {% endif %}
       " style="background-image: url({{ page.image.feature | prepend: site.baseurl_featured_img }});{% if page.image.style %}{{ page.image.style }}{% endif %}">
     </div>
-    <div class="title container container--content">
-        <h1>{{ page.title }}</h1>
-        <p class="subline">Inspiration for Article Intro Effects</p>
-        <p>by <strong>{{ site.author.name }}</strong> &#8212; Posted in <strong>{{ page.categories }}</strong> on <strong><time datetime="{{ page.date }}">
-            {{ page.date | date_to_string }}
-          </time></strong></p>
+    <div class="title">
+      <div>
+          <h1>{{ page.title }}</h1>
+          {% if page.showExcerpt == true %}
+          <h3 class="subline">{{ page.excerpt }}</h3>
+          {% endif %}
+          <div class="subline-2">by <strong>{{ site.author.name }}</strong> &#8212; Posted in <strong>{{ page.categories }}</strong> on <strong><time datetime="{{ page.date }}">
+              {{ page.date | date_to_string }}
+            </time></strong></div>
+      </div>
     </div>
 </header>
 

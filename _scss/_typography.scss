@@ -126,11 +126,11 @@ blockquote {
 //   line-height: $leading;
 //   letter-spacing: -0.02em;
 // }
-// h1 {
-//   font-size: 3 * $scale * 1rem;
-//   line-height: 3 * $leading;
-//   margin-top: 2 * $leading;
-// }
+h1 {
+  font-size: 2.5 * $scale * 1rem;
+  line-height: 3 * $leading;
+  margin-top: 2 * $leading;
+}
 // h2 {
 //   font-family: $title-secondary-font;
 //   font-size: 2 * $scale * 1rem;
