@@ -7,7 +7,7 @@ categories: tech
 tags: code, markdown, jekyll
 image:
   feature: markdown.png
-  style: "top: 50px; width: 80%; height: auto; opacity: 1"
+  style: ""
 bgContrast: dark
 bgGradientOpacity: darker
 syntaxHighlighter: yes
@@ -112,11 +112,11 @@ end a line in a paragraph with two or more spaces.
 
 ### Blockquotes <a name="4"></a> [[back to list]](#markdown-cheat-sheet)
 
-    > "Trung, you look like an famous actor"
-    > *someone said*
+    > "Trung, you look like an famous actor!"
+    > - someone said
 
 >"Trung, you look like an famous actor!"
->*someone said*
+>- someone said
 
 ---
 
@@ -143,7 +143,7 @@ This is [an example][id] reference-method link.
 ---
 
 ### Images <a name="6"></a> [[back to list]](#markdown-cheat-sheet)
-The syntaxt is almost the same with [Links](#links), just adding `!` at the beginning.
+The syntaxt is almost the same with [Links](#5), just adding `!` at the beginning.
 
     ![Alt text](/assets/img/hero/trungho.jpg "Trung Ho")
 
@@ -311,11 +311,11 @@ Typing an @ symbol, followed by a username, will notify that person to come and 
 
 ### Task Lists <a name="12"></a> [[back to list]](#markdown-cheat-sheet)
 
-    + [x] This is a complete item
-    + [ ] This is an incomplete item
+    [x] This is a complete item
+    [ ] This is an incomplete item
 
-- [x] This is a complete item
-- [ ] This is an incomplete item
+[x] This is a complete item
+[ ] This is an incomplete item
 
 ---
 
