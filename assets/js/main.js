@@ -1,3 +1,4 @@
+
 // plugins
 $.fn.typingAnimation = function(callback) {
     if (this.length === 0) {
@@ -58,26 +59,24 @@ $(function() {
 
     // scroll animation
     var layoutContent = document.querySelector('article');
-    var ua = navigator.userAgent.toLowerCase();
-    if (ua.indexOf("ucbrowser") === -1) { // not UCBrowser
-        $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    var offset = $(layoutContent).scrollTop() + target.offset().top - 15;
-                    var scrollAnimation = TweenLite.to(window, 2, {
-                        scrollTo: {
-                            y: offset
-                        },
-                        ease: Power4.easeOut
-                    });
-                    scrollAnimation.duration(1);
-                    return false;
-                }
+
+    $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                var offset = $(layoutContent).scrollTop() + target.offset().top - 15;
+                var scrollAnimation = TweenLite.to(window, 2, {
+                    scrollTo: {
+                        y: offset
+                    }, 
+                    ease: Power4.easeOut
+                });
+                scrollAnimation.duration(1);
+                return false;
             }
-        });
-    }
+        }
+    });
 
     // mickey
 

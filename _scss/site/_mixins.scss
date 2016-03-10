@@ -1,12 +1,4 @@
 
-
-// .rounded(VALUE);
-@mixin rounded($radius:5px) {
-  -webkit-border-radius : $radius;
-  -moz-border-radius : $radius;
-  border-radius : $radius; 
-}
-
 /* Animations */
 
 @mixin animation_blink() {
@@ -16,9 +8,11 @@
     animation: blink 0.7s infinite;
 }
 
-@mixin animation_move() {
-    bottom: 40px;
-    animation: move 0.5s infinite alternate;
+// .rounded(VALUE);
+@mixin rounded($radius:5px) {
+  -webkit-border-radius : $radius;
+  -moz-border-radius : $radius;
+  border-radius : $radius; 
 }
 
 @keyframes blink {
@@ -55,9 +49,4 @@
     100% {
         opacity: 1;
     }
-}
-
-@keyframes move {
-  from { bottom: 40px; }
-  to   { bottom: 20px; }
 }
