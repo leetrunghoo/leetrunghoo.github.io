@@ -121,7 +121,7 @@ table {
     }
 }
 
-a[target="_blank"] {
+a[target="_blank"]:not(.no-underline) {
     position: relative;
     text-decoration: none;
     &:before {
@@ -152,6 +152,7 @@ a[target="_blank"] {
     ol > li > a {
         display: inline-block;
         padding: 5px 0;
+        width: 100%;
     }
 }
 
