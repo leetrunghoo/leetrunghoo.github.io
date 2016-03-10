@@ -121,6 +121,10 @@ table {
     }
 }
 
+a {
+    @include hyphens();
+}
+
 a[target="_blank"]:not(.no-underline) {
     position: relative;
     text-decoration: none;

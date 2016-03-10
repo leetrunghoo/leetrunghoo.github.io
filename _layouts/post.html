@@ -27,25 +27,23 @@ layout: default
 
 <button class="trigger" ></button>
 
-<article class="postWrapper">
-  <section class="section--last">
-    <div class="container container--content">
-      <div class="content-body">
+<article>
+  <div class="container container--content">
+    <div class="content-body">
 
-        {{ content }}
+      {{ content }}
 
-      </div>
     </div>
-    <hr class="u-clearHr"/>
-    <hr class="u-clearHr"/>
-    <hr/>
-    <div class="container container--content">
-      <div class="content-body">
-        {% include subscribe.html %}
-        {% include comments.html %}
-      </div>
+  </div>
+  <hr class="u-clearHr"/>
+  <hr class="u-clearHr"/>
+  <hr/>
+  <div class="container container--content">
+    <div class="content-body">
+      {% include subscribe.html %}
+      {% include comments.html %}
     </div>
-  </section>
+  </div>
   <footer class="postFooter">
     {% if page.previous.url %}
       <section class="section--prePost is-darkBackgrounded u-table">
