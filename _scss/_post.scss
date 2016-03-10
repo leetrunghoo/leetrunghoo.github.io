@@ -109,22 +109,19 @@ button.trigger {
     width: 1em;
     height: 1em;
     border: none;
-    background: transparent;
+    background: url(../img/icon/arrow-down.svg) no-repeat center center;
+    background-color: transparent;
+    background-size: contain;
     color: transparent;
     font-size: 2em;
     cursor: pointer;
-}
-
-.container:not(.notrans) button.trigger {
+    @include animation_move();
     -webkit-transition: opacity 0.3s 0.5s;
     transition: opacity 0.3s 0.5s;
 }
 
-.container.modify:not(.notrans) button.trigger {
-    opacity: 0;
-    pointer-events: none;
-    -webkit-transition-delay: 0s;
-    transition-delay: 0s;
+.modify button.trigger {
+    display: none;
 }
 
 button.trigger::before {
@@ -142,33 +139,6 @@ button.trigger::before {
 
 button.trigger:focus {
     outline: none;
-}
-
-button.trigger span {
-    position: relative;
-    display: block;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-}
-
-button.trigger span::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: #fff;
-    content: "\e097";
-    text-transform: none;
-    font-weight: normal;
-    font-style: normal;
-    font-variant: normal;
-    font-family: 'icomoon';
-    line-height: 1;
-    speak: none;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 
