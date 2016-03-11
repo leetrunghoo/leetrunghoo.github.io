@@ -7,7 +7,7 @@ categories: tech
 tags: code, markdown, jekyll
 image:
   feature: markdown.png
-  style: ""
+  style: "background-size: 70%"
 bgContrast: dark
 bgGradientOpacity: darker
 syntaxHighlighter: yes
