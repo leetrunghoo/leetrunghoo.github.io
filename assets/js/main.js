@@ -65,7 +65,7 @@ $(function() {
                 var target = $(this.hash);
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                 if (target.length) {
-                    var offset = $(layoutContent).scrollTop() + target.offset().top - 15;
+                    var offset = $(layoutContent).scrollTop() + target.offset().top - 25;
                     var scrollAnimation = TweenLite.to(window, 2, {
                         scrollTo: {
                             y: offset

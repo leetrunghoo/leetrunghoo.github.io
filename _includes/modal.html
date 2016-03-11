@@ -12,7 +12,7 @@
     <h2 class="h2--shareTitle">Share this blog</h2>
     <ul class="shareWrapper">
       <li><a class="shareButton no-underline" href="https://twitter.com/intent/tweet?text={{ page.title | append: ' by @leetrunghoo' }}&url={{ page.url | prepend: site.url | url_encode }}" target="_blank"><span class="icon-twitter"></span></a></li>
-      <li><a class="shareButton no-underline" href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | prepend: site.url | url_encode }}" target="_blank"><span class="icon-facebook"></span></a></li>
+      <li><a class="shareButton no-underline" href="https://www.facebook.com/v2.0/dialog/share?app_id={{ site.fb_appid }}&href={{ page.url | prepend: site.url | url_encode }}" target="_blank"><span class="icon-facebook"></span></a></li>
       <li><a class="shareButton no-underline" href="https://plus.google.com/share?url={{ page.url | prepend: site.url | url_encode }}" target="_blank"><span class="icon-google-plus"></span></a></li>
       <li><a class="shareButton no-underline" href="https://www.linkedin.com/shareArticle
 ?mini=true&url={{ page.url | prepend: site.url | url_encode }}&title={{ page.title }}"  target="_blank"><span class="icon-linkedin"></span></a></li>

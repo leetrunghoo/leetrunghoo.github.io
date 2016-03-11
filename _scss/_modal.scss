@@ -15,17 +15,56 @@
     transition-delay: 0.5s;
     transition: opacity 0.3s ease-in;
     z-index: $zIndex-8--fullscreen-modal;
-}
-
-.fullscreenModal.active {
-    opacity: 1;
-    visibility: visible;
-    -webkit-transition-delay: 0.5s;
-    transition-delay: 0.5s;
-}
-
-.fullscreenModal h2 {
-    font-size: $font-M;
+    @media (max-width: $screen-xs-max) {
+        width: 180px;
+    }
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transition-delay: 0.5s;
+        transition-delay: 0.5s;
+    }
+    .shareWrapper {
+        @include clearfix();
+        list-style: none;
+        margin: $leading auto 0;
+        padding: 0;
+        width: 100%;
+        li {
+            padding: 20px;
+            display: inline-block;
+            text-align: center;
+            @media (max-width: $screen-xs-max) {
+                width: 100%;
+            }
+            .shareButton {
+                display: block;
+                margin: 0;
+                width: 100%;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: contain;
+                opacity: 0.8;
+                color: white;
+                font-size: 2.5em;
+                &:hover {
+                    opacity: 1;
+                }
+                .icon-facebook:hover {
+                    color: #3B5998;
+                }
+                .icon-twitter:hover {
+                    color: #33CCFF;
+                }
+                .icon-google-plus:hover {
+                    color: #d34836;
+                }
+                .icon-linkedin:hover {
+                    color: #4875B4;
+                }
+            }
+        }
+    }
 }
 
 .modal-toggle-group {
@@ -168,49 +207,5 @@
 
 // share buttons
 .h2--shareTitle {
-    margin-top: -100px;
-}
-
-.shareWrapper {
-    @include clearfix();
-    list-style: none;
-    margin: $leading auto 0;
-    padding: 0;
-    width: 100%;
-    li {
-        padding: 20px;
-        display: inline-block;
-        text-align: center;
-        @media (max-width: $screen-xs-max) {
-            width: 100%;
-        }
-        .shareButton {
-            display: block;
-            margin: 0;
-            margin-bottom: 20px;
-            padding: 0 15px;
-            width: 100%;
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: contain;
-            opacity: 0.8;
-            color: white;
-            font-size: 2.5em;
-            &:hover {
-                opacity: 1;
-            }
-            .icon-facebook:hover {
-                color: #3B5998;
-            }
-            .icon-twitter:hover {
-                color: #33CCFF;
-            }
-            .icon-google-plus:hover {
-                color: #d34836;
-            }
-            .icon-linkedin:hover {
-                color: #4875B4;
-            }
-        }
-    }
+    margin-top: -30px;
 }

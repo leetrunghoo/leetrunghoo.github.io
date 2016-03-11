@@ -269,24 +269,3 @@ button.trigger:focus {
     transform: translateY(0);
 }
 
-
-/* Media Queries */
-
-@media screen and (max-width: 27em) {
-    .intro-effect-jam3 .content {
-        padding: 0 2em 5em;
-    }
-    .intro-effect-grid .grid li h2 {
-        display: none;
-    }
-    .intro-effect-push .header .title {
-        top: 60px;
-        transform: translateX(-50%);
-    }
-    /*.title, .content {
-        font-size: 50%;
-    }*/
-    button.trigger::before {
-        display: none;
-    }
-}

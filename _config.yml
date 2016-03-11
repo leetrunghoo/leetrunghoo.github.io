@@ -22,7 +22,7 @@ baseurl_featured_img: '/assets/img/hero/'
 baseurl_featured_thumbnail: '/assets/img/thumbnail/'
 baseurl_js:          '/assets/js/'
 icon:                /assets/img/logo.png
-disqus:              disqus_shortname # get it on https://disqus.com/admin/
+disqus:              leetrunghoo # get it on https://disqus.com/admin/
 gems:
   - jemoji
 
