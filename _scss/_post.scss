@@ -13,6 +13,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: white;
+    z-index: 1;
 }
 
 .bg-img {
@@ -156,6 +157,8 @@ button.trigger:focus {
         transition: transform 0.5s ease-out 0.2s;
         transform: translateY(350px);
         opacity: 0;
+        position: relative;
+        z-index: 2;
     }
     &.modify {
         .bg-img {
@@ -268,4 +271,3 @@ button.trigger:focus {
     opacity: 1;
     transform: translateY(0);
 }
-

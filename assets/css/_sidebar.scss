@@ -1,0 +1,211 @@
+.menu-wrap a {
+    color: #b8b7ad;
+}
+
+.menu-wrap a:hover,
+.menu-wrap a:focus {
+    color: #c94e50;
+}
+
+.content {
+    position: relative;
+    background: #b4bad2;
+}
+
+.content::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    content: '';
+    opacity: 0;
+    transition: opacity 0.4s, transform 0s 0.4s;
+    transform: translate3d(100%, 0, 0);
+}
+
+
+/* Menu Button */
+
+#menu-button-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    z-index: 9002;
+    padding: 5px;
+    #menu-button {
+        width: 30px;
+        height: 25px;
+        transform: rotate(0deg);
+        transition: .5s ease-in-out;
+        cursor: pointer;
+        span {
+            display: block;
+            position: absolute;
+            height: 4px;
+            width: 100%;
+            background: white;
+            border-radius: 9px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .6s ease-in-out;
+            &:nth-child(1) {
+                top: 0px;
+            }
+            &:nth-child(2) {
+                top: 10px;
+            }
+            &:nth-child(3) {
+                top: 20px;
+            }
+        }
+        &.open span {
+            &:nth-child(1) {
+                top: 10px;
+                transform: rotate(135deg);
+            }
+            &:nth-child(2) {
+                opacity: 0;
+                left: -60px;
+            }
+            &:nth-child(3) {
+                top: 10px;
+                transform: rotate(-135deg);
+            }
+        }
+        &.change-color {
+            span {
+                background-color: rgba($black, .9);
+            }
+            &.open span {
+                background-color: white;
+            }
+        }
+    }
+}
+
+
+/* Close Button */
+
+.close-button {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    overflow: hidden;
+    text-indent: 16px;
+    border: none;
+    z-index: 9001;
+    background: transparent;
+    color: transparent;
+}
+
+.close-button::before,
+.close-button::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    background: #888;
+}
+
+.close-button::before {
+    transform: rotate(45deg);
+}
+
+.close-button::after {
+    transform: rotate(-45deg);
+}
+
+
+/* Menu */
+
+.menu-wrap {
+    position: fixed;
+    z-index: 9001;
+    width: 280px;
+    height: 100%;
+    font-size: 1.15em;
+    transform: translate3d(280px, 0, 0);
+    transition: transform 0.4s;
+    right: 0
+}
+
+.menu {
+    position: relative;
+    z-index: 9000;
+    padding: 3em 1em 0;
+}
+
+.menu,
+.close-button {
+    opacity: 0;
+    transform: translate3d(160px, 0, 0);
+    transition: opacity 0s 0.3s, transform 0s 0.3s;
+    transition-timing-function: cubic-bezier(.17, .67, .1, 1.27);
+}
+
+.icon-list a {
+    display: block;
+    padding: 0.8em;
+}
+
+.icon-list i {
+    font-size: 1.5em;
+    vertical-align: middle;
+    color: #282a35;
+}
+
+.icon-list a span {
+    margin-left: 10px;
+    font-size: 0.85em;
+    font-weight: 700;
+    vertical-align: middle;
+}
+
+
+/* Morph Shape */
+
+.morph-shape {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    fill: #3d3d3e;
+}
+
+
+/* Shown menu */
+
+.show-menu .menu-wrap,
+.show-menu .content::before {
+    transition-delay: 0s;
+}
+
+.show-menu .menu-wrap,
+.show-menu .menu,
+.show-menu .close-button,
+.show-menu .morph-shape,
+.show-menu .content::before {
+    transform: translate3d(0, 0, 0);
+}
+
+.show-menu .menu,
+.show-menu .close-button {
+    opacity: 1;
+    transition: opacity 0.3s, transform 0.3s;
+    transition-delay: 0.4s;
+}
+
+.show-menu .content::before {
+    opacity: 1;
+    transition: opacity 0.4s;
+}

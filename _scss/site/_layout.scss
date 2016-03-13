@@ -9,6 +9,7 @@
     border-radius: 20px;
     padding: 5px 10px;
     font-family: $title-secondary-font;
+
     &:hover {
         .brand-name-bg {
             opacity: 1;
@@ -121,7 +122,7 @@ table {
     }
 }
 
-a {
+a:not(.no-hyphens) { // no-hyphens: dont use word-wrap: break-word;
     @include hyphens();
 }
 
