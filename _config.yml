@@ -27,14 +27,12 @@ gems:
   - jemoji
 
 future:      true
-# highlighter: rouge
-# rouge:
-#   css_class: 'highlight'
-#   line_numbers: true
 
+highlighter: rouge
+markdown: kramdown
 kramdown:
   input: GFM  # GitHub Flavored Markdown
-  syntax_highlighter: rouge
+  hard_wrap: false
 
 author:
   name:              Trung Ho
@@ -51,7 +49,7 @@ fb_admins:           leetrunghoo
 fb_appid:            1053330601355734
 
 # Server
-exclude:             [".editorconfig", ".gitignore", "bower.json", "composer.json", "CONTRIBUTING.md", "CNAME", "LICENSE", "Gruntfile.js", "package.json", "node_modules", "README.md", "sass", "haml", "Gemfile", "Gemfile.lock"]
+exclude:             [".editorconfig", ".gitignore", "bower.json", "composer.json", "CONTRIBUTING.md", "CNAME", "LICENSE", "Gruntfile.js", "package.json", "node_modules", "README.md", "haml", "Gemfile", "Gemfile.lock"]
 port:                4001
 
 defaults:

@@ -52,12 +52,12 @@ var opacity = function(css) {
  * Compile files from sass into both assets/css (for live injecting) and site (for future jekyll builds)
  */
 gulp.task('styles', function() {
-  return gulp.src('_scss/main.scss')
+  return gulp.src('assets/css/main.scss')
     .pipe(sass({ outputStyle: 'expanded' }))
     .pipe(autoprefixer({browsers: ['last 2 versions', 'Firefox ESR', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1']}))
     .pipe(postcss([opacity]))
     .pipe(gulp.dest('assets/css'))
-    .pipe(rename({suffix: '.min'}))
+    // .pipe(rename({suffix: '.min'}))
     .pipe(minifycss())
     .pipe(gulp.dest('assets/css'));
 });
@@ -80,12 +80,12 @@ gulp.task("thumbnails", function () {
  * Watch _site generation, reload BrowserSync
  */
 gulp.task('watch', function() {
-  gulp.watch('_scss/**/*.scss', ['styles']);
+  gulp.watch('assets/css/**/*.scss', ['styles']);
   gulp.watch('assets/img/hero/*.{jpg,png}', ['thumbnails']);
   gulp.watch(['*.html',
           '*.txt',
           'about/**',
-          '_posts/*.markdown',
+          '_posts/**',
           'assets/js/**/**.js',
           'assets/img/**',
           'assets/fonts/**',
@@ -101,4 +101,4 @@ gulp.task('watch', function() {
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', ['thumbnails', 'browser-sync', 'watch']);
+gulp.task('default', ['browser-sync', 'watch']);
