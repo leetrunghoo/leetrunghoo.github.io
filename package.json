@@ -4,6 +4,7 @@
   "description": "Personal website",
   "homepage": "http://leetrunghoo.com",
   "author": "Trung Ho",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/leetrunghoo/leetrunghoo.github.io"

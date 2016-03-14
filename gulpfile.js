@@ -10,16 +10,11 @@ var gulp = require('gulp'),
     os = require("os"),
     cp = require('child_process');
 
-var messages = {
-  jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
-};
-
 /**
  * Build the Jekyll Site
  */
 gulp.task('jekyll-build', function (done) {
-    browserSync.notify(messages.jekyllBuild);
-    return cp.spawn('jekyll', ['build', '--config=_config.yml'], {stdio: 'inherit'})
+    return cp.spawn('jekyll.bat', ['build', '--config=_config.yml'], {stdio: 'inherit'})
         .on('close', done);
 });
 
@@ -38,7 +33,7 @@ gulp.task('browser-sync', ['styles', 'jekyll-build'], function() {
 // To support opacity in IE 8
 
 var opacity = function(css) {
-  css.eachDecl(function(decl, i) {
+  css.walkDecls(function(decl, i) {
     if (decl.prop === 'opacity') {
       decl.parent.insertAfter(i, {
         prop: '-ms-filter',
