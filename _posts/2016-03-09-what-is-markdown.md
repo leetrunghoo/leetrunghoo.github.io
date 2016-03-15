@@ -10,7 +10,6 @@ image:
   style: "background-size: 70%"
 bgContrast: dark
 bgGradientOpacity: darker
-syntaxHighlighter: yes
 ---
 
 ## Introduction
