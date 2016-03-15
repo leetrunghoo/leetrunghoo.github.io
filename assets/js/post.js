@@ -44,7 +44,7 @@
             $('#menu-button').addClass('change-color');
         } else {
             noscroll = true;
-            disable_scroll();
+            // disable_scroll();
             classie.remove(container, 'modify');
             $('#menu-button').removeClass('change-color');
         }
@@ -55,7 +55,7 @@
             isAnimating = false;
             if (reveal) {
                 noscroll = false;
-                enable_scroll();
+                // enable_scroll();
             }
         }, 600);
     }

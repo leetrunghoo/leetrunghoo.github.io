@@ -27,6 +27,7 @@ gulp.task('browser-sync', ['styles', 'jekyll-build'], function() {
         server: {
             baseDir: '_site'
         },
+        port: 8080,
         startPath: "/index.html",
         ghostMode: false, // Clicks, Scrolls & Form inputs on any device will be mirrored to all others.
         notify: {

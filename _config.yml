@@ -11,7 +11,7 @@ bing_verify:
 timezone:            asia/hanoi # eg. Asia/Kathmandu
 locale:              vi_VN # eg. en_us
 name:                Trung Ho
-title:               leetrunghoo
+title:               Trung Ho
 tagline:             'Software Developer - Music Lover'
 description:         'Personal website of Trung Ho'
 url:                 
