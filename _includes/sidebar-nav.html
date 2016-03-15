@@ -1,21 +1,4 @@
-<!--
-<nav role="navigation" class="sidebar sidebar--right">
-    <a href="{{site.baseurl}}" class="textLogo textLogo--white textLogo--sidebar">{{ site.name }}</a>
-    <ul class="sidebar-recentPosts">
-        {% for post in site.posts offset:0 limit:10 %} {% if post.title == page.title %} {% else %}
-        <li>
-            {% if post.image.feature %}
-            <a href="{{ post.url }}" class="sidebar-recentPosts-image-wrapper">
-                <img src="{{ post.image.feature | prepend: site.baseurl_featured_thumbnail }}" style="" alt="">
-            </a>
-            {% endif %}
-            <a href="{{ post.url }}">{{ post.title }}</a>
-            <div class="postMeta">{{ post.date | date_to_string }}</div>
-        </li>
-        {% endif %} {% endfor %}
-    </ul>
-</nav>
--->
+
 <div id="menu-button-container">
     <div id="menu-button" class="menu-button">
         <span></span>
@@ -40,11 +23,9 @@
             {% endif %} {% endfor %}
         </ul>
     </nav>
-    <!-- <button class="close-button" id="close-button">Close Menu</button> -->
     <div class="morph-shape" id="morph-shape" data-morph-open="M 101.059,0 78.746997,0 c 0,0 -66,113.339 -66,399.5 0,264.506 66,400.5 66,400.5 l 22.312003,0 0,-800 z;M-7.312,0H100c0,0,0,113.839,0,400c0,264.506,0,400,0,400H-7.312V0z">
         <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 800" preserveAspectRatio="none">
             <path d="M-7.312,0H0c0,0,0,113.839,0,400c0,264.506,0,400,0,400h-7.312V0z" />
         </svg>
     </div>
 </div>
-<!-- <button class="menu-button" id="open-button"></button> -->

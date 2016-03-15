@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en-us" class="no-js">
-
   {% include head.html %}
-
   <body>
+    <div class="brand-name-container">
+        <div class="brand-name-bg">
+        </div>
+        <a href="/#" class="brand-name no-hyphens">
+            <span data-hover="lee">lee</span><span>trung</span><span data-hover="hoo">hoo</span>
+        </a>
+    </div>
     {% if page.url != '/' %}
-      <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+      <script type="text/javascript">
+          document.querySelector('.brand-name-container').className += ' hide-on-mobile';
+      </script>
       {% include sidebar-nav.html %}
-<!--      {% include menu.html %}-->
     {% endif %}
 
     {{ content }}
-
-    {% if page.url != '/' %}
-      {% include sidebar-toggle.html %}
-    {% endif %}
 
     {% include footer-scripts.html %}
   </body>

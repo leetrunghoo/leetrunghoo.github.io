@@ -154,10 +154,10 @@ $(function() {
         $(this).toggleClass('active');
         if ($(this).hasClass('active')) {
             disable_scroll()
-            $('#menu-button').fadeOut();
+            $('#menu-button-container').fadeOut();
         } else {
             enable_scroll();
-            $('#menu-button').fadeIn();
+            $('#menu-button-container').fadeIn();
         }
         $('.modal-toggle-bubble').toggleClass('active');
         $('.modal-toggle-bubbleShadow').toggleClass('active');

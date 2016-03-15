@@ -9,7 +9,6 @@
     border-radius: 20px;
     padding: 5px 10px;
     font-family: $title-secondary-font;
-
     &:hover {
         .brand-name-bg {
             opacity: 1;
@@ -169,4 +168,10 @@ a[target="_blank"]:not(.no-underline) {
     height: 120px;
     width: auto;
     border-radius: 10px;
+}
+
+.hide-on-mobile {
+    @media (max-width: $screen-xs-max) {
+        display: none;
+    }
 }
