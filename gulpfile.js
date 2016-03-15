@@ -14,7 +14,8 @@ var gulp = require('gulp'),
  * Build the Jekyll Site
  */
 gulp.task('jekyll-build', function(done) {
-    return cp.spawn('jekyll', ['build', '--config=_config.yml'], { stdio: 'inherit' })
+    var jekyll = process.platform === "win32" ? "jekyll.bat" : "jekyll"
+    return cp.spawn(jekyll, ['build', '--config=_config.yml'], { stdio: 'inherit' })
         .on('close', done);
 });
 

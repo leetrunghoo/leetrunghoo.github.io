@@ -32,7 +32,6 @@ highlighter: rouge
 markdown: kramdown
 kramdown:
   input: GFM  # GitHub Flavored Markdown
-  hard_wrap: false
 
 author:
   name:              Trung Ho
