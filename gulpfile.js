@@ -6,7 +6,9 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     postcss = require('gulp-postcss'),
     imageResize = require('gulp-image-resize'),
+    // responsive = require('gulp-responsive'),
     parallel = require("concurrent-transform"),
+    changed = require("gulp-changed"),
     os = require("os"),
     cp = require('child_process');
 
@@ -73,14 +75,40 @@ gulp.task('styles', function() {
 /**
  * Automatically resize post feature images and turn them into thumbnails
  */
-gulp.task("thumbnails", function() {
+gulp.task("resizeImages", function() {
+    // need to install: apt-get install graphicsmagick
     gulp.src("assets/img/hero/*.{jpg,png}")
+        // .pipe(changed("assets/img/hero"))
+        .pipe(parallel(
+            imageResize({ width: 1080 }),
+            os.cpus().length
+        ))
+        .pipe(gulp.dest("assets/img/hero"));
+    gulp.src("assets/img/hero/*.{jpg,png}")
+        // .pipe(changed("assets/img/hero"))
         .pipe(parallel(
             imageResize({ width: 350 }),
             os.cpus().length
         ))
         .pipe(gulp.dest("assets/img/thumbnail"));
+    // // need to install: npm install sharp    
+    // gulp.src("assets/img/hero/*.{jpg,png}")
+    //     .pipe(responsive({
+    //         // resize all images to FHD size
+    //         '*': [{
+    //             width: 1080
+    //         }, {
+    //             // Produce thumbnail images and rename them
+    //             width: 300,
+    //             rename: {
+    //                 suffix: '-thumb'
+    //             },
+    //         }],
+    //     }))
+    //     .pipe(gulp.dest("assets/img/hero"));
 });
+
+
 
 /**
  * Watch scss files for changes & recompile
@@ -89,7 +117,7 @@ gulp.task("thumbnails", function() {
  */
 gulp.task('watch', function() {
     gulp.watch('assets/css/**/*.scss', ['styles']);
-    gulp.watch('assets/img/hero/*.{jpg,png}', ['thumbnails']);
+    // gulp.watch('assets/img/hero/*.{jpg,png}', ['thumbnails']);
     gulp.watch(['*.html',
         '*.txt',
         'about/**',
