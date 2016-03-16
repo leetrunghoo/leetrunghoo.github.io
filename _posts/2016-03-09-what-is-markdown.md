@@ -8,7 +8,6 @@ tags: code, markdown, jekyll
 image:
   feature: markdown.png
   style: "background-size: 70%"
-bgContrast: dark
 bgGradientOpacity: darker
 ---
 

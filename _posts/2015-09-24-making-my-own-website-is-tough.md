@@ -5,10 +5,9 @@ excerpt: "Freedom is not always good, in some cases, it would bring to you tough
 categories: life
 tags: code, life
 image:
-  feature: hello-world.jpg
-  style: "background-size: contain"
-bgContrast: dark
-bgGradientOpacity: darker
+  feature: work-desk-old.jpg
+  style: 
+bgGradientOpacity: 
 ---
 That's right. I thought I could quickly and easily make it because I can do whatever I want. It's my website, therefore, I can pick any technology, any frameworks for the front-end and back-end. I'm also free in designing, it's not like someone already designed it, did all the UI/UX stuff and you have to follow their guidelines, as my job, a web developer.
 
