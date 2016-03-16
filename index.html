@@ -5,30 +5,30 @@ title: Trung Ho
 <article class="postWrapper">
     <section class="section--first section--about section--fullpage u-table">
         <div class="section-backgroundImage display-none">
-            <img class="post-featuredImage" src="{{site.baseurl}}assets/img/hero/me.jpg" style="" alt="">
+            <div class="post-featuredImage welcome-img"></div>
         </div>
-        <div class="section-gradient display-none"></div>
+        <div class="section-gradient section-gradient--lighter display-none"></div>
         <div id="welcomeContainer" class="section-title u-tableCell u-verticalAlignMiddle typingAnimation" data-delay="2000">
             <div class="container">
                 <h2>Hello, I'm <strong>Trung</strong></h2>
                 <div class="postMeta-wrapper">
-                  <ul class="postMeta">
-                    <li class="postMeta-author">
-                      Software Developer - Music Lover
-                    </li>
-                  </ul>
+                    <ul class="postMeta">
+                        <li class="postMeta-author">
+                            Software Developer - Music Lover
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
-    <section class="section--last">
-        <div class="section-title">
-            My Posts:
-        </div>
-   </section>
+<!--     <section class="section--last">
+    </section> -->
     <section class="section--postsWrapper">
         <div class="container">
             <div class="blockGroup">
+                <div class="section-title">
+                    Latest Posts:
+                </div>
                 <ul class="blockGroup-list">
                     {% for post in site.posts %}
                     <li class="block">
@@ -56,7 +56,6 @@ title: Trung Ho
         </div>
     </section>
 </article>
-
 <script type="text/javascript">
-    document.querySelector('article').style.display = 'none';
+document.querySelector('article').style.display = 'none';
 </script>

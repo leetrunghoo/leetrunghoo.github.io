@@ -28,7 +28,6 @@
         transition: opacity 0.3s;
     }
     .brand-name {
-        font-weight: bold;
         color: inherit;
         cursor: pointer;
         background: none;
@@ -46,6 +45,7 @@
             outline: none;
             text-decoration: none;
             letter-spacing: 2px;
+            color: black;
             &::before {
                 position: absolute;
                 top: 0;
@@ -67,10 +67,28 @@
                     color: black;
                 }
             }
+            &:nth-child(2) {
+                color: $green;
+            }
         }
-        > span:nth-child(2) {
-            color: $green;
-        }
+    }
+}
+
+.section-backgroundImage .post-featuredImage.welcome-img {
+    width: 100%;
+    height: 100%;
+    background: url(../img/welcome.jpg) no-repeat center top;
+    background-size: cover;
+    @media (max-width: $screen-xs-max) {
+        background-image: url(../img/welcome-small.jpg);
+    }
+}
+
+#welcomeContainer {
+    h2 {
+        font-weight: normal;
+        padding: 0;
+        margin: 0;
     }
 }
 

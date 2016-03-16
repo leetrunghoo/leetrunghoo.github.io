@@ -145,6 +145,7 @@
 }
 
 .section-title {
+  margin: 2rem;
   z-index: $zIndex-1--section-title;
   text-align: center;
 }
@@ -152,7 +153,6 @@
 .section-title h2,
 .section-title h4 {
   margin-top: 0;
-  font-weight: 300;
 }
 
 .section-title h2 {
@@ -176,7 +176,6 @@
   z-index: $zIndex-5--tagline-frontpage;
 
   .postMeta-tagline {
-    font-weight: 300;
     letter-spacing: 0.04rem;
     color: $gray-light;
     text-transform: none;
