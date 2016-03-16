@@ -129,29 +129,25 @@
     top: 0;
     right: 0;
     fill: $gray-darker;
+    transform: rotate(180deg);
 }
 
 
 /* Shown menu */
 
 .show-menu {
-    .menu-wrap,
     .content::before {
         transition-delay: 0s;
-    }
-    .menu-wrap,
-    .menu,
-    .morph-shape,
-    .content::before {
-        transform: translate3d(0, 0, 0);
-    }
-    .menu {
-        opacity: 1;
-        transition: opacity 0.3s, transform 0.3s;
-        transition-delay: 0.4s;
-    }
-    .content::before {
         opacity: 1;
         transition: opacity 0.4s;
+    }
+    .menu-wrap {
+        transform: translate3d(0, 0, 0);
+        .menu {
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
+            transition: opacity 0.3s, transform 0.3s;
+            transition-delay: 0.4s;
+        }
     }
 }
