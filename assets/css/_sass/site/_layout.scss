@@ -121,7 +121,16 @@ table {
     }
 }
 
-a:not(.no-hyphens) { // no-hyphens: dont use word-wrap: break-word;
+p {
+    > img:not(.emoji) {
+        @media (max-width: $screen-xs-max) {
+            max-width: 100%;
+        }
+    }
+}
+
+a:not(.no-hyphens) {
+    // no-hyphens: dont use word-wrap: break-word;
     @include hyphens();
 }
 
@@ -172,6 +181,7 @@ a[target="_blank"]:not(.no-underline) {
 
 .hide-on-mobile {
     @media (max-width: $screen-xs-max) {
-        display: none;
+        // display: none;
+        position: absolute
     }
 }
