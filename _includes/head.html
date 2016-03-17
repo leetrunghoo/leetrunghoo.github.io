@@ -74,16 +74,20 @@
     {% endif %}
   </title>
 
+  <!-- for Windows Tiles -->
+  <meta name="msapplication-TileColor" content="#fff"/>
+  <meta name="msapplication-square150x150logo" content="{{ site.baseurl }}assets/img/favicon.ico"/>
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}assets/img/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="{{ site.baseurl }}assets/img/favicon.ico">
+
   <!-- CSS -->
   <link rel="stylesheet" href="{{ site.baseurl }}assets/css/main.css">
 
   <!-- Fonts -->
   <link href='http://fonts.googleapis.com/css?family=Lato:100,400' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Roboto:100,400' rel='stylesheet' type='text/css'>
-
-  <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}assets/img/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="{{ site.baseurl }}assets/img/favicon.ico">
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">

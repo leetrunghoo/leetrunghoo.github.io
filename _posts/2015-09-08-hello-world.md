@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hello World"
-excerpt: "Well, today I start to make my own portfolio website! Wish my luck :D"
+excerpt: "Well, today I start to make my own portfolio website! Wish my luck."
 categories: Life
 tags: code, life
 image:
