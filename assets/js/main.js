@@ -186,6 +186,9 @@ $(function() {
     $(document).scroll(function() {
         // Show modal toggle after scrolling 300px
         $('.modal-toggle-group').toggleClass('active', $(document).scrollTop() >= 300);
+        if ($(document).scrollTop() < 300 && $('.modal-toggle-bubble').hasClass('active')) {
+            $('.modal-toggle-wrapper').click();
+        }
         // brand name
         $('.brand-name-container').toggleClass('transparent', $(document).scrollTop() >= 100);
     });

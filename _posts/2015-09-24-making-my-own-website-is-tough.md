@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Making my own website is tough!"
-excerpt: "Freedom is not always good, in some cases, it would bring to you tough decisions."
+excerpt: "Freedom is not always good, in some cases, it would bring to you difficult decisions."
 categories: Life
 tags: code, life
 image:
@@ -9,7 +9,7 @@ image:
   style: 
 bgGradientOpacity: 
 ---
->Freedom is not always good, in some cases, it would bring to you tough decisions.
+>Freedom is not always good, in some cases, it would bring to you difficult decisions.
 
 That's right. This is my website, I thought I could quickly and easily make it because I can do whatever I want. I can pick any technology, any frameworks for the front-end and back-end. I'm also free in designing, it's not like someone already designed it, did all the UI/UX stuff and you have to follow their guidelines, as my job, a web developer.
 
