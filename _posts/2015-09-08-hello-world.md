@@ -2,7 +2,7 @@
 layout: post
 title:  "Hello World"
 excerpt: "Well, today I start to make my own portfolio website! Wish my luck :D"
-categories: life
+categories: Life
 tags: code, life
 image:
   feature: hello-world.jpg

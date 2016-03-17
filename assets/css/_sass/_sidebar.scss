@@ -140,6 +140,7 @@
         transition-delay: 0s;
         opacity: 1;
         transition: opacity 0.4s;
+        transform: translate3d(0, 0, 0);
     }
     .menu-wrap {
         transform: translate3d(0, 0, 0);

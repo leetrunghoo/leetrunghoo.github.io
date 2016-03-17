@@ -70,8 +70,8 @@ body {
         vertical-align: middle;
         .subline-2 {
             color: white;
-            font-size: $font-XS;
-            margin-top: 10px;
+            font-size: $font-XS1;
+            margin-top: 30px;
         }
     }
 }
@@ -174,7 +174,7 @@ button.trigger:focus {
         > article {
             transform: translateY(0);
             opacity: 1;
-            margin-top: -200px;
+            margin-top: -250px;
             @media (max-width: $screen-xs-max) {
                 margin-top: -150px;
             }
