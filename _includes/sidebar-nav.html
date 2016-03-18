@@ -1,22 +1,31 @@
-<nav role="navigation" class="sidebar sidebar--right">
-  
-  <span style="color: white">sorry, nothing here :D</span>
-  <!-- <a href="{{site.baseurl}}" class="textLogo textLogo--white textLogo--sidebar">{{ site.name }}</a> -->
-  <ul class="sidebar-recentPosts">
-    {% for post in site.posts offset:0 limit:10 %}
-      {% if post.title == page.title %}
-        <!-- exclude current post -->
-      {% else %}
-   <!--    <li>
-        {% if post.image.feature %}
-          <a href="{{ post.url }}" class="sidebar-recentPosts-image-wrapper">
-            <img src="{{ post.image.feature | prepend: site.baseurl_featured_thumbnail }}" style="" alt="">
-          </a>
-        {% endif %}
-        <a href="{{ post.url }}">{{ post.title }}</a>
-        <div class="postMeta">{{ post.date | date_to_string }}</div>
-      </li> -->
-      {% endif %}
-    {% endfor %}
-  </ul>
-</nav>
+
+<div id="menu-button-container">
+    <div id="menu-button" class="menu-button">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<div class="menu-wrap">
+    <nav class="menu">
+        Latest Posts:
+        <ul class="sidebar-recentPosts">
+            {% for post in site.posts offset:0 limit:10 %} {% if post.title == page.title %} {% else %}
+            <li>
+                {% if post.image.hero %}
+                <a href="{{ post.url }}" class="sidebar-recentPosts-image-wrapper">
+                    <img src="{{ post.image.hero }}" style="" alt="">
+                </a>
+                {% endif %}
+                <a href="{{ post.url }}">{{ post.title }}</a>
+                <div class="postMeta">{{ post.date | date_to_string }}</div>
+            </li>
+            {% endif %} {% endfor %}
+        </ul>
+    </nav>
+    <div class="morph-shape" id="morph-shape" data-morph-open="M-7.312,0H15c0,0,66,113.339,66,399.5C81,664.006,15,800,15,800H-7.312V0z;M-7.312,0H100c0,0,0,113.839,0,400c0,264.506,0,400,0,400H-7.312V0z">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 800" preserveAspectRatio="none">
+            <path d="M-7.312,0H0c0,0,0,113.839,0,400c0,264.506,0,400,0,400h-7.312V0z"></path>
+        </svg>
+    </div>
+</div>

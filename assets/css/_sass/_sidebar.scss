@@ -1,0 +1,154 @@
+.content {
+    position: relative;
+    background: #b4bad2;
+}
+
+.content::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9000;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    content: '';
+    opacity: 0;
+    transition: opacity 0.4s, transform 0s 0.4s;
+    transform: translate3d(100%, 0, 0);
+    cursor: pointer;
+}
+
+
+/* Menu Button */
+
+#menu-button-container {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background-color: transparent;
+    z-index: 9002;
+    padding: 5px;
+    #menu-button {
+        width: 30px;
+        height: 25px;
+        transform: rotate(0deg);
+        transition: .5s ease-in-out;
+        cursor: pointer;
+        span {
+            display: block;
+            position: absolute;
+            height: 4px;
+            width: 100%;
+            background: white;
+            border-radius: 9px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .6s ease-in-out;
+            &:nth-child(1) {
+                top: 0px;
+            }
+            &:nth-child(2) {
+                top: 10px;
+            }
+            &:nth-child(3) {
+                top: 20px;
+            }
+        }
+        &.open span {
+            &:nth-child(1) {
+                top: 10px;
+                transform: rotate(135deg);
+            }
+            &:nth-child(2) {
+                opacity: 0;
+                left: -60px;
+            }
+            &:nth-child(3) {
+                top: 10px;
+                transform: rotate(-135deg);
+            }
+        }
+        &.change-color {
+            span {
+                background-color: rgba($black, .9);
+            }
+            &.open span {
+                background-color: white;
+            }
+        }
+    }
+}
+
+
+/* Menu */
+
+.menu-wrap {
+    position: fixed;
+    z-index: 9001;
+    width: 280px;
+    height: 100%;
+    font-size: 1.15em;
+    transform: translate3d(280px, 0, 0);
+    transition: transform 0.4s;
+    right: 0;
+    color: white;
+    a {
+        color: $gray-lighter;
+        &:hover,
+        &:focus {
+            color: $green;
+        }
+    }
+    li {
+        &:hover,
+        &:focus {
+            a {
+                color: $green;
+            }
+        }
+    }
+    .menu {
+        position: relative;
+        z-index: 9000;
+        padding: 3em 1em 0;
+        opacity: 0;
+        transform: translate3d(160px, 0, 0);
+        transition: opacity 0s 0.3s, transform 0s 0.3s;
+        transition-timing-function: cubic-bezier(.17, .67, .1, 1.27);
+    }
+}
+
+
+/* Morph Shape */
+
+.morph-shape {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    fill: $gray-darker;
+    transform: rotate(180deg);
+}
+
+
+/* Shown menu */
+
+.show-menu {
+    .content::before {
+        transition-delay: 0s;
+        opacity: 1;
+        transition: opacity 0.4s;
+        transform: translate3d(0, 0, 0);
+    }
+    .menu-wrap {
+        transform: translate3d(0, 0, 0);
+        .menu {
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
+            transition: opacity 0.3s, transform 0.3s;
+            transition-delay: 0.4s;
+        }
+    }
+}

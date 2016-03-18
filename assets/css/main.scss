@@ -1,36 +1,46 @@
 // Reset
-@import "../../_scss/normalize";
+@import "_sass/normalize";
 
 // Variables and mixins
-@import "../../_scss/variables";
-@import "../../_scss/colors";
-@import "../../_scss/z-index";
-@import "../../_scss/animations";
-@import "../../_scss/mixins";
+@import "_sass/variables";
+@import "_sass/colors";
+@import "_sass/z-index";
+@import "_sass/animations";
+@import "_sass/mixins";
 
 // Typography & images
-@import "../../_scss/typography";
-@import "../../_scss/images";
+@import "_sass/typography";
+@import "_sass/images";
 
 // Core
-@import "../../_scss/global";
-@import "../../_scss/scaffolding";
-@import "../../_scss/grid";
+@import "_sass/global";
+@import "_sass/scaffolding";
+@import "_sass/grid";
 
 // Components
-@import "../../_scss/nav";
-@import "../../_scss/hero";
-@import "../../_scss/content";
-@import "../../_scss/modal";
-@import "../../_scss/form";
+@import "_sass/nav";
+@import "_sass/hero";
+@import "_sass/content";
+@import "_sass/modal";
+@import "_sass/form";
 
 // Utility classes
-@import "../../_scss/utilities";
-@import "../../_scss/responsive-utilities";
+@import "_sass/utilities";
+@import "_sass/responsive-utilities";
 
 // override
-@import "../../_scss/site/variables";
-@import "../../_scss/site/mixins";
+@import "_sass/site/variables";
+@import "_sass/site/mixins";
 // Site Styles
-@import "../../_scss/site/layout";
+@import "_sass/post";
+@import "_sass/site/layout";
 
+// code hightlight
+@import "_sass/syntax";
+@import "_sass/gist";
+
+// icon
+@import "_sass/icomoon";
+
+// sidebar
+@import "_sass/sidebar";

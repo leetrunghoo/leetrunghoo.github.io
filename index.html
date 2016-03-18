@@ -2,46 +2,67 @@
 layout: default
 title: Trung Ho
 ---
-<header class="brand-name-container">
-    <div class="brand-name-bg">
-    </div>
-    <a href="#" class="brand-name">
-        <span data-hover="lee">lee</span><span>trung</span><span data-hover="hoo">hoo</span>
-    </a>
-</header>
 <article class="postWrapper">
     <section class="section--first section--about section--fullpage u-table">
         <div class="section-backgroundImage display-none">
-            <img class="post-featuredImage" src="{{site.baseurl}}assets/images/hero/me.jpg" style="" alt="">
+            <div class="post-featuredImage welcome-img"></div>
         </div>
-        <div class="section-gradient display-none"></div>
-        <div id="welcomeContainer" class="section-title u-tableCell u-verticalAlignMiddle typingAnimation" data-delay="2000">
+        <div class="section-gradient section-gradient--lighter display-none"></div>
+        <div id="welcomeContainer" class="section-title u-tableCell u-verticalAlignMiddle typingAnimation" data-delay="1000">
             <div class="container">
                 <h2>Hello, I'm <strong>Trung</strong></h2>
                 <div class="postMeta-wrapper">
-                  <ul class="postMeta">
-                    <li class="postMeta-author">
-                      Software Developer - Music Lover
-                    </li>
-                  </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section--last">
-        <div class="section-title">
-            <div class="container">
-                <div class="postMeta-wrapper postMeta-wrapper--frontpage top-0">
                     <ul class="postMeta">
-                        <li class="postMeta-tagline">
-                            My website is under construction so there is nothing much, please come back later :)
+                        <li class="postMeta-author">
+                            Software Developer - Music Lover
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
+<!--     <section class="section--last">
+    </section> -->
+    <section class="section--postsWrapper">
+        <div class="container">
+            <div class="blockGroup">
+                <div class="section-title">
+                    Latest Posts:
+                </div>
+                <ul class="blockGroup-list">
+                    {% for post in site.posts %}
+                    <li class="block">
+                        <div class="postArticle-wrapper">
+                            <article class="postArticle postArticle--short">
+                                {% if post.image.hero %}
+                                <a href="{{ post.url }}">
+                                    <div class="postArticle-image desaturate" style="background-image:url('{{ post.image.hero }}')">
+                                    </div>
+                                </a>
+                                {% else %}
+                                <a href="{{ post.url }}">
+                                    <div class="postArticle-image" style="background-image:url('{{site.baseurl}} assets/img/logo-150.png')">
+                                    </div>
+                                </a>
+                                {% endif %}
+                                <a class="postArticle-title" href="{{ post.url }}">{{ post.title }}</a>
+                            </article>
+                            <div class="block-postMeta">{{ post.date | date_to_string }}</div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </section>
 </article>
+
+{% include subscribe.html %}
+
+<hr class="u-clearHr"/>
+<footer class="section--footer">
+  © 2016 Made by <strong>Trung Ho</strong> with <div class="icon-heart heart-beating"></div>
+</footer>
 
 <script type="text/javascript">
     document.querySelector('article').style.display = 'none';

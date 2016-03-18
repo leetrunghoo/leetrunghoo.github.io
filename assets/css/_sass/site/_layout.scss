@@ -1,0 +1,201 @@
+.brand-name-container {
+    font-size: $font-S;
+    position: fixed;
+    z-index: 500;
+    top: 15px;
+    left: 15px;
+    width: auto;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-family: $title-secondary-font;
+    &:hover {
+        .brand-name-bg {
+            opacity: 1;
+        }
+    }
+    .brand-name-bg {
+        background-color: #fff;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 20px;
+        opacity: 0.7;
+        transition: opacity 0.3s;
+    }
+    .brand-name {
+        color: inherit;
+        cursor: pointer;
+        background: none;
+        &:hover {
+            > span:nth-child(1)::before {
+                max-width: 0;
+            }
+            > span:nth-child(3)::before {
+                max-width: 100%;
+            }
+        }
+        > span {
+            position: relative;
+            display: inline-block;
+            outline: none;
+            text-decoration: none;
+            letter-spacing: 2px;
+            color: black;
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                overflow: hidden;
+                max-width: 0;
+                content: attr(data-hover);
+                transition: max-width 0.5s;
+            }
+            &:nth-child(3)::before {
+                color: $green;
+            }
+            &:nth-child(1) {
+                color: $green;
+                &::before {
+                    max-width: 100%;
+                    color: black;
+                }
+            }
+            &:nth-child(2) {
+                color: $green;
+            }
+        }
+    }
+}
+
+.section-backgroundImage .post-featuredImage.welcome-img {
+    width: 100%;
+    height: 100%;
+    background: url(../img/welcome.jpg) no-repeat center top;
+    background-size: cover;
+    @media (max-width: $screen-xs-max) {
+        background-image: url(../img/welcome-small.jpg);
+    }
+}
+
+#welcomeContainer {
+    h2 {
+        font-weight: normal;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+
+/** typing animation **/
+
+.display-none,
+.typingAnimation {
+    display: none;
+}
+
+.cursor-typing {
+    &:after {
+        content: "|";
+    }
+}
+
+.cursor-typed {
+    &:after {
+        content: "|";
+        @include animation_blink();
+    }
+}
+
+iframe {
+    border: 1px solid $gray;
+}
+
+figure {
+    margin: 0;
+}
+
+blockquote {
+    margin-left: 20px;
+}
+
+table {
+    position: relative;
+    border-collapse: collapse;
+    white-space: nowrap;
+    td,
+    th {
+        position: relative;
+        vertical-align: middle;
+        text-overflow: ellipsis;
+        border: 1px solid $gray;
+        padding: 5px 10px;
+    }
+}
+
+p {
+    > img:not(.emoji) {
+        @media (max-width: $screen-xs-max) {
+            max-width: 100%;
+        }
+    }
+}
+
+a:not(.no-hyphens) {
+    // no-hyphens: dont use word-wrap: break-word;
+    @include hyphens();
+}
+
+a[target="_blank"]:not(.no-underline) {
+    position: relative;
+    text-decoration: none;
+    &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.2s ease;
+        background-color: $blue;
+    }
+    &:hover:before {
+        visibility: visible;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+}
+
+.content-body {
+    h3 {
+        > a {
+            font-size: $font-XS;
+        }
+    }
+    ol > li > a {
+        display: inline-block;
+        padding: 5px 0;
+        width: 100%;
+    }
+}
+
+.top-0 {
+    top: 0;
+}
+
+.author-avatar {
+    height: 120px;
+    width: auto;
+    border-radius: 10px;
+}
+
+.hide-on-mobile {
+    @media (max-width: $screen-xs-max) {
+        // display: none;
+        position: absolute
+    }
+}

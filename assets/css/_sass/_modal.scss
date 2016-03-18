@@ -1,0 +1,223 @@
+//
+// Modal
+// --------------------------------------------------
+.fullscreenModal {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    color: $white;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    background: transparent;
+    transform: translateX(-50%);
+    transition-delay: 0.5s;
+    transition: opacity 0.3s ease-in;
+    z-index: $zIndex-8--fullscreen-modal;
+    @media (max-width: $screen-xs-max) {
+        width: 180px;
+    }
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transition-delay: 0.5s;
+        transition-delay: 0.5s;
+    }
+    .shareWrapper {
+        @include clearfix();
+        list-style: none;
+        margin: $leading auto 0;
+        padding: 0;
+        width: 100%;
+        li {
+            padding: 20px;
+            display: inline-block;
+            text-align: center;
+            @media (max-width: $screen-xs-max) {
+                width: 100%;
+            }
+            .shareButton {
+                display: block;
+                margin: 0;
+                width: 100%;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: contain;
+                color: $gray-lighter;
+                font-size: 2.5em;
+            }
+        }
+    }
+}
+
+.icon-facebook:hover {
+    color: #3B5998;
+}
+
+.icon-twitter:hover {
+    color: #33CCFF;
+}
+
+.icon-google-plus:hover {
+    color: #d34836;
+}
+
+.icon-linkedin:hover {
+    color: #0077b5;
+}
+
+.icon-github:hover {
+    color: #333333;
+}
+
+.icon-mail2:hover {
+    color: #dc4e41;
+}
+
+.icon-rss:hover {
+    color: #f26522;
+}
+
+.modal-toggle-group {
+    position: fixed;
+    display: block;
+    bottom: 15px;
+    right: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: $zIndex-7--modal-toggle-group;
+}
+
+.modal-toggle-group.active {
+    opacity: 1;
+    visibility: visible;
+    &.scaleIn {
+        transform: scale(1);
+    }
+}
+
+.modal-toggle-group,
+.modal-toggle-wrapper,
+.modal-toggle-close-wrapper,
+.modal-toggle-bubble,
+.modal-toggle-bubbleShadow {
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+}
+
+.modal-toggle-wrapper {
+    position: absolute;
+    top: 0;
+    display: block;
+    background-image: url(../img/heart.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 60%;
+    background-color: transparent;
+    cursor: pointer;
+    transform: scale(1);
+    transition: all 0.3s ease-out;
+    z-index: $zIndex-7--modal-toggle-wrapper;
+}
+
+.modal-toggle-wrapper.active {
+    opacity: 0;
+    transform: rotate(360deg);
+}
+
+.modal-toggle-close-wrapper {
+    position: absolute;
+    top: 0;
+    z-index: $zIndex-6--modal-toggle-close;
+    opacity: 0;
+    transition: opacity 0.3s;
+    .modal-toggle-close {
+        position: absolute;
+        top: 48%;
+        left: 15%;
+        display: block;
+        width: 30px;
+        height: 2px;
+        background: transparent;
+        transition: background 0.3s;
+        z-index: inherit;
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            background: inherit;
+            width: 100%;
+            height: 100%;
+            transform: translateZ(0);
+            backface-visibility: hidden;
+            transition: transform 0.5s, background 0s;
+        }
+        &:before {
+            top: -6px;
+            transform: rotate(0);
+        }
+        &:after {
+            bottom: -6px;
+            transform: rotate(0);
+        }
+    }
+}
+
+.modal-toggle-close-wrapper.active {
+    opacity: 1;
+    z-index: $zIndex-6--modal-toggle-close;
+    .modal-toggle-close {
+        background: transparent;
+        &:before,
+        &:after {
+            background: $white;
+        }
+        &:before {
+            top: 0;
+            transform: rotate(135deg);
+        }
+        &:after {
+            bottom: 0;
+            transform: rotate(225deg);
+        }
+    }
+}
+
+.modal-toggle-bubble {
+    position: absolute;
+    top: 0;
+    background-color: rgba($black, .9);
+    transform: scale(1);
+    transition: all 0.3s ease-out;
+    z-index: $zIndex-6--modal-toggle-bubble;
+}
+
+.modal-toggle-bubble.active {
+    transform: scale(100);
+    transition: all 0.6s ease-out;
+    transition-delay: .4s;
+}
+
+.modal-toggle-bubbleShadow {
+    position: absolute;
+    top: 0;
+    background-color: $black;
+    transform: scale(1);
+    opacity: 1;
+    z-index: $zIndex-5--modal-toggle-bubbleshadow;
+}
+
+.modal-toggle-bubbleShadow.active {
+    transform: scale(1.5);
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+
+// share buttons
+.h2--shareTitle {
+    margin-top: -30px;
+}

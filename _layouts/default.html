@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-us" class="no-js">
-
   {% include head.html %}
-
   <body>
-    {% if page.url != '/' %}
-      <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
-      {% include sidebar-nav.html %}
-      {% include menu.html %}
-    {% endif %}
+    <div class="brand-name-container">
+        <div class="brand-name-bg">
+        </div>
+        <a href="/#top" class="brand-name no-hyphens">
+            <span data-hover="lee">lee</span><span>trung</span><span data-hover="hoo">hoo</span>
+        </a>
+    </div>
+
+    <a name="top"></a>
 
     {{ content }}
-
-    {% if page.url != '/' %}
-      {% include sidebar-toggle.html %}
-    {% endif %}
 
     {% include footer-scripts.html %}
   </body>

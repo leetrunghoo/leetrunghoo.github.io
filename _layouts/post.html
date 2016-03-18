@@ -1,93 +1,85 @@
 ---
 layout: default
 ---
-<article class="postWrapper">
-  <section class="section--first is-darkBackgrounded u-table">
-    <div class="section-backgroundImage">
 
-      {% if page.image.feature %}
-        <img class="post-featuredImage" src="{{ page.image.feature | prepend: site.baseurl_featured_img }}" style="
-        {% if page.image.style %}
-          {{ page.image.style }};
-        {% endif %}
-        " alt="">
-      {% endif %}
+{% include sidebar-nav.html %}
 
+<div id="container" class="intro-effect-fadeout content">
+<header class="header">
+    <div class="bg-img
+              {% if page.bgGradientOpacity == "darker" %}
+                gradient-darker
+              {% elsif page.bgGradientOpacity == "lighter" %}
+                gradient-lighter
+              {% endif %}
+      " style="background-image: url({{ page.image.hero }});{% if page.image.heroStyle %}{{ page.image.heroStyle }}{% endif %}">
     </div>
-    <div class="section-gradient
-    {% if page.bgGradientOpacity == "darker" %}
-      section-gradient--darker
-    {% elsif page.bgGradientOpacity == "lighter" %}
-      section-gradient--lighter
-    {% endif %}
-    "></div>
-    <div class="section-title is-darkBackgrounded u-tableCell u-verticalAlignMiddle">
-      <div class="container">
-        <h2>{{ page.title }}</h2>
-        <div class="postMeta-wrapper">
-          <ul class="postMeta">
-            <li class="postMeta-datetime">
-              <time datetime="{{ page.date }}">
-                {{ page.date | date_to_string }}
-              </time>
-            </li>
-            <li class="postMeta-author">
-              By {{ site.author.name }}
-            </li>
-            <li class="postMeta-tags">
-              {{ page.categories }}
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="section--last">
-    <div class="container container--content">
-      <div class="content-body">
-
-        {{ content }}
-
-      </div>
-    </div>
-    <hr class="u-clearHr"/>
-    <hr class="u-clearHr"/>
-    <hr/>
-    <div class="container container--content">
-      <div class="content-body">
-        {% include subscribe.html %}
-        {% include comments.html %}
-      </div>
-    </div>
-  </section>
-  <footer class="postFooter">
-    {% if page.previous.url %}
-      <section class="section--prePost is-darkBackgrounded u-table">
-        <div class="section-backgroundImage section-backgroundImage--previousPage">
-          <img class="post-featuredImage"
-          {% if page.previous.image.feature %}
-            src="{{ page.previous.image.feature | prepend: site.baseurl_featured_img }}"
+    <div class="title">
+      <div>
+          <h1>{{ page.title }}</h1>
+          {% if page.showExcerpt == true %}
+          <h3 class="subline">{{ page.excerpt }}</h3>
           {% endif %}
-          style="top:0" alt="">
+          <div class="subline-2">by <strong>{{ site.author.name }}</strong> &#8212; Posted in <strong>{{ page.categories }}</strong> on <strong><time datetime="{{ page.date }}">
+              {{ page.date | date_to_string }}
+            </time></strong></div>
+      </div>
+    </div>
+</header>
+
+<button class="trigger" ></button>
+
+<article>
+  <div class="container container--content">
+    <div class="content-body">
+
+      {{ content }}
+
+    </div>
+  </div>
+  <hr class="u-clearHr"/>
+  <hr class="u-clearHr"/>
+  <hr/>
+  <div class="container container--content">
+    <div class="content-body">
+      {% include subscribe.html %}
+      {% include comments.html %}
+    </div>
+  </div>
+  <footer class="postFooter">
+    {% if page.next.url %}
+      <section class="section--prePost is-darkBackgrounded u-table">
+        <div class="section-backgroundImage section-backgroundImage--nextPage" style="background-image:url({{ page.next.image.hero }})">
         </div>
         <div class="section-gradient
-        {% if page.previous.bgGradientOpacity == "darker" %}
+        {% if page.next.bgGradientOpacity == "darker" %}
           section-gradient--darker
-        {% elsif page.previous.bgGradientOpacity == "lighter" %}
+        {% elsif page.next.bgGradientOpacity == "lighter" %}
           section-gradient--lighter
         {% endif %}
         "></div>
         <div class="section-title u-tableCell u-verticalAlignMiddle">
           <div class="container">
-            <h4>Next story:</h4>
-            <a class="prev" href="{{page.previous.url}}">
-              <h2>{{page.previous.title}}</h2>
+            <a class="prev" href="{{page.next.url}}">
+              <h4>Next story:</h4>
+              <h2>{{page.next.title}}</h2>
             </a>
           </div>
         </div>
       </section>
+      <footer class="section--footer footer-transparent">
+        © 2016 Made by <strong>Trung Ho</strong> with <div class="icon-heart heart-beating"></div>
+      </footer>
+    {% else %}
+      <footer class="section--footer">
+        © 2016 Made by <strong>Trung Ho</strong> with <div class="icon-heart heart-beating"></div>
+      </footer>
     {% endif %}
   </footer>
 </article>
 
 {% include modal.html %}
+
+<script type="text/javascript">
+    document.querySelector('.brand-name-container').className += ' hide-on-mobile';
+</script>

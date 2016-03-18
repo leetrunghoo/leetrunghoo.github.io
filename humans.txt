@@ -1,9 +1,3 @@
-    __  _______________ __ ________  __
-   /  |/  /  _/ ____/ //_// ____/\ \/ /
-  / /|_/ // // /   / ,<  / __/    \  /
- / /  / // // /___/ /| |/ /___    / /
-/_/  /_/___/\____/_/ |_/_____/   /_/
-
 The humans.txt file explains the technology, and graphic assets
 behind this site.
 
@@ -11,11 +5,8 @@ _______________________________________________________________________________
 
 PEOPLE
 
-This Jekyll theme was hand-crafted by:
-
-Vincent Chan
-Interaction design, visual design, content, web development
-http://www.twitter.com/vincentchan
+Owner: Trung Ho (https://leetrunghoo.com)
+This Jekyll theme was inspired by Mickey theme https://github.com/vincentchan/mickey
 
 _______________________________________________________________________________
 
