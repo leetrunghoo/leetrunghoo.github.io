@@ -13,6 +13,7 @@ $scale: 1;
 $font-XXS: 0.563rem;
 $font-XS: 0.75rem;
 $font-XS1: 0.80rem;
+$font-XS2: 0.90rem;
 $font-S: 1rem;
 $font-M: 1.333rem;
 $font-L: 1.777rem;
@@ -21,12 +22,30 @@ $font-XXL: 3.157rem;
 $font-XXXL: 4.209rem;
 $font-XXXXL: 5.61rem;
 // Font type
-$body-primary-font: 'Lato',
-sans-serif;
-$title-primary-font: 'Lato',
-sans-serif;
-$title-secondary-font: 'Roboto',
-sans-serif;
+$body-primary-font: 'Lato', sans-serif;
+$title-primary-font: 'Lato', sans-serif;
+$title-secondary-font: 'Roboto',  sans-serif;
+
+
+.font-xs { 
+    font-size: $font-XS; 
+}
+.font-xs1 { 
+    font-size: $font-XS1; 
+}
+.font-xs2 { 
+    font-size: $font-XS2; 
+}
+.font-s { 
+    font-size: $font-S; 
+}
+.font-m { 
+    font-size: $font-M; 
+}
+.font-l { 
+    font-size: $font-L; 
+}
+
 
 /* Setup */
 

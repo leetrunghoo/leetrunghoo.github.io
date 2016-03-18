@@ -177,7 +177,7 @@
 .section--subscribe {
     width: 100%;
     background: $white;
-    padding: $leading 0 0;
+    padding: $leading 0 $leading * 1.5;
     position: relative;
     z-index: $zIndex-4--posts-wrapper;
     h3 {

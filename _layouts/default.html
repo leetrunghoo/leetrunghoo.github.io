@@ -5,7 +5,7 @@
     <div class="brand-name-container">
         <div class="brand-name-bg">
         </div>
-        <a href="/#top" class="brand-name no-hyphens">
+        <a href="{% if page.url == '/' %}/#top{% else %}/{% endif %}" class="brand-name no-hyphens">
             <span data-hover="lee">lee</span><span>trung</span><span data-hover="hoo">hoo</span>
         </a>
     </div>
