@@ -5,8 +5,10 @@ excerpt: "Well, today I start to make my own portfolio website! Wish my luck."
 categories: Life
 tags: code, life
 image:
-  feature: hello-world.jpg
-  style: 
+  hero: /assets/img/hero/hello-world.jpg
+  heroStyle:
+  thumbnail: /assets/img/thumbnail/hello-world.jpg
+  thumbnailStyle:
 bgGradientOpacity: 
 ---
 Well, today I start to make my own portfolio website! Wish my luck. :smile:

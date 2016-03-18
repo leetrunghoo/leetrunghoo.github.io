@@ -5,16 +5,12 @@
     <div class="brand-name-container">
         <div class="brand-name-bg">
         </div>
-        <a href="/#" class="brand-name no-hyphens">
+        <a href="/#top" class="brand-name no-hyphens">
             <span data-hover="lee">lee</span><span>trung</span><span data-hover="hoo">hoo</span>
         </a>
     </div>
-    {% if page.url != '/' %}
-      <script type="text/javascript">
-          document.querySelector('.brand-name-container').className += ' hide-on-mobile';
-      </script>
-      {% include sidebar-nav.html %}
-    {% endif %}
+
+    <a name="top"></a>
 
     {{ content }}
 

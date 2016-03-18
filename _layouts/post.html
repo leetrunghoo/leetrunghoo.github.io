@@ -1,7 +1,9 @@
 ---
 layout: default
 ---
-<a name="top"></a>
+
+{% include sidebar-nav.html %}
+
 <div id="container" class="intro-effect-fadeout content">
 <header class="header">
     <div class="bg-img
@@ -10,7 +12,7 @@ layout: default
               {% elsif page.bgGradientOpacity == "lighter" %}
                 gradient-lighter
               {% endif %}
-      " style="background-image: url({{ page.image.feature | prepend: site.baseurl_featured_img }});{% if page.image.style %}{{ page.image.style }}{% endif %}">
+      " style="background-image: url({{ page.image.hero }});{% if page.image.heroStyle %}{{ page.image.heroStyle }}{% endif %}">
     </div>
     <div class="title">
       <div>
@@ -45,33 +47,39 @@ layout: default
     </div>
   </div>
   <footer class="postFooter">
-    {% if page.previous.url %}
+    {% if page.next.url %}
       <section class="section--prePost is-darkBackgrounded u-table">
-        <div class="section-backgroundImage section-backgroundImage--previousPage">
-          <img class="post-featuredImage"
-          {% if page.previous.image.feature %}
-            src="{{ page.previous.image.feature | prepend: site.baseurl_featured_img }}"
-          {% endif %}
-          style="top:0" alt="">
+        <div class="section-backgroundImage section-backgroundImage--nextPage" style="background-image:url({{ page.next.image.hero }})">
         </div>
         <div class="section-gradient
-        {% if page.previous.bgGradientOpacity == "darker" %}
+        {% if page.next.bgGradientOpacity == "darker" %}
           section-gradient--darker
-        {% elsif page.previous.bgGradientOpacity == "lighter" %}
+        {% elsif page.next.bgGradientOpacity == "lighter" %}
           section-gradient--lighter
         {% endif %}
         "></div>
         <div class="section-title u-tableCell u-verticalAlignMiddle">
           <div class="container">
-            <h4>Next story:</h4>
-            <a class="prev" href="{{page.previous.url}}">
-              <h2>{{page.previous.title}}</h2>
+            <a class="prev" href="{{page.next.url}}">
+              <h4>Next story:</h4>
+              <h2>{{page.next.title}}</h2>
             </a>
           </div>
         </div>
       </section>
+      <footer class="section--footer footer-transparent">
+        © 2016 Made by <strong>Trung Ho</strong> with <div class="icon-heart heart-beating"></div>
+      </footer>
+    {% else %}
+      <footer class="section--footer">
+        © 2016 Made by <strong>Trung Ho</strong> with <div class="icon-heart heart-beating"></div>
+      </footer>
     {% endif %}
   </footer>
 </article>
 
 {% include modal.html %}
+
+<script type="text/javascript">
+    document.querySelector('.brand-name-container').className += ' hide-on-mobile';
+</script>

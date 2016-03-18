@@ -23,8 +23,6 @@
         left: 0;
         border-radius: 20px;
         opacity: 0.7;
-        -webkit-transition: opacity 0.3s;
-        -moz-transition: opacity 0.3s;
         transition: opacity 0.3s;
     }
     .brand-name {
@@ -53,8 +51,6 @@
                 overflow: hidden;
                 max-width: 0;
                 content: attr(data-hover);
-                -webkit-transition: max-width 0.5s;
-                -moz-transition: max-width 0.5s;
                 transition: max-width 0.5s;
             }
             &:nth-child(3)::before {

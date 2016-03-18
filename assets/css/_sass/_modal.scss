@@ -44,27 +44,39 @@
                 background-repeat: no-repeat;
                 background-position: center center;
                 background-size: contain;
-                opacity: 0.8;
-                color: white;
+                color: $gray-lighter;
                 font-size: 2.5em;
-                &:hover {
-                    opacity: 1;
-                }
-                .icon-facebook:hover {
-                    color: #3B5998;
-                }
-                .icon-twitter:hover {
-                    color: #33CCFF;
-                }
-                .icon-google-plus:hover {
-                    color: #d34836;
-                }
-                .icon-linkedin:hover {
-                    color: #4875B4;
-                }
             }
         }
     }
+}
+
+.icon-facebook:hover {
+    color: #3B5998;
+}
+
+.icon-twitter:hover {
+    color: #33CCFF;
+}
+
+.icon-google-plus:hover {
+    color: #d34836;
+}
+
+.icon-linkedin:hover {
+    color: #0077b5;
+}
+
+.icon-github:hover {
+    color: #333333;
+}
+
+.icon-mail2:hover {
+    color: #dc4e41;
+}
+
+.icon-rss:hover {
+    color: #f26522;
 }
 
 .modal-toggle-group {

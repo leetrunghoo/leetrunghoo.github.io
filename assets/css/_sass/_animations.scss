@@ -17,3 +17,40 @@
 .scaleIn {
 	transform: scale(0);
 }
+
+
+@mixin animation_blink() {
+    opacity: 1;
+    animation: blink 0.7s infinite;
+}
+
+@mixin animation_move() {
+    bottom: 40px;
+    animation: move 0.5s infinite alternate;
+}
+
+@mixin animation_scale_font() {
+    animation: scale_font 0.5s infinite alternate;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes move {
+  from { bottom: 40px; }
+  to   { bottom: 20px; }
+}
+
+@keyframes scale_font {
+  from { font-size: 0.75rem; }
+  to   { font-size: 1rem }
+}

@@ -5,6 +5,10 @@ var gulp = require('gulp'),
     minifycss = require('gulp-clean-css'),
     rename = require('gulp-rename'),
     postcss = require('gulp-postcss'),
+    concat = require('gulp-concat'),
+    rename = require('gulp-rename'),
+    uglify = require('gulp-uglify'),
+    uncss = require('gulp-uncss'),
     imageResize = require('gulp-image-resize'),
     // responsive = require('gulp-responsive'),
     parallel = require("concurrent-transform"),
@@ -72,6 +76,22 @@ gulp.task('styles', function() {
         .pipe(gulp.dest('assets/css'));
 });
 
+
+/**
+ * concat all js files then minify it
+ */
+gulp.task('scripts', function() {  
+    return gulp.src('assets/js/*.js') 
+        // .pipe(concat('scripts.js'))
+        // .pipe(gulp.dest('assets/js'))
+        // .pipe(rename('scripts.min.js'))
+        .pipe(uglify())
+        .pipe(rename({
+          suffix: '.min'
+        }))
+        .pipe(gulp.dest('assets/js'));
+});
+ 
 /**
  * Automatically resize post feature images and turn them into thumbnails
  */
@@ -116,6 +136,7 @@ gulp.task("resizeImages", function() {
  * Watch _site generation, reload BrowserSync
  */
 gulp.task('watch', function() {
+    gulp.watch('assets/js/*.js', ['scripts']);
     gulp.watch('assets/css/**/*.scss', ['styles']);
     // gulp.watch('assets/img/hero/*.{jpg,png}', ['thumbnails']);
     gulp.watch(['*.html',

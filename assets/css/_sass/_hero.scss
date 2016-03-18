@@ -63,6 +63,13 @@
   z-index: $zIndex-neg2--carousel-backgroundImg;
   overflow: hidden;
 
+  &.section-backgroundImage--nextPage {
+    background: url() no-repeat center center;
+    background-size: cover;
+    @media (max-width: $screen-xs-max) {
+    }
+  }
+
   .post-featuredImage {
     min-width: 100%;
     min-height: 19 * $leading;
@@ -97,10 +104,6 @@
       opacity: 1;
     }
   }
-}
-
-.section-backgroundImage--previousPage img {
-  position: relative;
 }
 
 .section-gradient {
@@ -153,6 +156,7 @@
 .section-title h2,
 .section-title h4 {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 .section-title h2 {

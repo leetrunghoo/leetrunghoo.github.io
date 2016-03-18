@@ -1,3 +1,4 @@
+
 /*!
  * classie v1.0.1
  * class helper functions
@@ -14,8 +15,6 @@
 /*global define: false, module: false */
 
 ( function( window ) {
-
-'use strict';
 
 // class helper functions from bonzo https://github.com/ded/bonzo
 

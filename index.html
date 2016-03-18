@@ -34,14 +34,14 @@ title: Trung Ho
                     <li class="block">
                         <div class="postArticle-wrapper">
                             <article class="postArticle postArticle--short">
-                                {% if post.image.feature %}
+                                {% if post.image.hero %}
                                 <a href="{{ post.url }}">
-                                    <div class="postArticle-image desaturate" style="background-image:url('{{ post.image.feature | prepend: site.baseurl_featured_img }}')">
+                                    <div class="postArticle-image desaturate" style="background-image:url('{{ post.image.hero }}')">
                                     </div>
                                 </a>
                                 {% else %}
                                 <a href="{{ post.url }}">
-                                    <div class="postArticle-image" style="background-image:url('{{site.baseurl}}assets/img/logo-black.svg')">
+                                    <div class="postArticle-image" style="background-image:url('{{site.baseurl}} assets/img/logo-150.png')">
                                     </div>
                                 </a>
                                 {% endif %}
@@ -56,6 +56,14 @@ title: Trung Ho
         </div>
     </section>
 </article>
+
+{% include subscribe.html %}
+
+<hr class="u-clearHr"/>
+<footer class="section--footer">
+  © 2016 Made by <strong>Trung Ho</strong> with <div class="icon-heart heart-beating"></div>
+</footer>
+
 <script type="text/javascript">
-document.querySelector('article').style.display = 'none';
+    document.querySelector('article').style.display = 'none';
 </script>

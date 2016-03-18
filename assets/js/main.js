@@ -42,8 +42,7 @@ $.fn.typingAnimation = function(callback) {
         setTimeout(type, 80);
     };
 };
-
-
+  
 // detect if IE : from http://stackoverflow.com/a/16657946		
 var ie = (function() {
     var undef, rv = -1; // Return value assumes failure.
@@ -139,7 +138,7 @@ $(function() {
                 }
             }
         });
-    }
+    } 
 
     // mickey
 
@@ -185,11 +184,12 @@ $(function() {
 
     $(document).scroll(function() {
         // Show modal toggle after scrolling 300px
-        $('.modal-toggle-group').toggleClass('active', $(document).scrollTop() >= 300);
-        if ($(document).scrollTop() < 300 && $('.modal-toggle-bubble').hasClass('active')) {
+        var docScrollTop = $(document).scrollTop();
+        $('.modal-toggle-group').toggleClass('active', (docScrollTop >= 300 && docScrollTop <= $('.section--subscribe').offset().top - 300));
+        if ((docScrollTop < 300 || docScrollTop > $('.section--subscribe').offset().top - 300) && $('.modal-toggle-bubble').hasClass('active')) {
             $('.modal-toggle-wrapper').click();
         }
         // brand name
         $('.brand-name-container').toggleClass('transparent', $(document).scrollTop() >= 100);
     });
-});
+}); 

@@ -6,8 +6,10 @@ excerpt: "Quick reference and showcase Markdown."
 categories: tech
 tags: code, markdown, jekyll
 image:
-  feature: markdown.png
-  style: "background-size: 70%"
+  hero: /assets/img/hero/markdown.png
+  heroStyle: "background-size: 70%"
+  thumbnail: /assets/img/thumbnail/markdown.png
+  thumbnailStyle:
 bgGradientOpacity: darker
 ---
 

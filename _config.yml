@@ -1,5 +1,5 @@
 # https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title/
+permalink:           /:categories/:title/
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:    UA-73537086-1
@@ -12,30 +12,28 @@ timezone:            asia/hanoi # eg. Asia/Kathmandu
 locale:              vi_VN # eg. en_us
 name:                Trung Ho
 title:               Trung Ho
-tagline:             'Software Developer - Music Lover'
-description:         'Personal website of Trung Ho'
+tagline:             Software Developer - Music Lover
+description:         Personal website of Trung Ho
 url:                 
-rss:                 rss feed url
-baseurl:             '/'
-baseurl_posts_img:   '/assets/img/posts/'
-baseurl_featured_img: '/assets/img/hero/'
-baseurl_featured_thumbnail: '/assets/img/thumbnail/'
-baseurl_js:          '/assets/js/'
-icon:                /assets/img/logo.png
+url_public:          http://leetrunghoo.com
+rss:                 /rss.xml
+baseurl:             /
+baseurl_js:          /assets/js/
+icon:                /assets/img/logo-150.png
 disqus:              leetrunghoo # get it on https://disqus.com/admin/
 gems:
   - jemoji
 
-future:      true
-
-highlighter: rouge
-markdown: kramdown
+future:              true
+highlighter:         rouge
+markdown:            kramdown
 kramdown:
-  input: GFM  # GitHub Flavored Markdown
+  input:             GFM  # GitHub Flavored Markdown
 
 author:
   name:              Trung Ho
   url:               www.leetrunghoo.com
+  github:            leetrunghoo
   facebook:          leetrunghoo
   twitter:           leetrunghoo
   google_plus:       leetrunghoo

@@ -25,7 +25,7 @@ pre.highlight {
 	line-height: 1.5;
 	color: #333332;
 	margin-bottom: 1.5em;
-	@include rounded(4px);
+	border-radius : 4px;
 	code {
 		padding: 0;
 	}

@@ -5,8 +5,10 @@ excerpt: "Freedom is not always good, in some cases, it would bring to you diffi
 categories: Life
 tags: code, life
 image:
-  feature: work-desk-old.jpg
-  style: 
+  hero: /assets/img/hero/work-desk-old.jpg
+  heroStyle:
+  thumbnail: /assets/img/thumbnail/work-desk-old.jpg
+  thumbnailStyle:
 bgGradientOpacity: 
 ---
 >Freedom is not always good, in some cases, it would bring to you difficult decisions.
