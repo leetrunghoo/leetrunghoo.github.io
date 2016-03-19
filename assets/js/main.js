@@ -42,8 +42,33 @@ $.fn.typingAnimation = function(callback) {
         setTimeout(type, 80);
     };
 };
-  
-// detect if IE : from http://stackoverflow.com/a/16657946		
+
+// http://stackoverflow.com/questions/9847580/how-to-detect-safari-chrome-ie-firefox-and-opera-browser
+    // Opera 8.0+
+var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+    // Firefox 1.0+
+var isFirefox = typeof InstallTrigger !== 'undefined';
+    // At least Safari 3+: "[object HTMLElementConstructor]"
+var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+    // Internet Explorer 6-11
+var isIE = /*@cc_on!@*/false || !!document.documentMode;
+    // Edge 20+
+var isEdge = !isIE && !!window.StyleMedia;
+    // Chrome 1+
+var isChrome = !!window.chrome && !!window.chrome.webstore;
+    // Blink engine detection
+var isBlink = (isChrome || isOpera) && !!window.CSS;
+window.os = {
+    isOpera: isOpera,
+    isFirefox: isFirefox,
+    isSafari: isSafari,
+    isIE: isIE,
+    isEdge: isEdge,
+    isChrome: isChrome,
+    isBlink: isBlink,
+}
+
+// detect if IE : from http://stackoverflow.com/a/16657946      
 var ie = (function() {
     var undef, rv = -1; // Return value assumes failure.
     var ua = window.navigator.userAgent;
@@ -63,7 +88,7 @@ var ie = (function() {
 }());
 
 
-// disable/enable scroll (mousewheel and keys) from http://stackoverflow.com/a/4770179					
+// disable/enable scroll (mousewheel and keys) from http://stackoverflow.com/a/4770179                  
 // left: 37, up: 38, right: 39, down: 40,
 // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
 var keys = [32, 37, 38, 39, 40],
@@ -138,7 +163,7 @@ $(function() {
                 }
             }
         });
-    } 
+    }
 
     // mickey
 
@@ -192,4 +217,4 @@ $(function() {
         // brand name
         $('.brand-name-container').toggleClass('transparent', $(document).scrollTop() >= 100);
     });
-}); 
+});

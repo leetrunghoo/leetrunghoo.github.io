@@ -28,7 +28,7 @@ gulp.task('jekyll-build', function(done) {
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', ['styles', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['styles', 'scripts', 'jekyll-build'], function() {
     browserSync.init({
         server: {
             baseDir: '_site'
@@ -81,7 +81,7 @@ gulp.task('styles', function() {
  * concat all js files then minify it
  */
 gulp.task('scripts', function() {  
-    return gulp.src('assets/js/*.js') 
+    return gulp.src(['assets/js/*.js']) 
         // .pipe(concat('scripts.js'))
         // .pipe(gulp.dest('assets/js'))
         // .pipe(rename('scripts.min.js'))
@@ -89,7 +89,7 @@ gulp.task('scripts', function() {
         .pipe(rename({
           suffix: '.min'
         }))
-        .pipe(gulp.dest('assets/js'));
+        .pipe(gulp.dest('assets/js/min'));
 });
  
 /**

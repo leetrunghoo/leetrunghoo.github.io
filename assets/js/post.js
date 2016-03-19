@@ -55,16 +55,14 @@
             isAnimating = false;
             if (reveal) {
                 noscroll = false;
-                // enable_scroll();
             }
-        }, 600);
+        }, 300);
     }
 
     // refreshing the page...
     var pageScroll = scrollY();
     noscroll = pageScroll === 0;
 
-    // disable_scroll();
 
     if (pageScroll) {
         isRevealed = true;

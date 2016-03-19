@@ -19,11 +19,8 @@
     }
 
     function initEvents() {
-        // openbtn.addEventListener('click', toggleMenu);
-        // if (closebtn) {
-        //     closebtn.addEventListener('click', toggleMenu);
-        // }
-
+        var recentPosts = document.querySelector('.sidebar-recentPosts');
+        Ps.initialize(recentPosts, {});
         // close the menu element if the target it´s not the menu element or one of its descendants..
         container.addEventListener('click', function(ev) {
             var target = ev.target;
@@ -47,10 +44,10 @@
                 // reset path
                 path.attr('d', initialPath);
                 isAnimating = false;
-                enable_scroll();
+                // enable_scroll();
             }, 300);
         } else {
-            disable_scroll();
+            // disable_scroll();
             classie.add(bodyEl, 'show-menu');
             // animate path
             var pos = 0,
