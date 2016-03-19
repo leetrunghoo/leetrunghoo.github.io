@@ -51,16 +51,16 @@ gulp.task('browser-sync', ['styles', 'scripts', 'jekyll-build'], function() {
 
 // To support opacity in IE 8
 
-var opacity = function(css) {
-    css.walkDecls(function(decl, i) {
-        if (decl.prop === 'opacity') {
-            decl.parent.insertAfter(i, {
-                prop: '-ms-filter',
-                value: '"progid:DXImageTransform.Microsoft.Alpha(Opacity=' + (parseFloat(decl.value) * 100) + ')"'
-            });
-        }
-    });
-};
+// var opacity = function(css) {
+//     css.walkDecls(function(decl, i) {
+//         if (decl.prop === 'opacity') {
+//             decl.parent.insertAfter(i, {
+//                 prop: '-ms-filter',
+//                 value: '"progid:DXImageTransform.Microsoft.Alpha(Opacity=' + (parseFloat(decl.value) * 100) + ')"'
+//             });
+//         }
+//     });
+// };
 
 /**
  * Compile files from sass into both assets/css (for live injecting) and site (for future jekyll builds)
@@ -69,7 +69,7 @@ gulp.task('styles', function() {
     return gulp.src('assets/css/main.scss')
         .pipe(sass({ outputStyle: 'expanded' }))
         .pipe(autoprefixer({ browsers: ['last 2 versions', 'Firefox ESR', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'] }))
-        .pipe(postcss([opacity]))
+        // .pipe(postcss([opacity]))
         .pipe(gulp.dest('assets/css'))
         // .pipe(rename({suffix: '.min'}))
         .pipe(minifycss())
