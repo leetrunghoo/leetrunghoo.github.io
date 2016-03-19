@@ -81,6 +81,7 @@
 }
 
 #welcomeContainer {
+    background-color: transparent;
     h2 {
         font-weight: normal;
         padding: 0;
@@ -202,7 +203,7 @@ a[target="_blank"]:not(.no-underline) {
 
 .opacity-0 {
   opacity: 0;
-}
-.opacity-1 {
-  opacity: 1;
+  &::before, &::after {
+     opacity: 0;
+  }
 }
