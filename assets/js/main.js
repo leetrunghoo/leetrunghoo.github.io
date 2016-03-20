@@ -170,10 +170,10 @@ $(function() {
     // mickey
 
     // Featured image loaded behavior
-    $('.section-backgroundImage img').imagesLoaded()
-        .done(function(instance) {
-            $('.post-featuredImage').addClass('is-loaded');
-        });
+    // $('.section-backgroundImage img').imagesLoaded()
+    //     .done(function(instance) {
+    //         $('.post-featuredImage').addClass('is-loaded');
+    //     });
 
     // Modal toggle behavior
     $('.modal-toggle-wrapper').click(function() {
