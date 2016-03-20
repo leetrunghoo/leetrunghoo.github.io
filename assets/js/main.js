@@ -174,7 +174,7 @@ $(function() {
     //     .done(function(instance) {
     //         $('.post-featuredImage').addClass('is-loaded');
     //     });
-
+    $('.post-featuredImage').addClass('is-loaded');
     // Modal toggle behavior
     $('.modal-toggle-wrapper').click(function() {
         $(this).toggleClass('active');
