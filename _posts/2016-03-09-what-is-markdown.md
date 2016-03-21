@@ -325,6 +325,7 @@ Note: this just work when viewing .md file on github website, for example README
 Output:
 
 <input type="checkbox" disabled="disabled" checked="checked"> This is an complete item
+
 <input type="checkbox" disabled="disabled"> This is an incomplete item
 
 ---
