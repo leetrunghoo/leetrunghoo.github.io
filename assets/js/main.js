@@ -131,7 +131,7 @@ function enable_scroll() {
 
 $(function() {
     // show content after document ready
-    document.body.style.display = 'block';
+    document.body.style.opacity = 1;
 
     // add typing animation for home page
     $('#welcomeContainer').typingAnimation(function() {
