@@ -19,7 +19,7 @@ bgGradientOpacity: darker
 
 > "Markdown is a text-to-HTML conversion tool for web writers. Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid [XHTML (or HTML)](https://developer.mozilla.org/en-US/docs/Glossary/XHTML "HTML5 and HTML/XHTML"){:target="_blank"}".
 
-Let's take a look on how it works by the example I made on Codepen. The text on the left is writing in Markdown syntax and the output is on the right. You can play around by editing it:
+Let's take a look on how it works by the example I made on Codepen. The text on the left is writing in Markdown syntax and the output is on the right. You can play around by changing the text:
 <p data-height="480" data-theme-id="0" data-slug-hash="ZWEgew" data-default-tab="result" data-user="leetrunghoo" class='codepen'>See the Pen <a href='http://codepen.io/leetrunghoo/pen/ZWEgew/'>simple Markdown editor with Vuejs & Marked</a> by Trung Ho (<a href='http://codepen.io/leetrunghoo'>@leetrunghoo</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
@@ -311,11 +311,11 @@ Typing an @ symbol, followed by a username, will notify that person to come and 
 
 ### Task Lists <a name="12"></a> [[back to list]](#markdown-cheat-sheet)
 
-    [x] This is a complete item
-    [ ] This is an incomplete item
+    - [x] This is a complete item
+    - [ ] This is an incomplete item
 
-[x] This is a complete item
-[ ] This is an incomplete item
+- [x] This is a complete item
+- [ ] This is an incomplete item
 
 ---
 
