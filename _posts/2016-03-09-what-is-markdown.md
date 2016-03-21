@@ -62,6 +62,7 @@ GitHub uses Markdown with adding a few unique writing features for styling all f
 1. [Mentions](#11)
 1. [Task Lists](#12)
 1. [Emoji](#13)
+1. [Ignoring Markdown formatting](#14)
 
 ---
 
@@ -314,8 +315,17 @@ Typing an @ symbol, followed by a username, will notify that person to come and 
     - [x] This is a complete item
     - [ ] This is an incomplete item
 
-- [x] This is a complete item
-- [ ] This is an incomplete item
+Note: this just work when viewing .md file on github website, for example README.md. Another way (less pretty) is using HTML markup.
+
+``` html
+<input type="checkbox" disabled="disabled" checked="checked"> This is an complete item
+<input type="checkbox" disabled="disabled"> This is an incomplete item
+```
+
+Output:
+
+<input type="checkbox" disabled="disabled" checked="checked"> This is an complete item
+<input type="checkbox" disabled="disabled"> This is an incomplete item
 
 ---
 
@@ -323,6 +333,16 @@ Typing an @ symbol, followed by a username, will notify that person to come and 
 
 GitHub Flavored Markdown supports Emoji :+1: :smile: :heart: 
 Let's check out the [Emoji Cheat Sheet](http://www.emoji-cheat-sheet.com/){:target="_blank"}.
+
+---
+
+### Ignoring Markdown formatting <a name="14"></a> [[back to list]](#markdown-cheat-sheet)
+
+Last but not least, you can tell GitHub to ignore (or escape) Markdown formatting by using `\` before the Markdown character.
+
+    Let's rename \*our-new-project\* to \*our-old-project\*.
+
+ Let's rename \*our-new-project\* to \*our-old-project\*.
 
 ---
 
