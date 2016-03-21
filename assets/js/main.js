@@ -130,8 +130,8 @@ function enable_scroll() {
 
 
 $(function() {
-    // show article after document ready
-    document.querySelector('article').style.display = 'block';
+    // show content after document ready
+    document.body.style.display = 'block';
 
     // add typing animation for home page
     $('#welcomeContainer').typingAnimation(function() {
