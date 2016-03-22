@@ -15,7 +15,7 @@
     function scrollPage() {
         scrollVal = scrollY();
 
-        if (noscroll && !ie) {
+        if (noscroll && !window.os.isIE) {
             if (scrollVal < 0) return false;
             // keep it that way
             window.scrollTo(0, 0);
@@ -73,4 +73,48 @@
 
     window.addEventListener('scroll', scrollPage);
     trigger.addEventListener('click', function() { toggle('reveal'); });
+
+
+    // Modal toggle behavior
+    $('.modal-toggle-wrapper').click(function() {
+        $(this).toggleClass('active');
+        if ($(this).hasClass('active')) {
+            disable_scroll()
+            $('#menu-button-container').fadeOut();
+        } else {
+            enable_scroll();
+            $('#menu-button-container').fadeIn();
+        }
+        $('.modal-toggle-bubble').toggleClass('active');
+        $('.modal-toggle-bubbleShadow').toggleClass('active');
+        $('.modal-toggle-close-wrapper').toggleClass('active');
+        $('.fullscreenModal').toggleClass('active');
+    });
+
+    // Prevent default anchor event and make a share popup
+    $.fn.sharePopup = function(e, intWidth, intHeight, blnResize) {
+
+        e.preventDefault();
+        intWidth = intWidth || '750';
+        intHeight = intHeight || '500';
+        strResize = (blnResize ? 'yes' : 'no');
+
+        //// Set title and open popup with focus on it
+        var strTitle = ((typeof this.attr('title') !== 'undefined') ? this.attr('title') : 'Social Share'),
+            strParam = 'width=' + intWidth + ',height=' + intHeight + ',resizable=' + strResize,
+            objWindow = window.open(this.attr('href'), strTitle, strParam).focus();
+    }
+
+    $('.shareButton').on('click', function(e) {
+        $(this).sharePopup(e);
+    });
+
+    $(document).scroll(function() {
+        // Show modal toggle after scrolling 300px and hide it when nearly scroll to the end
+        var docScrollTop = $(document).scrollTop();
+        $('.modal-toggle-group').toggleClass('active', (docScrollTop >= 300 && docScrollTop <= $('.section--subscribe').offset().top - 300));
+        if ((docScrollTop < 300 || docScrollTop > $('.section--subscribe').offset().top - 300) && $('.modal-toggle-bubble').hasClass('active')) {
+            $('.modal-toggle-wrapper').click();
+        }
+    });
 })();
