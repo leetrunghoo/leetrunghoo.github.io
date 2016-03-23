@@ -1,4 +1,4 @@
-The humans.txt file explains the technology, and graphic assets
+The humans.txt file explains the technology, and assets
 behind this site.
 
 _______________________________________________________________________________
@@ -6,38 +6,35 @@ _______________________________________________________________________________
 PEOPLE
 
 Owner: Trung Ho (https://leetrunghoo.com)
-This Jekyll theme was inspired by Mickey theme https://github.com/vincentchan/mickey
+Email: leetrunghoo@gmail.com
 
 _______________________________________________________________________________
 
 TECHNOLOGY
 
-Jekyll
-http://jekyllrb.com/
+Jekyll (for building static web)
+http://jekyllrb.com
 
-jQuery
-http://jquery.com/
+Github Page (for hosting)
+https://github.com
 
-imagesLoaded
-https://github.com/desandro/imagesloaded
+jQuery (don't need to explain :D)
+http://jquery.com
 
-Sass
-http://sass-lang.com/
+Sass (preprocessor css)
+http://sass-lang.com
 
-SUIT CSS (styling methodology)
-https://suitcss.github.io/
+gulp.js (task runner)
+http://gulpjs.com
 
-gulp.js
-http://gulpjs.com/
-
-Prism (syntax highlighter)
-http://prismjs.com/
-
-Browsersync
+Browsersync (for live-server & for testing UI in multi-devices) 
 http://www.browsersync.io/
 
-Github
-https://github.com/
+Cloudflare (for https & optimization)
+https://www.cloudflare.com
+
+Codrops (a web design and development blog, has great inspirational articles for font-end dev)
+http://tympanus.net/codrops
 
 _______________________________________________________________________________
 
@@ -45,15 +42,15 @@ GRAPHIC ASSETS
 
 Roboto (font)
 https://www.google.com/fonts/specimen/Roboto
+Lato (font)
+https://www.google.com/fonts/specimen/Lato
 
-PT Sans (font)
-https://www.google.com/fonts/specimen/PT+Sans
+Icomoon (icons)
+https://icomoon.io/app
 
-Source Serif Pro (font)
-https://www.google.com/fonts/specimen/Source+Serif+Pro
+_______________________________________________________________________________
 
-Entypo (icons)
-http://www.entypo.com/
+IMAGES ASSETS
 
-Streamline (icons)
-http://www.streamlineicons.com/
+Unsplash (Free high-resolution photos)
+https://unsplash.com
