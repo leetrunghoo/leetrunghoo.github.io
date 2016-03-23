@@ -109,8 +109,8 @@ function enable_scroll() {
 }
 
 // load font
-var linkFont  = document.createElement('link');
-linkFont.rel  = 'stylesheet';
+var linkFont = document.createElement('link');
+linkFont.rel = 'stylesheet';
 linkFont.type = 'text/css';
 linkFont.href = 'http://fonts.googleapis.com/css?family=Lato:100,400';
 document.getElementsByTagName('head')[0].appendChild(linkFont);
@@ -141,13 +141,16 @@ $(function() {
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                 if (target.length) {
                     var offset = $(layoutContent).scrollTop() + target.offset().top - 25;
-                    var scrollAnimation = TweenLite.to(window, 2, {
-                        scrollTo: {
-                            y: offset
-                        },
-                        ease: Power4.easeOut
-                    });
-                    scrollAnimation.duration(1);
+                    $('html, body').animate({
+                        scrollTop: offset
+                    }, 700, 'easeOutQuint');
+                    // var scrollAnimation = TweenLite.to(window, 2, {
+                    //     scrollTo: {
+                    //         y: offset
+                    //     },
+                    //     ease: Power4.easeOut
+                    // });
+                    // scrollAnimation.duration(1);
                     return false;
                 }
             }
