@@ -39,7 +39,7 @@ $.fn.typingAnimation = function(callback) {
         if (char === '<') isTag = true;
         if (char === '>') isTag = false;
         if (isTag) return type();
-        setTimeout(type, 80);
+        setTimeout(type, 60);
     };
 };
 
@@ -107,6 +107,13 @@ function disable_scroll() {
 function enable_scroll() {
     window.onmousewheel = document.onmousewheel = document.onkeydown = document.body.ontouchmove = null;
 }
+
+// load font
+var linkFont  = document.createElement('link');
+linkFont.rel  = 'stylesheet';
+linkFont.type = 'text/css';
+linkFont.href = 'http://fonts.googleapis.com/css?family=Lato:100,400';
+document.getElementsByTagName('head')[0].appendChild(linkFont);
 
 
 $(function() {
