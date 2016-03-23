@@ -51,6 +51,13 @@
     }
 }
 
+.socialAccountList {
+    [class^="icon-"],
+    [class*=" icon-"] {
+        transition: color 0.3s ease;
+    }
+}
+
 .icon-facebook:hover {
     color: #3B5998;
 }
@@ -73,6 +80,10 @@
 
 .icon-mail2:hover {
     color: #dc4e41;
+}
+
+.icon-youtube:hover {
+    color: #cd201f;
 }
 
 .icon-rss:hover {
