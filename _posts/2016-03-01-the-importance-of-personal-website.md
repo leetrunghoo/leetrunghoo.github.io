@@ -30,3 +30,20 @@ If you’re an expert in something, it’s time to show the world (in this case,
 ## For personal branding
 
 The term branding has long been relegated to companies, but today almost every individual has a personal brand. What do you wish for people to associate with you when they think of your name? Once you understand how you wish your brand to be perceived, you can start to be much more strategic about your personal brand. And a website would help you to do that.
+
+## Writing blogs will be beneficial for yourself.
+
+As a software developer, I've learned new things every day. That's one of the reasons why I love my job: never feel bored when you still have tons of interesting stuff waiting for you to figure out. However, unless you take note about what you learned, you will forget them sooner or later. Sharing my knowledge also help others who have the same interest.
+
+> "We learn by teaching" - Latin proverb
+
+Blogging would help you to become a better writer and better thinker. You’ll live a more intentional life. Once you start writing about your life and the thoughts that shape it, you’ll begin thinking more intentionally about who you are, who you are becoming, and whether you like what you see or not. And that just may be reason enough to get started.
+
+---
+
+Disclaimer: This blog was written based on what I read.
+
+Reference:
+<http://simpleprogrammer.com/2013/06/24/3-easy-ways-to-market-yourself-as-a-software-developer/>
+<http://www.forbes.com/sites/jacquelynsmith/2013/04/26/why-every-job-seeker-should-have-a-personal-website-and-what-it-should-include/>
+<http://www.becomingminimalist.com/15-reasons-i-think-you-should-blog/>
