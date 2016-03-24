@@ -4,16 +4,16 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     minifycss = require('gulp-clean-css'),
     rename = require('gulp-rename'),
-    concat = require('gulp-concat'),
+    // concat = require('gulp-concat'),
     rename = require('gulp-rename'),
     uglify = require('gulp-uglify'),
-    uncss = require('gulp-uncss'),
+    // uncss = require('gulp-uncss'),
     imageResize = require('gulp-image-resize'),
     // responsive = require('gulp-responsive'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     parallel = require("concurrent-transform"),
-    changed = require("gulp-changed"),
+    // changed = require("gulp-changed"),
     os = require("os"),
     cp = require('child_process');
 
@@ -64,7 +64,8 @@ gulp.task('styles', function() {
         .pipe(gulp.dest('_includes'));
 });
 
-
+/*
+// currently, not use
 gulp.task('uncss', ['styles'], function() {
   return gulp.src(['_includes/main.css'])
         .pipe(uncss({
@@ -74,7 +75,7 @@ gulp.task('uncss', ['styles'], function() {
         }))
         .pipe(gulp.dest('_includes/'));
 });
-
+*/
 
 /**
  * concat all js files then minify it
@@ -132,11 +133,11 @@ gulp.task("resizeImages", function() {
  */
 gulp.task("optimizeImages", function() {
     gulp.src("assets/img/**")
-        .pipe(imagemin({
+        .pipe(parallel(imagemin({
             progressive: true,
             svgoPlugins: [{removeViewBox: false}],
             use: [pngquant()]
-        }))
+        })))
         .pipe(gulp.dest("assets/img"));
 });
 
