@@ -113,6 +113,12 @@ function enable_scroll() {
     window.onmousewheel = document.onmousewheel = document.onkeydown = document.body.ontouchmove = null;
 }
 
+// load font
+var linkFont  = document.createElement('link');
+linkFont.rel  = 'stylesheet';
+linkFont.type = 'text/css';
+linkFont.href = 'http://fonts.googleapis.com/css?family=Lato:100,400';
+document.getElementsByTagName('head')[0].appendChild(linkFont);
 
 $(function() {
     // show content after document ready
