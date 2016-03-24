@@ -106,6 +106,13 @@
   
   <!-- inline critical CSS  -->
   <style>
-      .menu{opacity:0;}
+    body {
+      opacity: 0; 
+      -webkit-transition: opacity 0.5s ease;
+      -moz-transition: opacity 0.5s ease;
+      -ms-transition: opacity 0.5s ease; 
+      transition: opacity 0.5s ease;
+    }
+    .menu{opacity:0;}
   </style>
 </head>
