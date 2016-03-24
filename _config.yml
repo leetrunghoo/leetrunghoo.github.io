@@ -10,7 +10,7 @@ bing_verify:
 # Setup
 timezone:            asia/hanoi # eg. Asia/Kathmandu
 locale:              vi_VN # eg. en_us
-name:                Trung Ho
+name:                Trung Ho (leetrunghoo)
 title:               leetrunghoo
 tagline:             Software Developer - Music Lover
 description:         Personal website of Trung Ho, Software Developer - Music Lover
@@ -32,7 +32,7 @@ kramdown:
 
 author:
   name:              Trung Ho
-  url:               www.leetrunghoo.com
+  url:               leetrunghoo.com
   github:            leetrunghoo
   facebook:          leetrunghoo
   twitter:           leetrunghoo
