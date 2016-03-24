@@ -19,6 +19,7 @@ var gulp = require('gulp'),
 
 /**
  * Build the Jekyll Site
+ * Note: need to generate css first to include inline css when Jekyll builds
  */
 gulp.task('jekyll-build', ['styles'], function(done) {
     var jekyll = process.platform === "win32" ? "jekyll.bat" : "jekyll"
@@ -29,7 +30,7 @@ gulp.task('jekyll-build', ['styles'], function(done) {
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', ['scripts', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['jekyll-build'], function() {
     browserSync.init({
         server: {
             baseDir: '_site'
@@ -50,30 +51,28 @@ gulp.task('browser-sync', ['scripts', 'jekyll-build'], function() {
     });
 });
 
-// To support opacity in IE 8
-
-// var opacity = function(css) {
-//     css.walkDecls(function(decl, i) {
-//         if (decl.prop === 'opacity') {
-//             decl.parent.insertAfter(i, {
-//                 prop: '-ms-filter',
-//                 value: '"progid:DXImageTransform.Microsoft.Alpha(Opacity=' + (parseFloat(decl.value) * 100) + ')"'
-//             });
-//         }
-//     });
-// };
-
 /**
- * Compile files from sass into both assets/css (for live injecting) and site (for future jekyll builds)
+ * Compile files from sass into _includes then we can use Jekyll includes inline css
  */
 gulp.task('styles', function() {
     return gulp.src('assets/css/main.scss')
-        .pipe(sass({ outputStyle: 'expanded' }))
-        .pipe(autoprefixer({ browsers: ['last 2 versions', 'Firefox ESR', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'] }))
+        .pipe(sass({ outputStyle: 'compressed' }))
+        .pipe(autoprefixer({ browsers: ['last 2 versions', 'Firefox ESR', 'safari 5', 'ie 9', 'opera 12.1'] }))
         .pipe(gulp.dest('assets/css'))
         // .pipe(rename({suffix: '.min'}))
         .pipe(minifycss())
         .pipe(gulp.dest('_includes'));
+});
+
+
+gulp.task('uncss', ['styles'], function() {
+  return gulp.src(['_includes/main.css'])
+        .pipe(uncss({
+          html: [
+            'http://leetrunghoo.com'
+          ]
+        }))
+        .pipe(gulp.dest('_includes/'));
 });
 
 
@@ -143,13 +142,15 @@ gulp.task("optimizeImages", function() {
 
 
 /**
+ * Default task, running just `gulp` will compile the sass,
+ * compile the jekyll site, launch BrowserSync & watch files.
  * Watch scss files for changes & recompile
  * Watch html/md files, run jekyll
  * Watch _site generation, reload BrowserSync
  */
-gulp.task('watch', function() {
+gulp.task('default', ['browser-sync'], function() {
     gulp.watch('assets/js/*.js', ['scripts']);
-    // gulp.watch('assets/css/**/*.scss', ['styles']);
+    // gulp.watch('assets/css/**/*.scss', ['styles']); // use task 'jekyll-build' instead
     gulp.watch(['*.html',
         '*.txt',
         'about/**',
@@ -160,9 +161,3 @@ gulp.task('watch', function() {
     ], ['jekyll-build']);
     gulp.watch("_site/index.html").on('change', browserSync.reload);
 });
-
-/**
- * Default task, running just `gulp` will compile the sass,
- * compile the jekyll site, launch BrowserSync & watch files.
- */
-gulp.task('default', ['browser-sync', 'watch']);
