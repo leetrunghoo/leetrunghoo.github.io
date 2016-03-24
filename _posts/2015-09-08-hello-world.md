@@ -3,7 +3,7 @@ layout: post
 title:  "Hello World"
 excerpt: "Well, today I start to make my own portfolio website! Wish my luck."
 categories: Life
-tags: code, life
+tags: code life
 image:
   hero: /assets/img/hero/hello-world.jpg
   heroStyle:

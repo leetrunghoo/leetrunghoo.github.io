@@ -4,7 +4,7 @@ title: What is Markdown?
 date: 2016-03-09 2:05:00 
 excerpt: "Quick reference and showcase Markdown."
 categories: tech
-tags: code, markdown, jekyll
+tags: code markdown jekyll
 image:
   hero: /assets/img/hero/markdown.png
   heroStyle: "background-size: 70%"
