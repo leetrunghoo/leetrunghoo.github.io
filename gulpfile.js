@@ -4,13 +4,14 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     minifycss = require('gulp-clean-css'),
     rename = require('gulp-rename'),
-    postcss = require('gulp-postcss'),
     concat = require('gulp-concat'),
     rename = require('gulp-rename'),
     uglify = require('gulp-uglify'),
     uncss = require('gulp-uncss'),
     imageResize = require('gulp-image-resize'),
     // responsive = require('gulp-responsive'),
+    imagemin = require('gulp-imagemin'),
+    pngquant = require('imagemin-pngquant'),
     parallel = require("concurrent-transform"),
     changed = require("gulp-changed"),
     os = require("os"),
@@ -69,7 +70,6 @@ gulp.task('styles', function() {
     return gulp.src('assets/css/main.scss')
         .pipe(sass({ outputStyle: 'expanded' }))
         .pipe(autoprefixer({ browsers: ['last 2 versions', 'Firefox ESR', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'] }))
-        // .pipe(postcss([opacity]))
         .pipe(gulp.dest('assets/css'))
         // .pipe(rename({suffix: '.min'}))
         .pipe(minifycss())
@@ -93,7 +93,7 @@ gulp.task('scripts', function() {
 });
  
 /**
- * Automatically resize post feature images and turn them into thumbnails
+ * Resize post hero images and turn them into thumbnails
  */
 gulp.task("resizeImages", function() {
     // need to install: apt-get install graphicsmagick
@@ -128,6 +128,18 @@ gulp.task("resizeImages", function() {
     //     .pipe(gulp.dest("assets/img/hero"));
 });
 
+/**
+ * Automatically optimize images
+ */
+gulp.task("optimizeImages", function() {
+    gulp.src("assets/img/**")
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
+        }))
+        .pipe(gulp.dest("assets/img"));
+});
 
 
 /**
