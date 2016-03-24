@@ -114,5 +114,11 @@
       transition: opacity 0.5s ease;
     }
     .menu{opacity:0;}
+
+    {% if page.url == "/" %}
+      {% include main.css %}
+    {% else %}
+      {% include main.css %}
+    {% endif %}
   </style>
 </head>

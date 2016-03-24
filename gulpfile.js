@@ -20,7 +20,7 @@ var gulp = require('gulp'),
 /**
  * Build the Jekyll Site
  */
-gulp.task('jekyll-build', function(done) {
+gulp.task('jekyll-build', ['styles'], function(done) {
     var jekyll = process.platform === "win32" ? "jekyll.bat" : "jekyll"
     return cp.spawn(jekyll, ['build', '--config=_config.yml'], { stdio: 'inherit' })
         .on('close', done);
@@ -29,7 +29,7 @@ gulp.task('jekyll-build', function(done) {
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', ['styles', 'scripts', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['scripts', 'jekyll-build'], function() {
     browserSync.init({
         server: {
             baseDir: '_site'
@@ -73,7 +73,7 @@ gulp.task('styles', function() {
         .pipe(gulp.dest('assets/css'))
         // .pipe(rename({suffix: '.min'}))
         .pipe(minifycss())
-        .pipe(gulp.dest('assets/css'));
+        .pipe(gulp.dest('_includes'));
 });
 
 
@@ -149,18 +149,14 @@ gulp.task("optimizeImages", function() {
  */
 gulp.task('watch', function() {
     gulp.watch('assets/js/*.js', ['scripts']);
-    gulp.watch('assets/css/**/*.scss', ['styles']);
-    // gulp.watch('assets/img/hero/*.{jpg,png}', ['thumbnails']);
+    // gulp.watch('assets/css/**/*.scss', ['styles']);
     gulp.watch(['*.html',
         '*.txt',
         'about/**',
         '_posts/**',
-        'assets/js/**/**.js',
-        'assets/img/**',
-        'assets/fonts/**',
+        'assets/**',
         '_layouts/**',
         '_includes/**',
-        'assets/css/**'
     ], ['jekyll-build']);
     gulp.watch("_site/index.html").on('change', browserSync.reload);
 });
