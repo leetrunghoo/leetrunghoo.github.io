@@ -113,20 +113,6 @@ function enable_scroll() {
     window.onmousewheel = document.onmousewheel = document.onkeydown = document.body.ontouchmove = null;
 }
 
-// load css
-var linkCSS  = document.createElement('link');
-linkCSS.rel  = 'stylesheet';
-linkCSS.type = 'text/css';
-linkCSS.href = '/assets/css/main.css';
-document.getElementsByTagName('head')[0].appendChild(linkCSS);
-
-// load font
-var linkFont  = document.createElement('link');
-linkFont.rel  = 'stylesheet';
-linkFont.type = 'text/css';
-linkFont.href = 'http://fonts.googleapis.com/css?family=Lato:100,400';
-document.getElementsByTagName('head')[0].appendChild(linkFont);
-
 $(function() {
     // show content after document ready
     document.body.style.opacity = 1;
