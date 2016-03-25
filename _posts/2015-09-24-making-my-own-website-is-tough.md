@@ -29,7 +29,7 @@ This kick off phrase took me more time than I thought. But I like what I'm doing
 
 ---
 
-### Update 25 March 2016
+### Update: 25 March 2016
 
 This blog was written a half year ago, many things were changed. I recommend you read these blogs:
 
