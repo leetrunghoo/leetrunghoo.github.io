@@ -3,7 +3,7 @@ layout: post
 title:  "The importance of personal website"
 excerpt: "Having a website of your own equals entering into an invaluable communication environment."
 categories: Life
-tags: code life
+tags: life experience
 image:
   hero: /assets/img/hero/my-web.jpg
   heroStyle:

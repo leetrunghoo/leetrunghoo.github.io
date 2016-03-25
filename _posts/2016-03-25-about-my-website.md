@@ -3,7 +3,7 @@ layout: post
 title:  "About my website"
 excerpt: "You may wonder what technology I'm using for my personal website, which scores 99/100 Google pagespeed"
 categories: Tech
-tags: website development
+tags: website development experience
 image:
   hero: /assets/img/hero/pagespeed.jpg
   heroStyle: "background-size: contain"

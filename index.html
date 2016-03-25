@@ -47,6 +47,13 @@ title: Trung Ho
                                 {% endif %}
                                 <a class="postArticle-title" href="{{ post.url }}">{{ post.title }}</a>
                             </article>
+                            <div class="block-tag">
+                                {% if post.tags %}
+                                    {% for tag in post.tags %}
+                                        <span class="tag">#{{ tag }}</span> 
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
                             <div class="block-postMeta">{{ post.date | date_to_string }}</div>
                         </div>
                     </li>

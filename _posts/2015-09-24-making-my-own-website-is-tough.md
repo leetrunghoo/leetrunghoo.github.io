@@ -3,7 +3,7 @@ layout: post
 title:  "Making my own website is tough!"
 excerpt: "Freedom is not always good, in some cases, it would bring to you difficult decisions."
 categories: Life
-tags: code life
+tags: code life experience
 image:
   hero: /assets/img/hero/work-desk-old.jpg
   heroStyle:
