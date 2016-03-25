@@ -123,23 +123,23 @@ end a line in a paragraph with two or more spaces.
 
 ### Links <a name="5"></a> [[back to list]](#markdown-cheat-sheet)
 
-    <http://leetrunghoo.com>
-    [This is my website](http://leetrunghoo.com)
-    [Link with title](http://leetrunghoo.com "my website")
-    [Open link in new tab](http://leetrunghoo.com "click to open in new tab"){:target="_blank"}
+    <https://leetrunghoo.com>
+    [This is my website](https://leetrunghoo.com)
+    [Link with title](https://leetrunghoo.com "my website")
+    [Open link in new tab](https://leetrunghoo.com "click to open in new tab"){:target="_blank"}
     Jump to the specified anchor point on the same page, [to the top](#top)
     This is [an example][id] reference-method link.
 
-    [id]: http://leetrunghoo.com
+    [id]: https://leetrunghoo.com
 
-<http://leetrunghoo.com>  
-[This is my website](http://leetrunghoo.com)  
-[Link with title](http://leetrunghoo.com "my website")  
-[Open link in new tab](http://leetrunghoo.com "click to open in new tab"){:target="_blank"}  
+<https://leetrunghoo.com>  
+[This is my website](https://leetrunghoo.com)  
+[Link with title](https://leetrunghoo.com "my website")  
+[Open link in new tab](https://leetrunghoo.com "click to open in new tab"){:target="_blank"}  
 Jump to the specified anchor point on the same page, [to the top](#top)  
 This is [an example][id] reference-method link.  
 
-[id]: http://leetrunghoo.com
+[id]: https://leetrunghoo.com
 
 ---
 
