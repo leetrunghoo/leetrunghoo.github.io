@@ -3,7 +3,7 @@ layout: post
 title:  "About my website"
 excerpt: "You may wonder what technology I'm using for my personal website, which scores 99/100 Google pagespeed"
 categories: Tech
-tags: "website development" "code" "Google PageSpeed Insights"
+tags: website development
 image:
   hero: /assets/img/hero/pagespeed.jpg
   heroStyle: "background-size: contain"
@@ -14,7 +14,7 @@ bgGradientOpacity: darker
 
 Today I release my website with blog feature, there is only portfolio feature left. I'd like to share with you few thoughts about my website.
 
-You may wonder what technology I'm using for my personal website, which scores **99/100** Google PageSpeed Insights (check it out: <https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fleetrunghoo.com>). 
+You may wonder what technology I'm using for my personal website, which scores **99/100** [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fleetrunghoo.com "test result"). 
 
 People say we should not care about chasing a grade, 100/100 is not the goal, even none of Google's websites reach 99/100 (google search <https://google.com> just got 71/100 for mobile). However, trying to achieve as high score as I can is quite fun :smile: I've learned a lot about optimizaion. I can't get the last point because I'm using google analytics for tracking the visitors, and this is external lib that I can't control the cache expiry date. There is a way to work around but this is such a minor thing, I just don't want to solve :)) like they say "nothing is perfect", I'm happy with my website.
 
