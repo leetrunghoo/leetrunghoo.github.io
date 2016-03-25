@@ -68,7 +68,7 @@ Disqus (free commenting service)
 <https://disqus.com>{:target="_blank"}
 
 Codepen (for marking code example)  
-<http://http://codepen.io>{:target="_blank"}
+<http://codepen.io>{:target="_blank"}
 
 Codrops (a web design and development blog that has great inspirational articles for font-end dev)
 <http://tympanus.net/codrops>{:target="_blank"}
