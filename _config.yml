@@ -32,7 +32,7 @@ kramdown:
   input:             GFM  # GitHub Flavored Markdown
 
 author:
-  name:              Trung Ho
+  name:              Trung Ho (leetrunghoo)
   url:               leetrunghoo.com
   github:            leetrunghoo
   facebook:          leetrunghoo
