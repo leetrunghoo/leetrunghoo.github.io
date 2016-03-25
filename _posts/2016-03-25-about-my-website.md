@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "About my website"
-excerpt: "You may wonder what technology I'm using for my personal website, which scores 99/100 Google pagespeed"
+excerpt: "You may wonder what technology I'm using for my personal website, which scores 99/100 Google PageSpeed Insights"
 categories: Tech
 tags: website development experience
 image:

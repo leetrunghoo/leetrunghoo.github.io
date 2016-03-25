@@ -26,3 +26,13 @@ For the frontend, I will go with [Angular 2](https://angular.io/ 'homepage'){:ta
 Another hard decision is the web flow, the UI/UX. I've seen many cool portfolio websites which are the inspiration for me. I really admire the authors of those websites and would love to make the same good job. However, I don't want mine is just a copy, I need it to be different. I made many prototypes but still not happy with it. After all, I need to face the fact that I'm not a UI/UX designer to make a unique beautiful layout. 
 
 This kick off phrase took me more time than I thought. But I like what I'm doing. :grin:
+
+---
+
+### Update 25 March 2016
+
+This blog was written a half year ago, many things were changed. I recommend you read these blogs:
+
+<https://leetrunghoo.com/life/im-back/> it's about why I discontinued to develop my website last year and what I learned from my mistakes
+
+<https://leetrunghoo.com/tech/about-my-website/> about what technique I use for building my website
