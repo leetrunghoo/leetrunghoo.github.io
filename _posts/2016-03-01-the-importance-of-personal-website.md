@@ -44,6 +44,7 @@ Blogging would help you to become a better writer and better thinker. You’ll l
 Disclaimer: This blog was written based on what I read.
 
 Reference:
-<http://simpleprogrammer.com/2013/06/24/3-easy-ways-to-market-yourself-as-a-software-developer/>
-<http://www.forbes.com/sites/jacquelynsmith/2013/04/26/why-every-job-seeker-should-have-a-personal-website-and-what-it-should-include/>
-<http://www.becomingminimalist.com/15-reasons-i-think-you-should-blog/>
+
+- <http://simpleprogrammer.com/2013/06/24/3-easy-ways-to-market-yourself-as-a-software-developer/>
+- <http://www.forbes.com/sites/jacquelynsmith/2013/04/26/why-every-job-seeker-should-have-a-personal-website-and-what-it-should-include/>
+- <http://www.becomingminimalist.com/15-reasons-i-think-you-should-blog/>

@@ -132,12 +132,12 @@ end a line in a paragraph with two or more spaces.
 
     [id]: http://leetrunghoo.com
 
-<http://leetrunghoo.com>
-[This is my website](http://leetrunghoo.com)
-[Link with title](http://leetrunghoo.com "my website")
-[Open link in new tab](http://leetrunghoo.com "click to open in new tab"){:target="_blank"}
-Jump to the specified anchor point on the same page, [to the top](#top)
-This is [an example][id] reference-method link.
+<http://leetrunghoo.com>  
+[This is my website](http://leetrunghoo.com)  
+[Link with title](http://leetrunghoo.com "my website")  
+[Open link in new tab](http://leetrunghoo.com "click to open in new tab"){:target="_blank"}  
+Jump to the specified anchor point on the same page, [to the top](#top)  
+This is [an example][id] reference-method link.  
 
 [id]: http://leetrunghoo.com
 
@@ -348,6 +348,7 @@ Last but not least, you can tell GitHub to ignore (or escape) Markdown formattin
 ---
 
 Reference:
-<https://help.github.com/categories/writing-on-github/>{:target="_blank"}
-<https://guides.github.com/features/mastering-markdown/>{:target="_blank"}
-<http://daringfireball.net/projects/markdown/>{:target="_blank"}
+
+- <https://help.github.com/categories/writing-on-github/>{:target="_blank"}
+- <https://guides.github.com/features/mastering-markdown/>{:target="_blank"}
+- <http://daringfireball.net/projects/markdown/>{:target="_blank"}
