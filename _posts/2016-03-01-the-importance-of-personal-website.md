@@ -33,11 +33,11 @@ The term branding has long been relegated to companies, but today almost every i
 
 ## Writing blogs will be beneficial for yourself.
 
-As a software developer, I've learned new things every day. That's one of the reasons why I love my job: never feel bored when you still have tons of interesting stuff waiting for you to figure out. However, unless you take note about what you learned, you will forget them sooner or later. Sharing my knowledge also help others who have the same interest.
+A personal website that has your portfolio is just like an online CV, but if it also has blogs, it will be much better. As a software developer, I've learned new things every day. That's one of the reasons why I love my job: never feel bored when you still have tons of interesting stuff waiting for you to figure out. However, unless you take note about what you learned, you will forget them sooner or later. Sharing your knowledge also help others who have the same interest. You'll have more friends, and your website will have more views.
 
 > "We learn by teaching" - Latin proverb
 
-Blogging would help you to become a better writer and better thinker. You’ll live a more intentional life. Once you start writing about your life and the thoughts that shape it, you’ll begin thinking more intentionally about who you are, who you are becoming, and whether you like what you see or not. And that just may be reason enough to get started.
+Blogging would help you to become a better writer and better thinker. You’ll live a more intentional life. Once you start writing about your life and the thoughts that shape it, you’ll begin thinking more intentionally about who you are, who you are becoming, and whether you like what you see or not. And that just may be reason enough to get started blogging.
 
 ---
 
