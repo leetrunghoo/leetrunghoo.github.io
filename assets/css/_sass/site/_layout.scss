@@ -9,7 +9,7 @@
 
 /* brand name */
 .brand-name-container {
-    font-size: $font-S;
+    font-size: $font-XS;
     position: fixed;
     z-index: 500;
     top: 15px;
@@ -18,7 +18,6 @@
     cursor: pointer;
     border-radius: 20px;
     padding: 5px 10px;
-    padding-top: 2px;
     font-family: $title-secondary-font;
     &:hover {
         .brand-name-bg {
@@ -53,7 +52,7 @@
             display: inline-block;
             outline: none;
             text-decoration: none;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             color: black;
             &::before {
                 position: absolute;
@@ -93,6 +92,7 @@
 }
 
 #welcomeContainer {
+    font-family: $title-primary-font;
     background-color: transparent;
     h2 {
         font-weight: normal;

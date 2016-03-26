@@ -79,11 +79,14 @@ Codrops (a web design and development blog that has great inspirational articles
 
 ### GRAPHIC ASSETS
 
-Roboto (font)  
-<https://www.google.com/fonts/specimen/Roboto>{:target="_blank"}
-
 Lato (font)  
 <https://www.google.com/fonts/specimen/Lato>{:target="_blank"}
+
+Cabin Sketch (font)  
+<https://www.google.com/fonts/specimen/Cabin+Sketch>{:target="_blank"}
+
+Short Stack (font)  
+<https://www.google.com/fonts/specimen/Short+Stack>{:target="_blank"}
 
 Icomoon (icons)  
 <https://icomoon.io/app>{:target="_blank"}
