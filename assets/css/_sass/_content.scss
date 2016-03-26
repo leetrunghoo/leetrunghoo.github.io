@@ -61,7 +61,6 @@
         display: block;
         width: 25%;
         margin-bottom: $leading;
-        font-family: $title-secondary-font;
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
@@ -199,7 +198,6 @@
     background: $white;
     position: relative;
     z-index: $zIndex-4--posts-wrapper;
-    font-family: $title-secondary-font;
     font-size: $font-XS;
     line-height: 1.5rem;
     text-align: center;

@@ -30,3 +30,10 @@ $link-hover-color:      darken($link-color, 15%) !default;
 $metabar-top-bg:				#eee !default;
 
 $hero-gradient:         $gray-dark;
+
+.color-white {
+	color: $white;
+}
+.color-black {
+	color: $black;
+}

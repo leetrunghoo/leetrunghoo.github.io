@@ -127,9 +127,8 @@ $(function() {
     // add typing animation for home page
     $('#welcomeContainer').typingAnimation(function() {
         setTimeout(function() {
+            $('#welcomeContainer').addClass('color-white');
             var $section = $('#welcomeContainer').parent();
-            $('#welcomeContainer').addClass('is-darkBackgrounded');
-            $section.addClass('is-darkBackgrounded');
             $section.find('.section-backgroundImage').removeClass('opacity-0');
             $section.find('.section-gradient').removeClass('opacity-0');
         }, 200);
