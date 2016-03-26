@@ -59,7 +59,7 @@ gulp.task('styles', function() {
     return gulp.src('assets/css/main.scss')
         .pipe(sass({ outputStyle: 'compressed' }))
         .pipe(autoprefixer({ browsers: ['last 2 versions', 'Firefox ESR', 'safari 5', 'ie 9', 'opera 12.1'] }))
-        .pipe(gulp.dest('assets/css'))
+        // .pipe(gulp.dest('assets/css'))
         // .pipe(rename({suffix: '.min'}))
         .pipe(minifycss())
         .pipe(gulp.dest('_includes'));
