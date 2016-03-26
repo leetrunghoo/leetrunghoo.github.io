@@ -115,6 +115,7 @@ function enable_scroll() {
 
 // load font
 function loadFont(fontName) {
+    fontName = fontName.replace(/\s+/g, '+');
     var linkFont  = document.createElement('link');
     linkFont.rel  = 'stylesheet';
     linkFont.type = 'text/css';
