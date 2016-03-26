@@ -114,11 +114,15 @@ function enable_scroll() {
 }
 
 // load font
-var linkFont  = document.createElement('link');
-linkFont.rel  = 'stylesheet';
-linkFont.type = 'text/css';
-linkFont.href = 'https://fonts.googleapis.com/css?family=Lato:100,400';
-document.getElementsByTagName('head')[0].appendChild(linkFont);
+function loadFont(fontName) {
+    var linkFont  = document.createElement('link');
+    linkFont.rel  = 'stylesheet';
+    linkFont.type = 'text/css';
+    linkFont.href = 'https://fonts.googleapis.com/css?family='+fontName+':100,400';
+    document.getElementsByTagName('head')[0].appendChild(linkFont);
+}
+loadFont('Lato');
+loadFont('Comic Sans MS');
 
 $(function() {
     // show content after document ready
