@@ -39,17 +39,17 @@ Gulp (task runner)
 <http://gulpjs.com>
 
 Gulp plugins:  
-: concurrent-transform 
-: gulp-autoprefixer 
-: gulp-clean-css 
-: gulp-rename
-: gulp-sass
-: gulp-changed
-: gulp-concat
-: gulp-uglify
-: gulp-uncss
-: gulp-image-resize
-: gulp-imagemin
+- concurrent-transform 
+- gulp-autoprefixer 
+- gulp-clean-css 
+- gulp-rename
+- gulp-sass
+- gulp-changed
+- gulp-concat
+- gulp-uglify
+- gulp-uncss
+- gulp-image-resize
+- gulp-imagemin
 
 Browsersync (for live-server & for testing UI in multi-devices) 
 <http://www.browsersync.io>
@@ -64,7 +64,7 @@ Disqus (free commenting service)
 <https://disqus.com>
 
 Codepen (for marking code example)  
-<http://http://codepen.io>
+<http://codepen.io>
 
 Codrops (a web design and development blog that has great inspirational articles for font-end dev)
 <http://tympanus.net/codrops>
