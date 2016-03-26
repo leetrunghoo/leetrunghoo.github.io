@@ -35,6 +35,7 @@ gulp.task('browser-sync', ['jekyll-build'], function() {
         server: {
             baseDir: '_site'
         },
+        online: true, // Will not attempt to determine your network status, assumes you're ONLINE.
         port: 8080,
         startPath: "/index.html",
         ghostMode: false, // Clicks, Scrolls & Form inputs on any device will be mirrored to all others.
@@ -80,18 +81,18 @@ gulp.task('uncss', ['styles'], function() {
 /**
  * concat all js files then minify it
  */
-gulp.task('scripts', function() {  
-    return gulp.src(['assets/js/*.js']) 
+gulp.task('scripts', function() {
+    return gulp.src(['assets/js/*.js'])
         // .pipe(concat('scripts.js'))
         // .pipe(gulp.dest('assets/js'))
         // .pipe(rename('scripts.min.js'))
         .pipe(uglify())
         .pipe(rename({
-          suffix: '.min'
+            suffix: '.min'
         }))
         .pipe(gulp.dest('assets/js/min'));
 });
- 
+
 /**
  * Resize post hero images and turn them into thumbnails
  */
@@ -135,7 +136,7 @@ gulp.task("optimizeImages", function() {
     gulp.src("assets/img/**")
         .pipe(parallel(imagemin({
             progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
+            svgoPlugins: [{ removeViewBox: false }],
             use: [pngquant()]
         })))
         .pipe(gulp.dest("assets/img"));
