@@ -21,7 +21,7 @@ var gulp = require('gulp'),
  * Build the Jekyll Site
  * Note: need to generate css first to include inline css when Jekyll builds
  */
-gulp.task('jekyll-build', ['styles', 'scripts'], function(done) {
+gulp.task('jekyll-build', function(done) {
     var jekyll = process.platform === "win32" ? "jekyll.bat" : "jekyll"
     return cp.spawn(jekyll, ['build', '--config=_config.yml'], { stdio: 'inherit' })
         .on('close', done);
@@ -65,18 +65,18 @@ gulp.task('styles', function() {
         .pipe(gulp.dest('_includes'));
 });
 
-/*
+
 // currently, not use
-gulp.task('uncss', ['styles'], function() {
-  return gulp.src(['_includes/main.css'])
-        .pipe(uncss({
-          html: [
-            'http://leetrunghoo.com'
-          ]
-        }))
-        .pipe(gulp.dest('_includes/'));
-});
-*/
+// gulp.task('uncss', ['styles'], function() {
+//   return gulp.src(['_includes/main.css'])
+//         .pipe(uncss({
+//           html: [
+//             'http://leetrunghoo.com'
+//           ]
+//         }))
+//         .pipe(gulp.dest('_includes/'));
+// });
+
 
 /**
  * concat all js files then minify it
@@ -142,7 +142,6 @@ gulp.task("optimizeImages", function() {
         .pipe(gulp.dest("assets/img"));
 });
 
-
 /**
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
@@ -150,16 +149,14 @@ gulp.task("optimizeImages", function() {
  * Watch html/md files, run jekyll
  * Watch _site generation, reload BrowserSync
  */
-gulp.task('default', ['browser-sync'], function() {
-    // gulp.watch('assets/js/*.js', ['scripts']); // use task 'jekyll-build' instead
-    // gulp.watch('assets/css/**/*.scss', ['styles']); // use task 'jekyll-build' instead
+gulp.task('default', ['styles', 'scripts', 'browser-sync'], function() {
+    gulp.watch('assets/js/*.js', ['scripts']); 
+    gulp.watch('assets/css/**/*.scss', ['styles']);
     gulp.watch(['*.html',
-        '*.txt',
-        'about/**',
         '_posts/**',
-        'assets/**',
+        'assets/img/**',
         '_layouts/**',
-        '_includes/**',
+        '_includes/**'
     ], ['jekyll-build']);
     gulp.watch("_site/index.html").on('change', browserSync.reload);
 });
