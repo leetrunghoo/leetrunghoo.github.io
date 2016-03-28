@@ -123,8 +123,8 @@ function loadFont(fontName) {
     document.getElementsByTagName('head')[0].appendChild(linkFont);
 }
 loadFont('Lato');
-loadFont('Cabin Sketch');
-loadFont('Short Stack');
+// loadFont('Cabin Sketch');
+// loadFont('Short Stack');
 
 $(function() {
     // show content after document ready
