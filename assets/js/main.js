@@ -39,7 +39,7 @@ $.fn.typingAnimation = function(callback) {
         if (char === '<') isTag = true;
         if (char === '>') isTag = false;
         if (isTag) return type();
-        setTimeout(type, 60);
+        setTimeout(type, 80);
     };
 };
 
