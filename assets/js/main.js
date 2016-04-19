@@ -70,7 +70,7 @@ window.os = {
     isIE: isIE,
     isEdge: isEdge,
     isChrome: isChrome,
-    isBlink: isBlink,
+    isBlink: isBlink
 }
 
 // disable/enable scroll (mousewheel and keys) from http://stackoverflow.com/a/4770179                  
