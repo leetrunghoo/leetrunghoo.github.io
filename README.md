@@ -7,9 +7,34 @@ Todo:
 - [x] Landing page
 - [x] Blog feature
 - [ ] Portfolio
-- [ ] Write more blogs :D
+- [ ] Write more blogs :smile:
 
 ---
+
+### How to run
+
+Note: I changed to use Gulp for building & deployment Jekyll web instead of Bundle. Gulp is more powerful and easier to use. Need to change name (or delete) 'Gemfile' file to avoid error when running gulp task.
+
+__Requirement:__ installed ruby, gem, nodejs & npm
+
+Install github-pages for setting up and maintaining a local Jekyll environment in sync with GitHub Pages.
+```
+gem install github-pages 
+```
+
+Install all gulp dependencies
+```
+npm install
+```
+
+Then run gulp task
+```
+gulp
+```
+
+---
+
+### About
 
 Owner: Trung Ho (https://leetrunghoo.com)  
 Email: leetrunghoo@gmail.com
