@@ -9,7 +9,6 @@ Todo:
 - [ ] Portfolio
 - [ ] Write more blogs :smile:
 
----
 
 ## How to run
 
@@ -32,7 +31,6 @@ npm install
 gulp
 ```
 
----
 
 ## About
 
