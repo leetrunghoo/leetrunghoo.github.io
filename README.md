@@ -17,19 +17,19 @@ Note: I changed to use Gulp for building & deployment Jekyll web instead of Bund
 __Requirement:__ installed ruby, gem, nodejs & npm
 
 1. Install github-pages for setting up and maintaining a local Jekyll environment in sync with GitHub Pages.
-```
-gem install github-pages 
-```
+	```
+	gem install github-pages 
+	```
 
 2. Install all gulp dependencies
-```
-npm install
-```
+	```
+	npm install
+	```
 
 3. Then run default gulp task. View gulpfile.js for more detail.
-```
-gulp
-```
+	```
+	gulp
+	```
 
 
 ## About
