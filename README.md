@@ -11,37 +11,36 @@ Todo:
 
 ---
 
-### How to run
+## How to run
 
 Note: I changed to use Gulp for building & deployment Jekyll web instead of Bundle. Gulp is more powerful and easier to use. Need to change name (or delete) 'Gemfile' file to avoid error when running gulp task.
 
 __Requirement:__ installed ruby, gem, nodejs & npm
 
-Install github-pages for setting up and maintaining a local Jekyll environment in sync with GitHub Pages.
+1. Install github-pages for setting up and maintaining a local Jekyll environment in sync with GitHub Pages.
 ```
 gem install github-pages 
 ```
 
-Install all gulp dependencies
+2. Install all gulp dependencies
 ```
 npm install
 ```
 
-Then run gulp task
+3. Then run default gulp task. View gulpfile.js for more detail.
 ```
 gulp
 ```
 
 ---
 
-### About
+## About
 
 Owner: Trung Ho (https://leetrunghoo.com)  
 Email: leetrunghoo@gmail.com
 
 I would like to thank the authors and contributors of below awesome libs/tools/assets that help me a lot to build my website.
 
----
 
 ### TECHNOLOGY
 
