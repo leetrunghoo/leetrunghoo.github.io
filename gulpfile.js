@@ -36,8 +36,8 @@ gulp.task('browser-sync', ['jekyll-build'], function() {
             baseDir: '_site'
         },
         online: true, // Will not attempt to determine your network status, assumes you're ONLINE.
-        port: 8080,
-        startPath: "/index.html",
+        port: 8081,
+        startPath: "/",
         ghostMode: false, // Clicks, Scrolls & Form inputs on any device will be mirrored to all others.
         notify: {
             styles: {
@@ -129,10 +129,11 @@ gulp.task("resizeImages", function() {
     //     .pipe(gulp.dest("assets/img/hero"));
 });
 
-/**
+/** Currently NOT use 
  * Automatically optimize images
+ * note: need to install imagemagick. Ex on Linux or MacOS: brew install imagemagick
  */
-gulp.task("optimizeImages", function() {
+gulp.task("optimizeImages", ['resizeImages'], function() {
     gulp.src("assets/img/**")
         .pipe(parallel(imagemin({
             progressive: true,
@@ -152,6 +153,7 @@ gulp.task("optimizeImages", function() {
 gulp.task('default', ['styles', 'scripts', 'browser-sync'], function() {
     gulp.watch('assets/js/*.js', ['scripts']); 
     gulp.watch('assets/css/**/*.scss', ['styles']);
+    gulp.watch('assets/img/hero/*.{jpg,png}', ['resizeImages']);
     gulp.watch(['*.html',
         '_posts/**',
         'assets/img/**',
