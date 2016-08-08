@@ -3,7 +3,7 @@ layout: post
 title:  "Giới thiệu Learn English webapp"
 excerpt: "Learn English là một Progressive Web App giúp chúng ta học tiếng Anh"
 categories: Project
-tags: pet-project progressive-web-app tieng-viet
+tags: PetProject ProgressiveWebApp TiengViet
 image:
   hero: /assets/img/hero/learnenglish.png
   heroStyle: 
