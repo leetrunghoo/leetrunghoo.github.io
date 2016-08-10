@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flickr rest api demo</title>
+    <meta name="description" content="Flickr rest api example" />
+    <meta name="keywords" content="Flickr, image grid, masonry, demo" />
+    <meta name="author" content="Trung Ho" />
+    <link rel="shortcut icon" href="http://leetrunghoo.com/assets/img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.21/css/lightgallery.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.0/remodal.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.0/remodal-default-theme.min.css" />
+    <style>
+    body {
+    	font-family: "arial";
+        padding: 5px;
+        margin: 0;
+    }
+
+    button:focus {outline:0;}
+    
+    .grid-item {
+        width: calc(100% - 10px);
+        margin: 5px;
+        -webkit-transition: -webkit-box-shadow .25s;
+        transition: box-shadow .25s;
+    }
+    
+    @media only screen and (min-width: 413px) {
+        .grid-item {
+            width: calc(50% - 10px);
+        }
+    }
+    
+    @media only screen and (min-width: 768px) {
+        .grid-item {
+            width: calc(33.33% - 10px);
+        }
+    }
+    
+    @media only screen and (min-width: 1080px) {
+        .grid-item {
+            width: calc(25% - 10px);
+        }
+    }
+    
+    .grid-item:hover {
+        cursor: pointer;
+        -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+    }
+
+    #btnSetting {
+    	color: white;
+    	width: 32px;
+    	height: 32px;
+    	border-radius: 5px;
+    	opacity: 0.3;
+    	position: fixed;
+    	top: 15px;
+    	left: 15px;
+    	font-size: 2.5em;
+    	text-align: center;
+    	background: none;
+    	border: 0;
+    	background-repeat: no-repeat;
+    	background-image: url("data:image/svg+xml;charset=UTF-8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='32' height='32' viewBox='0 0 32 32'><path d='M29.181 19.070c-1.679-2.908-0.669-6.634 2.255-8.328l-3.145-5.447c-0.898 0.527-1.943 0.829-3.058 0.829-3.361 0-6.085-2.742-6.085-6.125h-6.289c0.008 1.044-0.252 2.103-0.811 3.070-1.679 2.908-5.411 3.897-8.339 2.211l-3.144 5.447c0.905 0.515 1.689 1.268 2.246 2.234 1.676 2.903 0.672 6.623-2.241 8.319l3.145 5.447c0.895-0.522 1.935-0.82 3.044-0.82 3.35 0 6.067 2.725 6.084 6.092h6.289c-0.003-1.034 0.259-2.080 0.811-3.038 1.676-2.903 5.399-3.894 8.325-2.219l3.145-5.447c-0.899-0.515-1.678-1.266-2.232-2.226zM16 22.479c-3.578 0-6.479-2.901-6.479-6.479s2.901-6.479 6.479-6.479c3.578 0 6.479 2.901 6.479 6.479s-2.901 6.479-6.479 6.479z'></path></svg>")
+
+    }
+    #btnSetting:hover {
+    	opacity: 1;
+    	cursor: pointer;
+    }
+
+    .lg-actions .lg-next, .lg-actions .lg-prev {
+    	background: none;
+    }
+
+    .remodal {
+    	padding: 20px;
+    }
+    .form {
+    	text-align: left;
+    }
+    .form > div {
+    	height: 40px;
+    	line-height: 40px;
+    }
+    .form > div > div:first-child {
+    	width: 50%;
+    	display: inline-block;
+    	vertical-align: middle;
+    	text-align: right;
+    }
+    .form > div > input {
+    	height: 20px;
+    	width: 150px;
+    	max-width: 45%;
+    }
+
+    </style>
+</head>
+<body ">
+	<div id="container"></div>
+	<a href="#modal"><button id="btnSetting" title="setting"></button></a>
+	<div class="remodal-bg">
+		<div class="remodal" data-remodal-id="modal">
+		  <button data-remodal-action="close" class="remodal-close"></button>
+		  <h1>Setting</h1>
+		  <div class="form">
+			<div>
+			  	<div>link or account ID:</div> 
+			  	<input type="text" id="txtFlickr"/>
+			</div>
+		  	<div>
+			  	<div>thumbnail quality:</div> 
+			  	<select id="selectThumbQuality">
+			  		<option value="0">Low</option>
+			  		<option value="1" selected="selected">Medium</option>
+			  		<option value="2">High</option>
+			  	</select>
+		  	</div>
+			<div>
+			  	<div>photo quality:</div>
+			  	<select id="selectPhotoQuality">
+			  		<option value="0">Low</option>
+			  		<option value="1">Medium</option>
+			  		<option value="2" selected="selected">High</option>
+			  		<option value="3">Extra High</option>
+			  	</select>
+			</div>
+		  </div>
+		  <br>
+		  <button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
+		  <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
+		</div>
+	</div>
+	<!-- /container -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js "></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.0/imagesloaded.pkgd.min.js "></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.1.0/masonry.pkgd.min.js "></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.21/js/lightgallery-all.min.js "></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.0/remodal.min.js "></script>
+	<script src="handleFlickr.js "></script>
+	<script>
+		
+	</script>
+</body>
+
+</html>
