@@ -105,9 +105,9 @@
 </head>
 <body ">
 	<div id="container"></div>
-	<a href="#modal"><button id="btnSetting" title="setting"></button></a>
+	<a data-remodal-target="modal" href="#"><button id="btnSetting" title="setting"></button></a>
 	<div class="remodal-bg">
-		<div class="remodal" data-remodal-id="modal">
+		<div class="remodal" data-remodal-id="modal" data-remodal-options="hashTracking: false">
 		  <button data-remodal-action="close" class="remodal-close"></button>
 		  <h1>Setting</h1>
 		  <div class="form">
@@ -118,18 +118,21 @@
 		  	<div>
 			  	<div>thumbnail quality:</div> 
 			  	<select id="selectThumbQuality">
-			  		<option value="0">Low</option>
-			  		<option value="1" selected="selected">Medium</option>
-			  		<option value="2">High</option>
+                    <option value="1">Very Low</option>
+			  		<option value="3">Low</option>
+			  		<option value="5" selected="selected">Medium</option>
+			  		<option value="8">High</option>
+                    <option value="9">Extra High</option>
 			  	</select>
 		  	</div>
 			<div>
 			  	<div>photo quality:</div>
 			  	<select id="selectPhotoQuality">
-			  		<option value="0">Low</option>
-			  		<option value="1">Medium</option>
-			  		<option value="2" selected="selected">High</option>
-			  		<option value="3">Extra High</option>
+                    <option value="1">Very Low</option>
+			  		<option value="3">Low</option>
+			  		<option value="5">Medium</option>
+			  		<option value="8" selected="selected">High</option>
+			  		<option value="9">Extra High</option>
 			  	</select>
 			</div>
 		  </div>

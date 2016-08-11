@@ -1,12 +1,17 @@
 $(function() {
     var apiKey = '986e904143a37c668876552671aacde9',
-        authorId = '99002729@N07',
-        qThumb = $('selectThumbQuality').val(),
-        qPhoto = $('selectPhotoQuality').val(),
-        gallery = '';
-    perPage = 10,
+        authorId = localStorage.getItem('demo_authorId') || 'nhienhy', //99002729@N07
+        // photo quality = 3: low, 5: med, 8: high, 9: xhigh
+        qThumb = localStorage.getItem('demo_qThumb') || 5,
+        qPhoto = localStorage.getItem('demo_qPhoto') || 8,
+        perPage = 10,
         startPage = 0,
-        arrQuality = ['_m', '', '_b'];
+        arrQuality = ['_s', '_q', '_t', '_m', '_n', '', '_z', '_c', '_b', '_h'],
+        listLoadedImg = {};
+
+    $('#txtFlickr').val(authorId);
+    $('#selectThumbQuality').val(qThumb);
+    $('#selectPhotoQuality').val(qPhoto)
 
     // Main content container
     var $container = $('#container');
@@ -18,25 +23,70 @@ $(function() {
         percentPosition: true
     });
 
+    // $('[data-remodal-id=modal]').remodal({hashTracking: false});
+
+    // init lightGallery
+    var gallery = initLightGallery();
+
+    function initLightGallery() {
+        return $container.lightGallery({
+            thumbnail: true,
+            animateThumb: true,
+            showThumbByDefault: true,
+            showAfterLoad: false,
+            getCaptionFromTitleOrAlt: false,
+            hash: false
+        }).data('lightGallery');
+    }
+
     // Remodal event
     $(document).on('confirmation', '.remodal', function() {
-        console.log('---', $('#txtFlickr').val());
+        var flagReload = false;
+        if ($('#selectThumbQuality').val() && $('#selectThumbQuality').val() !== qThumb) {
+            qThumb = $('#selectThumbQuality').val();
+            localStorage.setItem('demo_qThumb', qThumb);
+            flagReload = true;
+        }
+        if ($('#selectPhotoQuality').val() && $('#selectPhotoQuality').val() !== qPhoto) {
+            qPhoto = $('#selectPhotoQuality').val();
+            localStorage.setItem('demo_qPhoto', qPhoto);
+            flagReload = true;
+        }
         if ($('#txtFlickr').val() && $('#txtFlickr').val() !== authorId) {
             authorId = $('#txtFlickr').val();
-            console.log(authorId);
+            localStorage.setItem('demo_authorId', authorId);
+            flagReload = true;
+        }
+        if (flagReload) {
             $container.empty();
-            if (gallery) {
-                gallery.destroy(true);
-            }
+            gallery.destroy(true);
+            gallery = initLightGallery();
             startLoadImages();
         }
-        qThumb = $('#selectThumbQuality').val();
-        qPhoto = $('#selectPhotoQuality').val();
     });
     $(document).on('cancellation', '.remodal', function() {
-        $('#txtFlickr').val('');
+        $('#txtFlickr').val(authorId);
         $('#selectThumbQuality').val(qThumb);
         $('#selectPhotoQuality').val(qPhoto);
+    });
+
+    // when view photo detail => load larger photo
+    $container.on('onAfterSlide.lg', function() {
+        $('#tempImg').remove();
+        setTimeout(function() {
+            var thumbLink = $('.lg-thumb-item.active img').attr('src');
+            var detailLink = $('.lg-current .lg-img-wrap img').attr('src');
+            if (!listLoadedImg[detailLink]) { // check cached img
+                $('.lg-current .lg-img-wrap img').attr('src', thumbLink);
+                $container.append('<img src="' + detailLink + '" id="tempImg" style="display: none">');
+                $('#tempImg').imagesLoaded(function() {
+                    console.log('loaded image: ' + detailLink);
+                    $('.lg-current .lg-img-wrap img').attr('src', detailLink);
+                    listLoadedImg[detailLink] = true;
+                    $('#tempImg').remove();
+                });
+            }
+        }, 100);
     });
 
 
@@ -60,54 +110,58 @@ $(function() {
         $.getJSON(url, function(response) {
             if (response.stat === 'ok') {
                 var imgages = '';
+                // if (qThumb === 10 || qPhoto === 10) { // call rest to get sizes' link
+                //     for (var i = 0; i < response.photos.photo.length; i++) {
+                //         var photo = response.photos.photo[i];
+                //         getPhotoSizes(photo.id, function(response) {
+                //             var link = response.sizes.size[+qThumb];
+                //             var link_detail = response.sizes.size[+qPhoto];
+                //             imgages += '<a href="' + link_detail + '" ><img class="grid-item " src="' + link + '"" alt="' + photo.title + '" style="display: none" ></a>';
+                //             if (i === response.photos.photo.length - 1) {
+                //                 appendImages($(imgages), callback);
+                //             }
+                //         });
+                //     }
+                // } else { // combine string to get sizes' link
                 for (var i = 0; i < response.photos.photo.length; i++) {
                     var photo = response.photos.photo[i];
-                    var link = 'https://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + arrQuality[+$('#selectThumbQuality').val()] + '.jpg';
-                    var link_large = 'https://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + arrQuality[+$('#selectPhotoQuality').val()] + '.jpg';
-
-                    console.log(link);
-                    console.log(link_large);
-                    imgages += '<a href="' + link + '" ><img class="grid-item " src=' + link + ' style="display: none" ></a>';
-
+                    console.log(qPhoto + ' ' + arrQuality[+qPhoto]);
+                    var link = 'https://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + arrQuality[+qThumb] + '.jpg';
+                    var link_detail = 'https://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + arrQuality[+qPhoto] + '.jpg';
+                    imgages += '<a href="' + link_detail + '" ><img class="grid-item " src="' + link + '"" alt="' + photo.title + '" style="display: none" ></a>';
                 }
-                var $newEle = $(imgages);
-                $container.append($newEle);
-
-                $newEle.each(function(index) {
-                    var $img = $(this).find('img');
-                    $img.imagesLoaded(function(ele) {
-                        console.log('loaded img: ', $img.attr('src'));
-                        $img.show();
-                        $container.masonry('appended', $img, true);
-                        $container.masonry('layout');
-                    });
-                });
-                $newEle.imagesLoaded(function() {
-                    console.log('loaded all');
-                    // Init lightGallery
-                    // TODO: refresh lightGallery everytime added photo
-                    if (gallery) {
-                        gallery.destroy(true);
-                    }
-                    gallery = $container.lightGallery({
-                        thumbnail: true,
-                        animateThumb: true,
-                        showThumbByDefault: true,
-                        subHtmlSelectorRelative: true,
-                        hash: false
-                    }).data('lightGallery');
-                    if (callback) {
-                        callback();
-                    }
-                });
+                appendImages($(imgages), callback);
+                // }
             }
         });
     }
 
-    function getPhotoInfo(id) {
+    function appendImages($newEle, callback) {
+        $container.append($newEle);
+        $newEle.each(function(index) {
+            var $a = $(this);
+            var $img = $a.find('img');
+            $img.imagesLoaded(function(ele) {
+                console.log('loaded img: ', $img.attr('src'));
+                $img.show();
+                $container.masonry('appended', $img, true);
+                $container.masonry('layout');
+                gallery.$items = gallery.$items.add($a);
+                gallery.init();
+            });
+        });
+        $newEle.imagesLoaded(function() {
+            console.log('====loaded all====');
+            if (callback) {
+                callback();
+            }
+        });
+    }
+
+    function getPhotoSizes(id, callback) {
         var url = 'https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=' + apiKey + '&photo_id=' + id + '&format=json&nojsoncallback=1';
         $.getJSON(url, function(response) {
-
+            callback(response);
         });
     }
 
