@@ -137,6 +137,10 @@ $(function() {
             }
         }, 100);
     });
+    $container.one('onCloseAfter.lg', function() {
+        var newUrl = deleteUrlParam('photourl');
+        changeUrl(newUrl);
+    });
 
     // infinite scroll
     var loadingImages = false;
@@ -225,6 +229,9 @@ function getParameterByName(name, url) {
 function getUrlVars(url) {
     var hash;
     var myJson = {};
+    if (url.indexOf('?') < 0) {
+        return '';
+    }
     var hashes = url.slice(url.indexOf('?') + 1).split('&');
     for (var i = 0; i < hashes.length; i++) {
         hash = hashes[i].split('=');
@@ -235,13 +242,16 @@ function getUrlVars(url) {
 
 function deleteUrlParam(paramName) {
     var json = getUrlVars(location.href);
+    if (json) {
+        return location.origin + location.pathname;
+    }
     delete json[paramName];
     var newParamsUrl = Object.keys(json).map(function(k) {
         return k + '=' + json[k]
     }).join('&');
     console.log('newParamsUrl', newParamsUrl);
     var slash = '';
-    if(location.pathname.substring(location.pathname.length-1,location.pathname.length) !== '/') {
+    if (location.pathname.substring(location.pathname.length - 1, location.pathname.length) !== '/') {
         slash = '/';
     }
     return location.origin + location.pathname + slash + '?' + newParamsUrl;
