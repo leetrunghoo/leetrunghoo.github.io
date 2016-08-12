@@ -240,7 +240,11 @@ function deleteUrlParam(paramName) {
         return k + '=' + json[k]
     }).join('&');
     console.log('newParamsUrl', newParamsUrl);
-    return location.origin + location.pathname + '/?' + newParamsUrl;
+    var slash = '';
+    if(location.pathname.substring(location.pathname.length-1,location.pathname.length) !== '/') {
+        slash = '/';
+    }
+    return location.origin + location.pathname + slash + '?' + newParamsUrl;
 }
 
 function changeUrl(newUrl) {

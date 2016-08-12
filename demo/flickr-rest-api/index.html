@@ -149,7 +149,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.0/remodal.min.js"></script>
 	<!-- <script src="handleFlickr.js"></script> -->
 	<script>
-		$(function() {
+        $(function() {
             var apiKey = '986e904143a37c668876552671aacde9',
                 authorId = localStorage.getItem('demo_authorId') || 'nhienhy', //99002729@N07
                 // photo quality = 3: low, 5: med, 8: high, 9: xhigh
@@ -391,13 +391,16 @@
                 return k + '=' + json[k]
             }).join('&');
             console.log('newParamsUrl', newParamsUrl);
-            return location.origin + location.pathname + '/?' + newParamsUrl;
+            var slash = '';
+            if(location.pathname.substring(location.pathname.length-1,location.pathname.length) !== '/') {
+                slash = '/';
+            }
+            return location.origin + location.pathname + slash + '?' + newParamsUrl;
         }
 
         function changeUrl(newUrl) {
             window.history.pushState("object or string", document.title, newUrl);
         }
-
 	</script>
 </body>
 
