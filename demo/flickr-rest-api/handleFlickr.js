@@ -91,7 +91,7 @@ $(function() {
         if (authorIdValue && authorIdValue !== authorId) {
             authorId = authorIdValue;
             localStorage.setItem('demo_authorId', authorIdValue);
-            changeUrl(location.origin + '/?authorid=' + authorIdValue);
+            changeUrl(location.origin + location.pathname + '/?authorid=' + authorIdValue);
             flagReloadPhotos = true;
         }
         if (flagReloadPhotos) {
@@ -240,7 +240,7 @@ function deleteUrlParam(paramName) {
         return k + '=' + json[k]
     }).join('&');
     console.log('newParamsUrl', newParamsUrl);
-    return location.origin + '/?' + newParamsUrl;
+    return location.origin + location.pathname + '/?' + newParamsUrl;
 }
 
 function changeUrl(newUrl) {
