@@ -149,7 +149,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.0/remodal.min.js"></script>
 	<!-- <script src="handleFlickr.js"></script> -->
 	<script>
-        $(function() {
+         $(function() {
             var apiKey = '986e904143a37c668876552671aacde9',
                 authorId = localStorage.getItem('demo_authorId') || 'nhienhy', //99002729@N07
                 // photo quality = 3: low, 5: med, 8: high, 9: xhigh
@@ -163,6 +163,14 @@
             $('#txtFlickr').val(authorId);
             $('#selectThumbQuality').val(qThumb);
             $('#selectPhotoQuality').val(qPhoto)
+
+            if (location.href.indexOf('authorid') < 0) {
+                var slash = '';
+                if (location.pathname.substring(location.pathname.length - 1, location.pathname.length) !== '/') {
+                    slash = '/';
+                }
+                changeUrl(location.origin + location.pathname + slash + '?authorid=' + authorId);
+            }
 
             // Main content container
             var $container = $('#container');
@@ -242,11 +250,7 @@
                 if (authorIdValue && authorIdValue !== authorId) {
                     authorId = authorIdValue;
                     localStorage.setItem('demo_authorId', authorIdValue);
-                    var slash = '';
-                    if (location.pathname.substring(location.pathname.length - 1, location.pathname.length) !== '/') {
-                        slash = '/';
-                    }
-                    changeUrl(location.origin + location.pathname + slash + '?authorid=' + authorIdValue);
+                    changeUrl(location.origin + location.pathname + '?authorid=' + authorIdValue);
                     flagReloadPhotos = true;
                 }
                 if (flagReloadPhotos) {
@@ -292,7 +296,7 @@
                     }
                 }, 100);
             });
-            $container.one('onCloseAfter.lg', function() {
+            $container.on('onCloseAfter.lg', function() {
                 var newUrl = deleteUrlParam('photourl');
                 changeUrl(newUrl);
             });
@@ -403,12 +407,7 @@
             var newParamsUrl = Object.keys(json).map(function(k) {
                 return k + '=' + json[k]
             }).join('&');
-            console.log('newParamsUrl', newParamsUrl);
-            var slash = '';
-            if (location.pathname.substring(location.pathname.length - 1, location.pathname.length) !== '/') {
-                slash = '/';
-            }
-            return location.origin + location.pathname + slash + '?' + newParamsUrl;
+            return location.origin + location.pathname + '?' + newParamsUrl;
         }
 
         function changeUrl(newUrl) {

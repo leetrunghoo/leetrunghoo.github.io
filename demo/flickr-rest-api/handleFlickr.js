@@ -13,6 +13,14 @@ $(function() {
     $('#selectThumbQuality').val(qThumb);
     $('#selectPhotoQuality').val(qPhoto)
 
+    if (location.href.indexOf('authorid') < 0) {
+        var slash = '';
+        if (location.pathname.substring(location.pathname.length - 1, location.pathname.length) !== '/') {
+            slash = '/';
+        }
+        changeUrl(location.origin + location.pathname + slash + '?authorid=' + authorId);
+    }
+
     // Main content container
     var $container = $('#container');
 
@@ -91,11 +99,7 @@ $(function() {
         if (authorIdValue && authorIdValue !== authorId) {
             authorId = authorIdValue;
             localStorage.setItem('demo_authorId', authorIdValue);
-            var slash = '';
-            if (location.pathname.substring(location.pathname.length - 1, location.pathname.length) !== '/') {
-                slash = '/';
-            }
-            changeUrl(location.origin + location.pathname + slash + '?authorid=' + authorIdValue);
+            changeUrl(location.origin + location.pathname + '?authorid=' + authorIdValue);
             flagReloadPhotos = true;
         }
         if (flagReloadPhotos) {
@@ -141,7 +145,7 @@ $(function() {
             }
         }, 100);
     });
-    $container.one('onCloseAfter.lg', function() {
+    $container.on('onCloseAfter.lg', function() {
         var newUrl = deleteUrlParam('photourl');
         changeUrl(newUrl);
     });
@@ -252,12 +256,7 @@ function deleteUrlParam(paramName) {
     var newParamsUrl = Object.keys(json).map(function(k) {
         return k + '=' + json[k]
     }).join('&');
-    console.log('newParamsUrl', newParamsUrl);
-    var slash = '';
-    if (location.pathname.substring(location.pathname.length - 1, location.pathname.length) !== '/') {
-        slash = '/';
-    }
-    return location.origin + location.pathname + slash + '?' + newParamsUrl;
+    return location.origin + location.pathname + '?' + newParamsUrl;
 }
 
 function changeUrl(newUrl) {
