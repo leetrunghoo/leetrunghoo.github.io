@@ -23,8 +23,6 @@ $(function() {
         percentPosition: true
     });
 
-    // $('[data-remodal-id=modal]').remodal({hashTracking: false});
-
     // init lightGallery
     var gallery = initLightGallery();
 
@@ -39,25 +37,64 @@ $(function() {
         }).data('lightGallery');
     }
 
+    // check url params
+    var pAuthorId = getParameterByName('authorid');
+    console.log('url param AuthorId: ', pAuthorId);
+    var pPhotoUrl = getParameterByName('photourl');
+    console.log('url param photourl: ', pPhotoUrl);
+    if (pAuthorId && pAuthorId !== authorId) {
+        authorId = pAuthorId;
+        localStorage.setItem('demo_authorId', authorId);
+    }
+    if (pPhotoUrl) {
+        var a = '<a href="' + pPhotoUrl + '" ><img class="grid-item " src="' + pPhotoUrl + '"" style="display: none" ></a>';
+        var $a = $(a);
+        $container.append($a);
+        var $img = $a.find('img');
+        $img.imagesLoaded(function(ele) {
+            console.info('+++loaded img from url param: ', $img.attr('src'));
+            $img.show();
+            $container.masonry('appended', $img, true);
+            $container.masonry('layout');
+            gallery.$items = gallery.$items.add($a);
+            gallery.init();
+            $a.click();
+            $container.one('onBeforeClose.lg', function() {
+                var newUrl = deleteUrlParam('photourl');
+                changeUrl(newUrl);
+                reloadPhotos();
+            });
+        });
+    } else {
+        console.info('------start loading photos------');
+        startLoadImages();
+    }
+
     // Remodal event
     $(document).on('confirmation', '.remodal', function() {
-        var flagReload = false;
+        var flagReloadPhotos = false;
         if ($('#selectThumbQuality').val() && $('#selectThumbQuality').val() !== qThumb) {
             qThumb = $('#selectThumbQuality').val();
             localStorage.setItem('demo_qThumb', qThumb);
-            flagReload = true;
+            flagReloadPhotos = true;
         }
         if ($('#selectPhotoQuality').val() && $('#selectPhotoQuality').val() !== qPhoto) {
             qPhoto = $('#selectPhotoQuality').val();
             localStorage.setItem('demo_qPhoto', qPhoto);
-            flagReload = true;
+            flagReloadPhotos = true;
         }
-        if ($('#txtFlickr').val() && $('#txtFlickr').val() !== authorId) {
-            authorId = $('#txtFlickr').val();
-            localStorage.setItem('demo_authorId', authorId);
-            flagReload = true;
+        var authorIdValue = $('#txtFlickr').val();
+        if (authorIdValue && authorIdValue.indexOf('http') > -1) {
+            authorIdValue = authorIdValue.split('/photos/')[1];
+            authorIdValue = authorIdValue.split('/')[0];
         }
-        if (flagReload) {
+        if (authorIdValue && authorIdValue !== authorId) {
+            authorId = authorIdValue;
+            localStorage.setItem('demo_authorId', authorIdValue);
+            changeUrl(location.origin + '/?authorid=' + authorIdValue);
+            flagReloadPhotos = true;
+        }
+        if (flagReloadPhotos) {
             $container.empty();
             gallery.destroy(true);
             gallery = initLightGallery();
@@ -70,17 +107,29 @@ $(function() {
         $('#selectPhotoQuality').val(qPhoto);
     });
 
+    function reloadPhotos() {
+        $container.empty();
+        gallery.destroy(true);
+        gallery = initLightGallery();
+        startLoadImages();
+    }
+
     // when view photo detail => load larger photo
     $container.on('onAfterSlide.lg', function() {
         $('#tempImg').remove();
         setTimeout(function() {
             var thumbLink = $('.lg-thumb-item.active img').attr('src');
             var detailLink = $('.lg-current .lg-img-wrap img').attr('src');
+
+            // change url without refreshing
+            var newUrl = deleteUrlParam('photourl') + '&photourl=' + detailLink;
+            changeUrl(newUrl);
+
             if (!listLoadedImg[detailLink]) { // check cached img
                 $('.lg-current .lg-img-wrap img').attr('src', thumbLink);
                 $container.append('<img src="' + detailLink + '" id="tempImg" style="display: none">');
                 $('#tempImg').imagesLoaded(function() {
-                    console.log('loaded image: ' + detailLink);
+                    // console.info('loaded image: ' + detailLink);
                     $('.lg-current .lg-img-wrap img').attr('src', detailLink);
                     listLoadedImg[detailLink] = true;
                     $('#tempImg').remove();
@@ -89,9 +138,18 @@ $(function() {
         }, 100);
     });
 
-
-    console.log('-----------loadImages');
-    startLoadImages();
+    // infinite scroll
+    var loadingImages = false;
+    $(document).scroll(function() {
+        var docScrollTop = $(document).scrollTop();
+        var endScroll = $(document).height() - $(window).height() - 200;
+        if (!loadingImages && (docScrollTop > endScroll)) {
+            loadingImages = true;
+            loadImages(++startPage, function() {
+                loadingImages = false;
+            });
+        }
+    });
 
     function startLoadImages() {
         startPage = 0;
@@ -110,28 +168,14 @@ $(function() {
         $.getJSON(url, function(response) {
             if (response.stat === 'ok') {
                 var imgages = '';
-                // if (qThumb === 10 || qPhoto === 10) { // call rest to get sizes' link
-                //     for (var i = 0; i < response.photos.photo.length; i++) {
-                //         var photo = response.photos.photo[i];
-                //         getPhotoSizes(photo.id, function(response) {
-                //             var link = response.sizes.size[+qThumb];
-                //             var link_detail = response.sizes.size[+qPhoto];
-                //             imgages += '<a href="' + link_detail + '" ><img class="grid-item " src="' + link + '"" alt="' + photo.title + '" style="display: none" ></a>';
-                //             if (i === response.photos.photo.length - 1) {
-                //                 appendImages($(imgages), callback);
-                //             }
-                //         });
-                //     }
-                // } else { // combine string to get sizes' link
+                // combine string to get sizes' link
                 for (var i = 0; i < response.photos.photo.length; i++) {
                     var photo = response.photos.photo[i];
-                    console.log(qPhoto + ' ' + arrQuality[+qPhoto]);
                     var link = 'https://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + arrQuality[+qThumb] + '.jpg';
                     var link_detail = 'https://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + arrQuality[+qPhoto] + '.jpg';
                     imgages += '<a href="' + link_detail + '" ><img class="grid-item " src="' + link + '"" alt="' + photo.title + '" style="display: none" ></a>';
                 }
                 appendImages($(imgages), callback);
-                // }
             }
         });
     }
@@ -142,7 +186,7 @@ $(function() {
             var $a = $(this);
             var $img = $a.find('img');
             $img.imagesLoaded(function(ele) {
-                console.log('loaded img: ', $img.attr('src'));
+                // console.info('loaded img: ', $img.attr('src'));
                 $img.show();
                 $container.masonry('appended', $img, true);
                 $container.masonry('layout');
@@ -151,7 +195,7 @@ $(function() {
             });
         });
         $newEle.imagesLoaded(function() {
-            console.log('====loaded all====');
+            console.info('====loaded all====');
             if (callback) {
                 callback();
             }
@@ -165,16 +209,40 @@ $(function() {
         });
     }
 
-    // infinite scroll
-    var loadingImages = false;
-    $(document).scroll(function() {
-        var docScrollTop = $(document).scrollTop();
-        var endScroll = $(document).height() - $(window).height() - 200;
-        if (!loadingImages && (docScrollTop > endScroll)) {
-            loadingImages = true;
-            loadImages(++startPage, function() {
-                loadingImages = false;
-            });
-        }
-    });
 });
+
+// helper functions
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+function getUrlVars(url) {
+    var hash;
+    var myJson = {};
+    var hashes = url.slice(url.indexOf('?') + 1).split('&');
+    for (var i = 0; i < hashes.length; i++) {
+        hash = hashes[i].split('=');
+        myJson[hash[0]] = hash[1];
+    }
+    return myJson;
+}
+
+function deleteUrlParam(paramName) {
+    var json = getUrlVars(location.href);
+    delete json[paramName];
+    var newParamsUrl = Object.keys(json).map(function(k) {
+        return k + '=' + json[k]
+    }).join('&');
+    console.log('newParamsUrl', newParamsUrl);
+    return location.origin + '/?' + newParamsUrl;
+}
+
+function changeUrl(newUrl) {
+    window.history.pushState("object or string", document.title, newUrl);
+}
