@@ -1,13 +1,13 @@
 $(function() {
     var apiKey = '986e904143a37c668876552671aacde9',
-        authorId = localStorage.getItem('demo_authorId') || 'nhienhy', //99002729@N07
+        authorId = localStorage.getItem('demo_authorId') || 'hin-stone', //99002729@N07
         // photo quality = 3: low, 5: med, 8: high, 9: xhigh
         qThumb = localStorage.getItem('demo_qThumb') || 5,
         qPhoto = localStorage.getItem('demo_qPhoto') || 8,
         perPage = 10,
         startPage = 0,
         arrQuality = ['_s', '_q', '_t', '_m', '_n', '', '_z', '_c', '_b', '_h'],
-        listLoadedImg = {};
+        listLoadedImg = {}; // use for checking cached detail photos
 
     $('#txtFlickr').val(authorId);
     $('#selectThumbQuality').val(qThumb);
@@ -52,6 +52,7 @@ $(function() {
     console.log('url param photourl: ', pPhotoUrl);
     if (pAuthorId && pAuthorId !== authorId) {
         authorId = pAuthorId;
+        $('#txtFlickr').val(authorId);
         localStorage.setItem('demo_authorId', authorId);
     }
     if (pPhotoUrl) {
@@ -128,17 +129,24 @@ $(function() {
         setTimeout(function() {
             var thumbLink = $('.lg-thumb-item.active img').attr('src');
             var detailLink = $('.lg-current .lg-img-wrap img').attr('src');
-
+            if (!detailLink) {
+                return;
+            }
             // change url without refreshing
             var newUrl = deleteUrlParam('photourl') + '&photourl=' + detailLink;
             changeUrl(newUrl);
-
-            if (!listLoadedImg[detailLink]) { // check cached img
-                $('.lg-current .lg-img-wrap img').attr('src', thumbLink);
+             // check cached img
+            if (!listLoadedImg[detailLink]) {
+                $('.lg-current .lg-img-wrap img').attr('src', thumbLink); // use Thumbnail photo for detail while loading
                 $container.append('<img src="' + detailLink + '" id="tempImg" style="display: none">');
                 $('#tempImg').imagesLoaded(function() {
-                    // console.info('loaded image: ' + detailLink);
-                    $('.lg-current .lg-img-wrap img').attr('src', detailLink);
+                    // check current viewing thumb photo has same ID with detail photo
+                    var currentImgUrl = $('.lg-current .lg-img-wrap img').attr('src') || '';
+                    var currentImgId = currentImgUrl.substring(currentImgUrl.lastIndexOf('/')+1, currentImgUrl.lastIndexOf('.'));
+                    currentImgId = currentImgId.split('_')[0];
+                    if(detailLink.indexOf(currentImgId) > 0) {
+                        $('.lg-current .lg-img-wrap img').attr('src', detailLink);
+                    }
                     listLoadedImg[detailLink] = true;
                     $('#tempImg').remove();
                 });

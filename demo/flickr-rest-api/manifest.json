@@ -1,0 +1,13 @@
+{
+    "name": "Flickr Demo",
+    "short_name": "Flickr Demo",
+    "icons": [{
+        "src": "https://leetrunghoo.com/assets/img/logo-150.png",
+        "sizes": "150x150",
+        "type": "image\/png"
+    }],
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#fff",
+    "theme_color": "#fff"
+}
