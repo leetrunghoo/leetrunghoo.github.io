@@ -91,7 +91,11 @@ $(function() {
         if (authorIdValue && authorIdValue !== authorId) {
             authorId = authorIdValue;
             localStorage.setItem('demo_authorId', authorIdValue);
-            changeUrl(location.origin + location.pathname + '/?authorid=' + authorIdValue);
+            var slash = '';
+            if (location.pathname.substring(location.pathname.length - 1, location.pathname.length) !== '/') {
+                slash = '/';
+            }
+            changeUrl(location.origin + location.pathname + slash + '?authorid=' + authorIdValue);
             flagReloadPhotos = true;
         }
         if (flagReloadPhotos) {
@@ -242,10 +246,9 @@ function getUrlVars(url) {
 
 function deleteUrlParam(paramName) {
     var json = getUrlVars(location.href);
-    if (json) {
-        return location.origin + location.pathname;
+    if (json[paramName]) {
+        delete json[paramName];
     }
-    delete json[paramName];
     var newParamsUrl = Object.keys(json).map(function(k) {
         return k + '=' + json[k]
     }).join('&');
