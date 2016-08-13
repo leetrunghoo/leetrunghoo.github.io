@@ -1,24 +1,29 @@
 $(function() {
     var apiKey = '986e904143a37c668876552671aacde9',
-        authorId = localStorage.getItem('demo_authorId') || 'hin-stone', //99002729@N07
+        userId = localStorage.getItem('demo_userId') || 'hin-stone', //99002729@N07
         // photo quality = 3: low, 5: med, 8: high, 9: xhigh
         qThumb = localStorage.getItem('demo_qThumb') || 5,
         qPhoto = localStorage.getItem('demo_qPhoto') || 8,
-        perPage = 10,
+        perPage = 100,
         startPage = 0,
+        perPart = 10,
+        startPhotoIndex = 0,
+        arrListPhotos = [],
         arrQuality = ['_s', '_q', '_t', '_m', '_n', '', '_z', '_c', '_b', '_h'],
         listLoadedImg = {}; // use for checking cached detail photos
 
-    $('#txtFlickr').val(authorId);
+    // load default setting
+    $('#txtFlickr').val(userId);
     $('#selectThumbQuality').val(qThumb);
     $('#selectPhotoQuality').val(qPhoto)
 
-    if (location.href.indexOf('authorid') < 0) {
+    // append user_id to url
+    if (location.href.indexOf('user_id') < 0) {
         var slash = '';
         if (location.pathname.substring(location.pathname.length - 1, location.pathname.length) !== '/') {
             slash = '/';
         }
-        changeUrl(location.origin + location.pathname + slash + '?authorid=' + authorId);
+        changeUrl(location.origin + location.pathname + slash + '?user_id=' + userId);
     }
 
     // Main content container
@@ -45,15 +50,39 @@ $(function() {
         }).data('lightGallery');
     }
 
+    $('.pagination').pagination({
+        items: 0,
+        itemsOnPage: 100,
+        displayedPages: 3,
+        edges: 1,
+        hrefTextPrefix: '',
+        selectOnClick: false,
+        prevText: '',
+        nextText: '',
+        cssStyle: 'light-theme',
+        onPageClick: function(pageNumber, event) {
+            console.log(pageNumber);
+            $container.empty();
+            gallery.destroy(true);
+            gallery = initLightGallery();
+            loadPage(pageNumber);
+            $('.pagination.bottom').hide();
+            return false;
+        },
+        onInit: function() {
+            // Callback triggered immediately after initialization
+        }
+    });
+
     // check url params
-    var pAuthorId = getParameterByName('authorid');
+    var pAuthorId = getParameterByName('user_id');
     console.log('url param AuthorId: ', pAuthorId);
-    var pPhotoUrl = getParameterByName('photourl');
-    console.log('url param photourl: ', pPhotoUrl);
-    if (pAuthorId && pAuthorId !== authorId) {
-        authorId = pAuthorId;
-        $('#txtFlickr').val(authorId);
-        localStorage.setItem('demo_authorId', authorId);
+    var pPhotoUrl = getParameterByName('photo_url');
+    console.log('url param photo_url: ', pPhotoUrl);
+    if (pAuthorId && pAuthorId !== userId) {
+        userId = pAuthorId;
+        $('#txtFlickr').val(userId);
+        localStorage.setItem('demo_userId', userId);
     }
     if (pPhotoUrl) {
         var a = '<a href="' + pPhotoUrl + '" ><img class="grid-item " src="' + pPhotoUrl + '"" style="display: none" ></a>';
@@ -69,7 +98,7 @@ $(function() {
             gallery.init();
             $a.click();
             $container.one('onBeforeClose.lg', function() {
-                var newUrl = deleteUrlParam('photourl');
+                var newUrl = deleteUrlParam('photo_url');
                 changeUrl(newUrl);
                 reloadPhotos();
             });
@@ -92,15 +121,15 @@ $(function() {
             localStorage.setItem('demo_qPhoto', qPhoto);
             flagReloadPhotos = true;
         }
-        var authorIdValue = $('#txtFlickr').val();
-        if (authorIdValue && authorIdValue.indexOf('http') > -1) {
-            authorIdValue = authorIdValue.split('/photos/')[1];
-            authorIdValue = authorIdValue.split('/')[0];
+        var userIdValue = $('#txtFlickr').val();
+        if (userIdValue && userIdValue.indexOf('http') > -1) {
+            userIdValue = userIdValue.split('/photos/')[1];
+            userIdValue = userIdValue.split('/')[0];
         }
-        if (authorIdValue && authorIdValue !== authorId) {
-            authorId = authorIdValue;
-            localStorage.setItem('demo_authorId', authorIdValue);
-            changeUrl(location.origin + location.pathname + '?authorid=' + authorIdValue);
+        if (userIdValue && userIdValue !== userId) {
+            userId = userIdValue;
+            localStorage.setItem('demo_userId', userIdValue);
+            changeUrl(location.origin + location.pathname + '?user_id=' + userIdValue);
             flagReloadPhotos = true;
         }
         if (flagReloadPhotos) {
@@ -111,7 +140,7 @@ $(function() {
         }
     });
     $(document).on('cancellation', '.remodal', function() {
-        $('#txtFlickr').val(authorId);
+        $('#txtFlickr').val(userId);
         $('#selectThumbQuality').val(qThumb);
         $('#selectPhotoQuality').val(qPhoto);
     });
@@ -133,18 +162,18 @@ $(function() {
                 return;
             }
             // change url without refreshing
-            var newUrl = deleteUrlParam('photourl') + '&photourl=' + detailLink;
+            var newUrl = deleteUrlParam('photo_url') + '&photo_url=' + detailLink;
             changeUrl(newUrl);
-             // check cached img
+            // check cached img
             if (!listLoadedImg[detailLink]) {
                 $('.lg-current .lg-img-wrap img').attr('src', thumbLink); // use Thumbnail photo for detail while loading
                 $container.append('<img src="' + detailLink + '" id="tempImg" style="display: none">');
                 $('#tempImg').imagesLoaded(function() {
                     // check current viewing thumb photo has same ID with detail photo
                     var currentImgUrl = $('.lg-current .lg-img-wrap img').attr('src') || '';
-                    var currentImgId = currentImgUrl.substring(currentImgUrl.lastIndexOf('/')+1, currentImgUrl.lastIndexOf('.'));
+                    var currentImgId = currentImgUrl.substring(currentImgUrl.lastIndexOf('/') + 1, currentImgUrl.lastIndexOf('.'));
                     currentImgId = currentImgId.split('_')[0];
-                    if(detailLink.indexOf(currentImgId) > 0) {
+                    if (detailLink.indexOf(currentImgId) > 0) {
                         $('.lg-current .lg-img-wrap img').attr('src', detailLink);
                     }
                     listLoadedImg[detailLink] = true;
@@ -154,50 +183,64 @@ $(function() {
         }, 100);
     });
     $container.on('onCloseAfter.lg', function() {
-        var newUrl = deleteUrlParam('photourl');
+        var newUrl = deleteUrlParam('photo_url');
         changeUrl(newUrl);
     });
 
     // infinite scroll
     var loadingImages = false;
     $(document).scroll(function() {
-        var docScrollTop = $(document).scrollTop();
-        var endScroll = $(document).height() - $(window).height() - 200;
-        if (!loadingImages && (docScrollTop > endScroll)) {
-            loadingImages = true;
-            loadImages(++startPage, function() {
-                loadingImages = false;
-            });
+        if (startPhotoIndex < perPage) {
+            var docScrollTop = $(document).scrollTop();
+            var endScroll = $(document).height() - $(window).height() - 200;
+            if (!loadingImages && (docScrollTop > endScroll)) {
+                loadingImages = true;
+                loadImages(function() {
+                    loadingImages = false;
+                });
+            }
+        }
+        if ($(document).scrollTop() > $(window).height()) {
+            $('.pagination.bottom').show();
         }
     });
 
     function startLoadImages() {
         startPage = 0;
-        loadImages(++startPage, function() {
+        loadPage(++startPage, function() {
             // make sure body has scroll therefore be able to do infinitescroll
             if (document.body.scrollHeight <= window.innerHeight) {
-                loadImages(++startPage);
+                loadPage(++startPage);
             }
         });
     }
 
-    function loadImages(page, callback) {
+    function loadPage(page, callback) {
         console.log('loadImages page: ' + page);
-        authorId = authorId || $('txtFlickr').val();
-        var url = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=' + apiKey + '&user_id=' + authorId + '&per_page=' + perPage + '&page=' + page + '&format=json&nojsoncallback=1';
+        var url = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=' + apiKey + '&user_id=' + userId + '&per_page=' + perPage + '&page=' + page + '&format=json&nojsoncallback=1';
         $.getJSON(url, function(response) {
             if (response.stat === 'ok') {
-                var imgages = '';
-                // combine string to get sizes' link
-                for (var i = 0; i < response.photos.photo.length; i++) {
-                    var photo = response.photos.photo[i];
-                    var link = 'https://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + arrQuality[+qThumb] + '.jpg';
-                    var link_detail = 'https://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + arrQuality[+qPhoto] + '.jpg';
-                    imgages += '<a href="' + link_detail + '" ><img class="grid-item " src="' + link + '"" alt="' + photo.title + '" style="display: none" ></a>';
-                }
-                appendImages($(imgages), callback);
+                arrListPhotos = response.photos.photo;
+                startPhotoIndex = 0;
+                $('.pagination').pagination('updateItems', response.photos.total);
+                loadImages(callback);
             }
         });
+    }
+
+    function loadImages(callback) {
+        console.log(' startPhotoIndex: ' + startPhotoIndex);
+        var photos = arrListPhotos.slice(startPhotoIndex, startPhotoIndex + perPart);
+        startPhotoIndex += perPart;
+        var imgages = '';
+        // combine string to get sizes' link
+        for (var i = 0; i < photos.length; i++) {
+            var photo = photos[i];
+            var link = 'https://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + arrQuality[+qThumb] + '.jpg';
+            var link_detail = 'https://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + arrQuality[+qPhoto] + '.jpg';
+            imgages += '<a href="' + link_detail + '" ><img class="grid-item " src="' + link + '"" alt="' + photo.title + '" style="display: none" ></a>';
+        }
+        appendImages($(imgages), callback);
     }
 
     function appendImages($newEle, callback) {
