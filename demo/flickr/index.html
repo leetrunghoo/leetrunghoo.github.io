@@ -51,7 +51,7 @@
 
     body {
     	font-family: "arial";
-        padding: 5px;
+        padding: 0;
         margin: 0;
         position: relative;
     }
@@ -61,6 +61,14 @@
     }
 
     button:focus {outline:0;}
+    
+    #container {
+        padding: 50px 0;
+    }
+
+    .wraper {
+        padding: 5px;
+    }
     
     .grid-item {
         width: calc(100% - 10px);
@@ -145,10 +153,6 @@
         margin: 0 10px;
     }
 
-    #container {
-        padding: 50px 0;
-    }
-
     .pagination {
         position: absolute;
         top: 17px;
@@ -169,7 +173,9 @@
 </head>
 <body ">
     <div class="pagination"></div>   
-	<div id="container"></div>
+    <div class="wraper">
+	   <div id="container"></div>
+    </div>
     <div class="pagination bottom"></div>
 	<a data-remodal-target="modal" href="#"><button id="btnSetting" title="setting"></button></a>
 	<div class="remodal-bg">
