@@ -67,6 +67,7 @@ $(function() {
             gallery = initLightGallery();
             loadPage(pageNumber);
             $('.pagination.bottom').hide();
+            $(document).scrollTop(0);
             return false;
         },
         onInit: function() {
@@ -195,7 +196,9 @@ $(function() {
             var endScroll = $(document).height() - $(window).height() - 200;
             if (!loadingImages && (docScrollTop > endScroll)) {
                 loadingImages = true;
+                NProgress.start();
                 loadImages(function() {
+                    NProgress.done();
                     loadingImages = false;
                 });
             }
@@ -217,14 +220,24 @@ $(function() {
 
     function loadPage(page, callback) {
         console.log('loadImages page: ' + page);
+        NProgress.start();
         var url = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=' + apiKey + '&user_id=' + userId + '&per_page=' + perPage + '&page=' + page + '&format=json&nojsoncallback=1';
         $.getJSON(url, function(response) {
             if (response.stat === 'ok') {
                 arrListPhotos = response.photos.photo;
                 startPhotoIndex = 0;
                 $('.pagination').pagination('updateItems', response.photos.total);
-                loadImages(callback);
+                loadImages(function() {
+                    NProgress.done();
+                    if (callback) {
+                        callback();
+                    }
+                });
+            } else {
+                NProgress.done();
             }
+        }, function() {
+            NProgress.done();
         });
     }
 
