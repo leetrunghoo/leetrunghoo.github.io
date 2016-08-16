@@ -129,11 +129,11 @@ gulp.task("resizeImages", function() {
     //     .pipe(gulp.dest("assets/img/hero"));
 });
 
-/** Currently NOT use 
- * Automatically optimize images
+/** 
+ * Optimize images
  * note: need to install imagemagick. Ex on Linux or MacOS: brew install imagemagick
  */
-gulp.task("optimizeImages", ['resizeImages'], function() {
+gulp.task("optimizeImages",  function() {
     gulp.src("assets/img/**")
         .pipe(parallel(imagemin({
             progressive: true,
