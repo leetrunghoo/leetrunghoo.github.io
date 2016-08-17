@@ -146,9 +146,9 @@ table {
 
 p {
     > img:not(.emoji) {
-        @media (max-width: $screen-xs-max) {
+        // @media (max-width: $screen-xs-max) {
             max-width: 100%;
-        }
+        // }
     }
 }
 
