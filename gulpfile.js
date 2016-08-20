@@ -156,6 +156,7 @@ gulp.task('default', ['styles', 'scripts', 'browser-sync'], function() {
     gulp.watch('assets/img/hero/*.{jpg,png}', ['resizeImages']);
     gulp.watch(['*.html',
         '_posts/**',
+        'portfolio/**',
         'assets/img/**',
         '_layouts/**',
         '_includes/**'
