@@ -27,5 +27,38 @@ Experience in using technologies (JavaEE, EJB, Icefaces, UML) and development to
 
 ## Skills and Techniques
 
-## Projects
+__Languages skills__
+: English: fluent (IELTS: 5.5)
+
+__Computer skills__
+: Languages Known : Java, UML, JavaScript, HTML, XML.
+
+__RDBMS:__ MySQL, MS SQL Sever.
+
+__OS:__ MacOS, Windows, Linux. 
+
+__Others__  : EJB 3, JSP, JSF, Icefaces, Glassfish, MVC.
+
+### Communication skills
+The experience at work as well as joining outdoor activities has improved my ability to communicate effectively with everyone. It also taught me the importance of listening, supporting and respecting the others.
+
+### Teamwork skills
+The experience in working in a team helps me a lot to become a good team member. I am willing to share the information, trust and support other colleagues.
+
+### Problem solving skills
+As a software developer, I am used to face many problems. I had to handle not only bugs, but also critical problems like changing requirements. To handle them, firstly I identify the cause, then identify possible solutions, after that select the best solution. 
+
+## Interests
+
+Playing the guitar, listening to music, singing.
+Surfing the web, interested in new technologies, cell phone.
+Joining English speaking club and outdoor activities.
+
+## Refferences
+
+Mr. Le Quang Tri
+Position    : Project Director in Fisoft.
+Office Add  : 169B Thich Quang Duc, Phu Nhuan Dist, HCM City.
+Mobile No   : 0903935802
+Email       : trilq@fisoft.com.vn
 
