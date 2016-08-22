@@ -32,23 +32,24 @@ Thanks to [Web App Manifest](https://developer.mozilla.org/en-US/docs/Web/Manife
 
 ## Demo key features
 
-**1. Fast, very fast:** I use new tech to make it as fast as possible. On below demo, I used Chome Android on 3G network and it took about 1s to load the web (cleared cache). It was almost instant loading when revisit the web.
 
-<iframe width="100%" height="320" src="https://www.youtube.com/embed/nuJf_K5fxn0" frameborder="0" allowfullscreen></iframe>
+**1. Text-to-Speech:** When opened a lesson, you can click on the links to listen. You can choose using mp3 (default) or Web Speech. If you using Web Speech, you can change the voice, the voice speed and using without network (it used Speech Synthesis that only supported by Chrome, Opera, Safari & Edge 14).
 
-**2. Work Offline:** Thanks to Service Worker, the web can work offline or when the network is not stable (only supported by Chrome, Opera & Firefox)
+**2. Practise speaking:** You can pratice speaking to find out you pronouce right or not (it used Speech Recognition that only supported by Chrome và Opera). 
+
+<iframe width="100%" height="320" src="https://www.youtube.com/embed/L_4ZDqVbOKo" frameborder="0" allowfullscreen></iframe>
+
+**3. Work Offline:** Thanks to Service Worker, the web can work offline or when the network is not stable (only supported by Chrome, Opera & Firefox)
 
 <iframe width="100%" height="320" src="https://www.youtube.com/embed/vpVN7uuOHzE" frameborder="0" allowfullscreen></iframe>
 
-**3. App-like:** Just add to home screen of smartphone and works like a native app. Without installing!
+**4. App-like:** Just add to home screen of smartphone and works like a native app. Without installing!
 
 <iframe width="100%" height="320" src="https://www.youtube.com/embed/TrtP4qwl3qo" frameborder="0" allowfullscreen></iframe>
 
-**4. Text-to-Speech:** When opened a lesson, you can click on the links to listen. You can choose using mp3 (default) or Web Speech. If you using Web Speech, you can change the voice, the voice speed and using without network (it used Speech Synthesis that only supported by Chrome, Opera, Safari & Edge 14).
+**5. Fast, very fast:** I use new tech to make it as fast as possible. On below demo, I used Chome Android on 3G network and it took about 1s to load the web (cleared cache). It was almost instant loading when revisit the web.
 
-**5. Practise speaking:** You can pratice speaking to find out you pronouce right or not (it used Speech Recognition that only supported by Chrome và Opera). 
-
-<iframe width="100%" height="320" src="https://www.youtube.com/embed/L_4ZDqVbOKo" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="320" src="https://www.youtube.com/embed/nuJf_K5fxn0" frameborder="0" allowfullscreen></iframe>
 
 ## About the project:
 
