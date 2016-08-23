@@ -109,6 +109,12 @@ blockquote {
     }
 }
 
+dl {
+    dt, dd {
+        line-height: $leading;
+    }
+}
+
 
 /* Headings */
 

@@ -1,12 +1,13 @@
 ---
-layout: portfolio
-title: "Portfolio of Trung Ho (leetrunghoo)"
+layout: cv
+title: "CV of Trung Ho (leetrunghoo)"
 ---
+# CURRICULUM VITAE
 
 {% assign cv = site.data.cv %}
 ## Basic Infomation
 {% assign basic = cv.basic %}
-- Name: {{ basic.name }}
+- Name: __{{ basic.name }}__
 - Date of birth: {{ basic.dob }}
 - Phone: {{ basic.phone }}
 - Address: {{ basic.address }}
@@ -32,40 +33,30 @@ __Responsibility:__
 
 ## Skills and Techniques
 
-### Languages skills
-{% for lang in cv.language_skills %}
-- __{{ lang.name }}:__ {{ lang.description }}{% endfor %}
+{% for skill in cv.skills %}
+### {{ skill.type }}
+{{ skill.description }}
+{% for detail in skill.details %}
+- __{{ detail.name }}:__ {{ detail.description }}{% endfor %}
+{% endfor %}
 
-### Computer skills
-{% for skill in cv.computer_skills %}
-- __{{ skill.name }}:__ {{ skill.description }}{% endfor %}
+## Education
 
-### Communication skills
-The experience at work as well as joining outdoor activities has improved my ability to communicate effectively with everyone. It also taught me the importance of listening, supporting and respecting the others.
-
-### Teamwork skills
-The experience in working in a team helps me a lot to become a good team member. I am willing to share the information, trust and support other colleagues.
-
-### Problem solving skills
-As a software developer, I am used to face many problems. I had to handle not only bugs, but also critical problems like changing requirements. To handle them, firstly I identify the cause, then identify possible solutions, after that select the best solution. 
+{% for detail in cv.education %}
+|__{{ detail.time }}:__| {{ detail.school }}|
+|| {{ detail.degree }}|{% endfor %}
 
 ## Interests
 
-Playing the guitar, listening to music, singing.
+{% for hobby in cv.hobbies %}
+- {{ hobby }}{% endfor %}
 
-Surfing the web, interested in new technologies, cell phone.
+## References
 
-Joining English speaking club and outdoor activities.
-
-## Refferences
-
-Mr. Le Quang Tri
-
-Position    : Project Director in Fisoft.
-
-Office Add  : 169B Thich Quang Duc, Phu Nhuan Dist, HCM City.
-
-Mobile No   : 0903935802
-
-Email       : trilq@fisoft.com.vn
+{% for person in cv.references %}
+__{{person.name}}__
+: Position: {{person.position}}
+: Phone: {{person.phone}}
+: Email: {{person.email}}
+{% endfor %}
 

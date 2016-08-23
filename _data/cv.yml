@@ -1,15 +1,15 @@
 basic:
-  name: Trung Ho
+  name: Ho Quang Trung
   dob: September 18, 1988
   phone: (+84)909773420
-  address: Tan Binh dist, Ho Chi Minh city
+  address: Tan Binh dist, Ho Chi Minh city, Vietnam
   email: leetrunghoo@gmail.com
   website: https://leetrunghoo.com
   github: https://github.com/leetrunghoo
 
 objective: Seeking position of a Front End Developer or Fullstack Javascript Developer in product-based software company. Where I would be able to put to use the knowledge gained in the web development and push the limits of the web.
 
-skills:
+skills_detail:
 - name: HTML5
   score: 9
 - name: CSS3
@@ -21,23 +21,32 @@ skills:
 - name: Java
   score: 7
 
-computer_skills:
-- name: Languages Known
-  description: HTML5, CSS3, Javascript, Nodejs, Java
-- name: Database
-  description: MySQL, MongoDB
-- name: OS
-  description: MacOS, Linux, Windows
-- name: Tools
-  description: Sublime Text, Netbeans
-- name: Patterns and Techniques
-  description: OOP, MVC, MVVM, Ajax, Performance Optimisation Techniques, SEO
-- name: Others
-  description: Gulp, SASS, Git/Svn, jQuery, Backbone, Polymer, Requirejs
-
-language_skills:
-- name: English
-  description: fluent (IELTS 6.0)
+skills:
+  - type: Computer Skills
+    description:
+    details:
+    - name: Languages Known
+      description: HTML5, CSS3, Javascript, Nodejs, Java
+    - name: Database
+      description: MySQL, MongoDB
+    - name: OS
+      description: MacOS, Linux, Windows
+    - name: Tools
+      description: Sublime Text, Netbeans
+    - name: Patterns and Techniques
+      description: OOP, MVC, MVVM, Ajax, Performance Optimisation Techniques, SEO
+    - name: Others
+      description: Gulp, SASS, Git/Svn, jQuery, Backbone, Polymer, Requirejs
+  - type: Languages Skills
+    description:
+    details:
+    - name: English
+      description: fluent (IELTS 6.0)
+    - name: Vietnamese
+      description: native
+  - type: Soft Skills
+    description: Communication skills, Teamwork skills, Self-study skills, Public Speaking.
+    details:
 
 works:
 - company: Biglabs
@@ -45,13 +54,13 @@ works:
   time: Jan 2013 - May 2016
   description:
   - Becoming the main Web Dev for Biglabs (the only one for long time), involved in many projects, products.
-  - Self-learning latest font-end technologies to develop cutting edge web app.
+  - Self-learning latest font-end technologies to develop cutting edge web apps.
   - Interviewer.
 - company: Fisoft
   position: Java Developer
   time: Oct 2009 - May 2012
   description:
-  - Building eBOSS (an ERP system) for nearly 3 years.
+  - Working in a team to build eBOSS (an ERP system) for nearly 3 years.
   - Developing, debugging and testing throughout software development activities. Participating in analysis and design phases.
   - Collaborating with business analysts and some experts in business fields (for example accounting and manufacturing) in order to analyze the customer’s requirements.
   - Implementing task lists, estimating deliver assignments as functional specifications, quality standards and project schedules.
@@ -66,7 +75,11 @@ education:
 
 hobbies:
 - Playing musical instruments, singing.
-- Learning new, cutting the edge web technology. Doing pet project for experience.
+- Learning latest web technologies. Doing pet project for experiment.
 - Joining English speaking club and outdoor activities.
 
-
+references:
+- name: Mr. Le Quang Tri
+  position: Project Director of Fisoft.
+  phone: (+84)903935802
+  email: trilq@fisoft.com.vn
