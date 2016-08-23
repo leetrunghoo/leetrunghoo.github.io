@@ -83,11 +83,12 @@ p.u--startsWithDoubleQuote {
 
 ul,
 ol {
-    margin-top: $leading;
-    margin-bottom: $leading;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     padding-left: 22px;
     li {
         line-height: $leading;
+        padding-bottom: 5px;
     }
     ul,
     ol {

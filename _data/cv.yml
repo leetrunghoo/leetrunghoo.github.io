@@ -1,0 +1,72 @@
+basic:
+  name: Trung Ho
+  dob: September 18, 1988
+  phone: (+84)909773420
+  address: Tan Binh dist, Ho Chi Minh city
+  email: leetrunghoo@gmail.com
+  website: https://leetrunghoo.com
+  github: https://github.com/leetrunghoo
+
+objective: Seeking position of a Front End Developer or Fullstack Javascript Developer in product-based software company. Where I would be able to put to use the knowledge gained in the web development and push the limits of the web.
+
+skills:
+- name: HTML5
+  score: 9
+- name: CSS3
+  score: 9
+- name: Javascript
+  score: 9
+- name: Nodejs
+  score: 7
+- name: Java
+  score: 7
+
+computer_skills:
+- name: Languages Known
+  description: HTML5, CSS3, Javascript, Nodejs, Java
+- name: Database
+  description: MySQL, MongoDB
+- name: OS
+  description: MacOS, Linux, Windows
+- name: Tools
+  description: Sublime Text, Netbeans
+- name: Patterns and Techniques
+  description: OOP, MVC, MVVM, Ajax, Performance Optimisation Techniques, SEO
+- name: Others
+  description: Gulp, SASS, Git/Svn, jQuery, Backbone, Polymer, Requirejs
+
+language_skills:
+- name: English
+  description: fluent (IELTS 6.0)
+
+works:
+- company: Biglabs
+  position: Senior Web/Front End Developer
+  time: Jan 2013 - May 2016
+  description:
+  - Becoming the main Web Dev for Biglabs (the only one for long time), involved in many projects, products.
+  - Self-learning latest font-end technologies to develop cutting edge web app.
+  - Interviewer.
+- company: Fisoft
+  position: Java Developer
+  time: Oct 2009 - May 2012
+  description:
+  - Building eBOSS (an ERP system) for nearly 3 years.
+  - Developing, debugging and testing throughout software development activities. Participating in analysis and design phases.
+  - Collaborating with business analysts and some experts in business fields (for example accounting and manufacturing) in order to analyze the customer’s requirements.
+  - Implementing task lists, estimating deliver assignments as functional specifications, quality standards and project schedules.
+
+education:
+- school: University of Greenwich
+  degree: Bachelor's degree, Computing
+  time: 2012 - 2013
+- school: NIIT
+  degree: College, Computer Software Engineering
+  time: 2007 - 2009
+
+hobbies:
+- Playing musical instruments, singing.
+- Learning new, cutting the edge web technology. Doing pet project for experience.
+- Joining English speaking club and outdoor activities.
+
+

@@ -15,8 +15,17 @@ title: Trung Ho (leetrunghoo)
             </div>
         </div>
     </section>
-<!--     <section class="section--last">
-    </section> -->
+    <section class="section--last">
+        <div class="container container--content">
+        <div class="content-body">
+            {% for work in site.data.cv.works %}
+                <h2>{{ work.company }}</h2>
+                <h4>{{ work.time }}</h4>
+                <h4>{{ work.position }}</h4>
+            {% endfor %}
+        </div>
+    </div>
+    </section>
     <section class="section--postsWrapper">
         <div class="container">
             <div class="blockGroup">
