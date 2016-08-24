@@ -36,7 +36,7 @@ skills:
     - name: Patterns and Techniques
       description: OOP, MVC, MVVM, Ajax, Performance Optimisation Techniques, SEO
     - name: Others
-      description: Gulp, SASS, Git/Svn, jQuery, Backbone, Polymer, Requirejs
+      description: Gulp, SASS, jQuery, Backbone, Polymer, Requirejs, Git/Svn, JIRA
   - type: Languages Skills
     description:
     details:
@@ -68,10 +68,10 @@ works:
 education:
 - school: University of Greenwich
   degree: Bachelor's degree, Computing
-  time: 2012 - 2013
+  time: 2013
 - school: NIIT
   degree: College, Computer Software Engineering
-  time: 2007 - 2009
+  time: 2009
 
 hobbies:
 - Playing musical instruments, singing.

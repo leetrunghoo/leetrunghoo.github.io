@@ -1,13 +1,15 @@
-
 /* for styling selection color */
+
 * {
-  &::selection {
-    background: $gray-dark;
-    color: white;
-  }
+    &::selection {
+        background: $gray-dark;
+        color: white;
+    }
 }
 
+
 /* brand name */
+
 .brand-name-container {
     font-size: $font-XS;
     position: fixed;
@@ -133,7 +135,6 @@ figure {
 table {
     position: relative;
     border-collapse: collapse;
-    white-space: nowrap;
     td,
     th {
         position: relative;
@@ -147,7 +148,7 @@ table {
 p {
     > img:not(.emoji) {
         // @media (max-width: $screen-xs-max) {
-            max-width: 100%;
+        max-width: 100%;
         // }
     }
 }
@@ -210,13 +211,24 @@ a[target="_blank"]:not(.no-underline) {
 }
 
 .opacity-0 {
-  opacity: 0;
-  &::before, &::after {
-     opacity: 0;
-  }
+    opacity: 0;
+    &::before,
+    &::after {
+        opacity: 0;
+    }
 }
 
 .tag {
     color: $gray-dark;
     font-size: $font-XS;
+}
+
+/** cv page **/
+.cv {
+    table {
+        td,
+        th {
+            border: 0;
+        }
+    }
 }
