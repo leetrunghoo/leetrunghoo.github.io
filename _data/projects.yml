@@ -1,0 +1,97 @@
+company:
+- name: EBOSS
+  url:
+  company: Fisoft
+  time: 2009-2012
+  team: over 10 people
+  role: Java developer
+  tech: Java, EJB3, JSF, MySQL, Glassfish, UML
+  description: 
+  - EBOSS is an ERP system runs on web (web app) which has many modules such as Financial Accounting, Manufacturing, Inventory... 
+  - I involved in all software development activities.
+  picture:
+    - url: /assets/img/projects/eboss1.jpg
+      caption:
+    - url: /assets/img/projects/eboss2.jpg
+      caption:
+
+- name: Biglabs Website
+  url: http://www.big-labs.com
+  company: Biglabs
+  time: 2013
+  team: 1 developer, 1 designer
+  role: Full Stack Java developer
+  tech: Java, SpringMVC, HTML, CSS3, jQuery, MySQL, Tomcat, Full Responsive
+  description: 
+  - My first done project in Biglabs is a responsive website. It has the information of the company, people, products, register and a simple CMS to input/edit those information.
+  - I needed to develope everything of the web from the ground up including front-end, back-end, CMS, database, deployment. Thanks to that, I've learned a lot, especially front-end skills, and I'm in love with it.
+  picture:
+    - url: /assets/img/projects/bl1.jpg
+      caption: using http://ami.responsivedesign.is/ to check the responsive website
+    - url: /assets/img/projects/bl2.jpg
+      caption: Who We Are page
+    - url: /assets/img/projects/bl3.jpg
+      caption: simple CMS that I made for edit the information
+    - url: /assets/img/projects/bl4.jpg
+      caption: simple CMS that I made for edit the information
+
+- name: SmartMozo Web App
+  url: http://www.smartmozo.com/aeon/#map
+  company: Biglabs
+  time: 2014-2015
+  team: 2-3 developers, 1 designer
+  role: Leader of front-end team
+  tech: HTML5, CSS3, Backbone, jQuery, RequireJS, Intel App Framework, Leafletjs, Atmosphere-JS, REST
+  description: 
+  - This is a mobile web app uses REST to communicate with server-side. It's a subproject of SmartMozo project. 
+  - SmartMozo applies O2O model to attract shoppers online and bring them to the physical mall and create the best shopping experience for shoppers. 
+  - The customer can use this web app to see the indoor map of a mall, it also shows the promotions, e-coupons, events that happening in a mall on the map. 
+  - Moreover, the killer feature is showing the location of shops, customer, and the direction to shop at real-time.
+  - I contributed to the SmartMozo since the beginning and really love it because of its great ideas. I had the responsibility to choose which frameworks/libraries are used, train and assign tasks to new members, report to PM.
+  picture:
+    - url: /assets/img/projects/sm-lib.jpg
+      caption: A diagram shows which libraries/frameworks are used
+    - url: /assets/img/projects/sm1.jpg
+      caption:
+    - url: /assets/img/projects/sm2.jpg
+      caption:
+    - url: /assets/img/projects/sm3.jpg
+      caption:
+    - url: /assets/img/projects/sm4.jpg
+      caption:
+    - url: /assets/img/projects/sm5.jpg
+      caption:
+
+- name: SmartMozo Website
+  url: http://www.smartmozo.com/
+  company: Biglabs
+  time: 2015
+  team: 1 developer, 1 designer
+  role: Front-end dev
+  tech: CSS3, HTML5, jQuery, Full Responsive
+  description: 
+  - This is a static responsive website for introducing SmartMozo. I made it within 3 weeks.
+  picture:
+    - url: /assets/img/projects/smw.jpg
+      caption: using http://ami.responsivedesign.is/ to check the responsive website
+
+- name: SportMozo Web App
+  url: https://sportmozo.com/mobile-web-china/
+  company: Biglabs
+  time: 2015-2016
+  team: 1 developer, 1 designer
+  role: Front-end dev
+  tech: HTML5, SASS, Framework7, RequireJS, i18next, jQuery, REST
+  description: 
+  - This is a mobile web app for E-commerce, using REST to communicate with server-side. It's a subproject of SportMozo project which is an E-commerce website.
+  - I had the responsibility to choose which frameworks/libraries are used to develop the web app, report to PM.
+  picture:
+    - url: /assets/img/projects/sport1.jpg
+      caption:
+    - url: /assets/img/projects/sport2.jpg
+      caption:
+    - url: /assets/img/projects/sport3.jpg
+      caption:
+    - url: /assets/img/projects/sport4.jpg
+      caption:
+

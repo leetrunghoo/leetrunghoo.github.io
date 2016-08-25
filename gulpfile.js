@@ -112,6 +112,13 @@ gulp.task("resizeImages", function() {
             os.cpus().length
         ))
         .pipe(gulp.dest("assets/img/thumbnail"));
+    gulp.src("assets/img/projects/*.{jpg,png}")
+        // .pipe(changed("assets/img/hero"))
+        .pipe(parallel(
+            imageResize({ width: 1080 }),
+            os.cpus().length
+        ))
+        .pipe(gulp.dest("assets/img/projects"));
     // // need to install: npm install sharp    
     // gulp.src("assets/img/hero/*.{jpg,png}")
     //     .pipe(responsive({
@@ -134,13 +141,13 @@ gulp.task("resizeImages", function() {
  * note: need to install imagemagick. Ex on Linux or MacOS: brew install imagemagick
  */
 gulp.task("optimizeImages",  function() {
-    gulp.src("assets/img/**")
+    gulp.src("assets/img/projects/**")
         .pipe(parallel(imagemin({
             progressive: true,
             svgoPlugins: [{ removeViewBox: false }],
             use: [pngquant()]
         })))
-        .pipe(gulp.dest("assets/img"));
+        .pipe(gulp.dest("assets/img/projects"));
 });
 
 /**

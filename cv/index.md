@@ -23,7 +23,7 @@ title: "CV of Trung Ho (leetrunghoo)"
 
 ### __{{ work.time }}:__ {{ work.company }}
 
-__Job title:__ {{ work.position }}
+__Position:__ {{ work.position }}
 
 __Responsibility:__ 
 {% for description in work.description %}
