@@ -5,9 +5,9 @@ excerpt: "Learn English là một Progressive Web App giúp chúng ta học ti�
 categories: Project
 tags: PetProject ProgressiveWebApp Vietnamese
 image:
-  hero: /assets/img/hero/learnenglish.png
+  hero: /assets/img/hero/learnenglish.jpg
   heroStyle: 
-  thumbnail: /assets/img/thumbnail/learnenglish.png
+  thumbnail: /assets/img/thumbnail/learnenglish.jpg
   thumbnailStyle:
 bgGradientOpacity: darker
 ---

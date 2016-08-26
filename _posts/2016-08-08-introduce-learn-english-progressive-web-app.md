@@ -5,14 +5,14 @@ excerpt: "This is a Progressive Web App for learning English"
 categories: Project
 tags: PetProject ProgressiveWebApp
 image:
-  hero: /assets/img/hero/learnenglish.png
+  hero: /assets/img/hero/learnenglish.jpg
   heroStyle: 
-  thumbnail: /assets/img/thumbnail/learnenglish.png
+  thumbnail: /assets/img/thumbnail/learnenglish.jpg
   thumbnailStyle:
 bgGradientOpacity: darker
 ---
 
-[Learn English](https://learnenglish.leetrunghoo.com){:target="_blank"} is a Progressive Web App for learning English that I made for personal use and for learning new tech. I would like to share it to everyone, hope it helps.
+[Learn English](https://learnenglish.leetrunghoo.com){:target="_blank"} is a Progressive Web App for learning English that I made for personal use and for learning new tech. It's totally free, and I would like to share it to everyone, hope it helps.
 For those who don't know what Progressive Web App means, I copy this definition from [Google Developers](https://developers.google.com/web/fundamentals/getting-started/your-first-progressive-web-app/)
 
 Progressive Web Apps (PWA) are:
