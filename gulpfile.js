@@ -13,7 +13,6 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     parallel = require("concurrent-transform"),
-    // changed = require("gulp-changed"),
     os = require("os"),
     cp = require('child_process');
 
@@ -99,21 +98,18 @@ gulp.task('scripts', function() {
 gulp.task("resizeImages", function() {
     // need to install: apt-get install graphicsmagick
     gulp.src("assets/img/hero/*.{jpg,png}")
-        // .pipe(changed("assets/img/hero"))
         .pipe(parallel(
             imageResize({ width: 1080 }),
             os.cpus().length
         ))
         .pipe(gulp.dest("assets/img/hero"));
     gulp.src("assets/img/hero/*.{jpg,png}")
-        // .pipe(changed("assets/img/hero"))
         .pipe(parallel(
             imageResize({ width: 350 }),
             os.cpus().length
         ))
         .pipe(gulp.dest("assets/img/thumbnail"));
     gulp.src("assets/img/projects/*.{jpg,png}")
-        // .pipe(changed("assets/img/hero"))
         .pipe(parallel(
             imageResize({ width: 1080 }),
             os.cpus().length
@@ -141,13 +137,13 @@ gulp.task("resizeImages", function() {
  * note: need to install imagemagick. Ex on Linux or MacOS: brew install imagemagick
  */
 gulp.task("optimizeImages",  function() {
-    gulp.src("assets/img/projects/**")
+    gulp.src("assets/img/**")
         .pipe(parallel(imagemin({
             progressive: true,
             svgoPlugins: [{ removeViewBox: false }],
             use: [pngquant()]
         })))
-        .pipe(gulp.dest("assets/img/projects"));
+        .pipe(gulp.dest("assets/img"));
 });
 
 /**
