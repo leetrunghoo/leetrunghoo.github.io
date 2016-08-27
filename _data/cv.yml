@@ -7,7 +7,7 @@ basic:
   website: https://leetrunghoo.com
   github: https://github.com/leetrunghoo
 
-objective: Seeking position of a Front End Developer or Fullstack Javascript Developer in product-based software company. Where I would be able to put to use the knowledge gained in the web development and push the limits of the web.
+objective: Seeking position of a Front End Developer or Full-stack Javascript Developer in a product-based software company. Where I would be able to put to use the knowledge gained in the web development and push the limits of the web.
 
 skills_detail:
 - name: HTML5
@@ -34,7 +34,7 @@ skills:
     - name: Tools
       description: Sublime Text, Netbeans
     - name: Patterns and Techniques
-      description: OOP, MVC, MVVM, Ajax, Performance Optimisation Techniques, SEO
+      description: OOP, MVC, MVVM, REST, Performance Optimisation Techniques, SEO
     - name: Others
       description: Gulp, SASS, jQuery, Backbone, Polymer, Requirejs, Git/Svn, JIRA
   - type: Languages Skills
@@ -53,8 +53,8 @@ works:
   position: Senior Web/Front End Developer
   time: Jan 2013 - May 2016
   description:
-  - Becoming the main Web Dev for Biglabs (the only one for long time), involved in many projects, products.
-  - Self-learning latest font-end technologies to develop cutting edge web apps.
+  - Becoming the main Web Dev for Biglabs (the only one for a long time), involved in many projects, products.
+  - Self-learning latest front-end technologies to develop cutting-edge websites/web apps with great UI/UX.
   - Interviewer.
 - company: Fisoft
   position: Java Developer
@@ -63,7 +63,7 @@ works:
   - Working in a team to build eBOSS (an ERP system) for nearly 3 years.
   - Developing, debugging and testing throughout software development activities. Participating in analysis and design phases.
   - Collaborating with business analysts and some experts in business fields (for example accounting and manufacturing) in order to analyze the customer’s requirements.
-  - Implementing task lists, estimating deliver assignments as functional specifications, quality standards and project schedules.
+  - Implementing task lists, estimating deliver assignments as functional specifications, quality standards, and project schedules.
 
 education:
 - school: University of Greenwich
@@ -75,7 +75,7 @@ education:
 
 hobbies:
 - Playing & learning musical instruments. Singing. 
-- Learning latest web technologies. Doing pet project for experiment.
+- Learning latest web technologies. Making pet projects for practice.
 - Joining English speaking club and making new friends.
 
 references:
@@ -90,15 +90,18 @@ references:
   email: trilq@fisoft.com.vn
 
 theysay:
-- name: Ms. Tran Thi Dan Que
+- name: Que Tran
+  avatar: /assets/img/avatar/quetran.jpg
   position: Head of R&D at Biglabs.
   message: Trung is a fast learner and pays attention to detail. He starts a project with a lot of energy and enthusiasm, but they will decrease with time. He needs to be filled up the energy at the end of a phase.
 
-- name: Mr. Tran Thien An
+- name: An Tran
+  avatar: /assets/img/avatar/antran.jpg
   position: Leader/PM at Biglabs.
   message: Well, Trung is a funny and easygoing guy to work with. Over several completed projects, he proves himself a hardcore front-end developer with a practical and result-oriented mindset that brings tangible and valuable benefit to our company. Cannot recommend him enough.
 
-- name: Mr. Ngo Dai Hong Hai
+- name: Hai Ngo
+  avatar: /assets/img/avatar/haingo.jpg
   position: Leader/PM at Biglabs.
   message: Trung is friendly when works with other members. He has good skills in web developing and active in high work load environment.
 

@@ -146,9 +146,9 @@ This is [an example][id] reference-method link.
 ### Images <a name="6"></a> [[back to list]](#markdown-cheat-sheet)
 The syntaxt is almost the same with [Links](#5), just adding `!` at the beginning.
 
-    ![Alt text](/assets/img/trungho.jpg "Trung Ho")
+    ![Alt text](/assets/img/avatar/trungho.jpg "Trung Ho")
 
-![Alt text](/assets/img/trungho.jpg "Trung Ho")
+![Alt text](/assets/img/avatar/trungho.jpg "Trung Ho")
 
 ---
 

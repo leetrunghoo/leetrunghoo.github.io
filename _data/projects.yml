@@ -29,9 +29,9 @@ pet:
   blog: https://leetrunghoo.com/tech/about-my-website/
   time: 2016
   team: alone
-  tech: Jekyll, SASS, jQuery, Gulp, Github Page, Cloudflare, Full Responsive
+  tech: Jekyll, SASS, jQuery, Gulp, Github Page, CloudFlare, Full Responsive
   description:
-  - Using Jekyll to build a static website that hosted by Github Page. In addition, Cloudflare is used for https & optimization.
+  - Using Jekyll to build a static website that hosted by Github Page. In addition, CloudFlare is a free cloud service for https & optimization.
   - Using Gulp for building & deployment Jekyll web instead of Bundle. Gulp is more powerful and easier to use.
   - For more information, please read this blog https://leetrunghoo.com/tech/about-my-website/
   picture:
@@ -140,7 +140,7 @@ company:
   company: Biglabs
   time: 2014-2015
   team: 2-3 developers, 1 designer
-  role: Leader of front-end team
+  role: Leader of the front-end team
   tech: REST, HTML5, CSS3, Backbone, jQuery, RequireJS, Intel App Framework, Leafletjs, Atmosphere-JS, Mobile only
   description:
   - This is a mobile web app uses REST to communicate with server-side. It's a subproject of SmartMozo project. 
@@ -171,8 +171,8 @@ company:
   role: Full Stack Java developer
   tech: Java, SpringMVC, HTML, CSS3, jQuery, MySQL, Tomcat, Full Responsive
   description:
-  - My first done project in Biglabs is a responsive website. It has the information of the company, people, products, register and a simple CMS to input/edit those information.
-  - Developing everything of the web from the ground up including front-end, back-end, CMS, database, deployment. Thanks to that, I've learned a lot, especially front-end skills, and I'm in love with it.
+  - My first done project in Biglabs is a responsive website. It has the information of the company, people, products, register and a simple CMS to input/edit the information.
+  - Responsible for developing the web from the ground up including front-end, back-end, CMS, database, deployment. Thanks to that, I've learned a lot, especially front-end skills, and I'm in love with it.
   picture:
     - url: /assets/img/projects/bl1.jpg
       caption: using http://ami.responsivedesign.is to check the responsive website

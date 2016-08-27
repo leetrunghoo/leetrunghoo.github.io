@@ -19,7 +19,7 @@ url_public:          https://www.leetrunghoo.com
 rss:                 /rss.xml
 baseurl:             /
 baseurl_js:          /assets/js/
-avatar:              /assets/img/trungho.jpg
+avatar:              /assets/img/avatar/trungho.jpg
 icon:                /assets/img/logo-150.png
 disqus:              leetrunghoo # get it on https://disqus.com/admin/
 gems:

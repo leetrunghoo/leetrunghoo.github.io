@@ -115,21 +115,6 @@ gulp.task("resizeImages", function() {
             os.cpus().length
         ))
         .pipe(gulp.dest("assets/img/projects"));
-    // // need to install: npm install sharp    
-    // gulp.src("assets/img/hero/*.{jpg,png}")
-    //     .pipe(responsive({
-    //         // resize all images to FHD size
-    //         '*': [{
-    //             width: 1080
-    //         }, {
-    //             // Produce thumbnail images and rename them
-    //             width: 300,
-    //             rename: {
-    //                 suffix: '-thumb'
-    //             },
-    //         }],
-    //     }))
-    //     .pipe(gulp.dest("assets/img/hero"));
 });
 
 /** 
