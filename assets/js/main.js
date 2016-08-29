@@ -140,7 +140,32 @@ $(function() {
         }, 200);
     });
 
-    // scroll animation
+    // swiper in home page
+    // var swiper = new Swiper('.swiper-container', {
+    //     preloadImages: false,
+    //     lazyLoading: true,
+    //     watchSlidesVisibility: true,
+    //     pagination: '.swiper-pagination',
+    //     paginationClickable: true,
+    //     slidesPerView: 2,
+    //     spaceBetween: 20,
+    //     breakpoints: {
+    //         640: {
+    //             slidesPerView: 1,
+    //             spaceBetween: 10
+    //         }
+    //     }
+    // });
+
+    // Masonry in home page
+    var $projects = $('#projects');
+    $projects.masonry({
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-item',
+        percentPosition: true
+    });
+
+    // scroll animation when click anchor
     var layoutContent = document.querySelector('article');
     var ua = navigator.userAgent.toLowerCase();
     if (ua.indexOf("ucbrowser") === -1) { // not UCBrowser

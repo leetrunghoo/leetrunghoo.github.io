@@ -17,17 +17,54 @@ title: Trung Ho (leetrunghoo)
     </section>
 
     {% include aboutme.html %}
-    <!--<section class="section--last">
+
+    <section class="section--last">
         <div class="container container--content">
-        <div class="content-body">
-            {% for work in site.data.cv.works %}
-                <h2>{{ work.company }}</h2>
-                <h4>{{ work.time }}</h4>
-                <h4>{{ work.position }}</h4>
-            {% endfor %}
+            <div class="content-body">
+                {% for work in site.data.cv.works %}
+                    <h2>{{ work.company }}</h2>
+                    <h4>{{ work.time }}</h4>
+                    <h4>{{ work.position }}</h4>
+                {% endfor %}
+            </div>
+            <div class="blockGroup">
+                <div class="section-title">
+                    <h2>What I've done:</h2>
+                </div>
+            </div>
         </div>
-    </div>-->
+        <div class="filter-projects">
+            <button class="button button--primary">All</button>
+            <button class="button">Company Projects</button>
+            <button class="button">Pet Projects</button>
+            <button class="button">Others</button>
+        </div>
+        {% assign projects = site.data.projects %}
+        <div class="wraper">
+           <div id="projects">
+                {% for project in projects.company %}
+                <a href="#{{project.name}}" ><img class="grid-item " src="{{ project.picture[0].url }}" alt="{{ project.name }}" ></a>
+                {% endfor %}
+                {% for project in projects.pet %}
+                <a href="#{{project.name}}" ><img class="grid-item " src="{{ project.picture[0].url }}" alt="{{ project.name }}" ></a>
+                {% endfor %}
+           </div>
+        </div>
+        
+        <!-- Swiper -->
+        <!-- <div class="swiper-container project-container">
+            <div class="swiper-wrapper">
+                {% for project in projects.company %}
+                <div data-background="{{ project.picture[0].url }}"  class="swiper-slide swiper-lazy">
+                    <div class="swiper-lazy-preloader"></div>
+                    <div class="project-name">{{ project.name }}</div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="swiper-pagination"></div>
+        </div> -->
     </section>
+    
     <section class="section--postsWrapper">
         <div class="container">
             <div class="blockGroup">

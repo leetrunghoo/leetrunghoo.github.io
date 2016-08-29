@@ -151,18 +151,10 @@
   margin: 2rem;
   z-index: $zIndex-1--section-title;
   text-align: center;
-}
-
-.section-title h2,
-.section-title h4 {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.section-title h2 {
-  @media (max-width: $screen-xs-max) {
-    font-size: $font-L;
-    line-height: 1.5;
+  > * {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
   }
 }
 

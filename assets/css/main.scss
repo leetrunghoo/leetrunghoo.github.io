@@ -27,10 +27,6 @@
 @import "_sass/utilities";
 @import "_sass/responsive-utilities";
 
-// Site Styles
-@import "_sass/post";
-@import "_sass/site/layout";
-
 // code hightlight
 @import "_sass/syntax";
 @import "_sass/gist";
@@ -41,3 +37,10 @@
 // sidebar
 @import "_sass/perfect-scrollbar";
 @import "_sass/sidebar";
+
+// css for libs
+@import "_sass/libs";
+
+// Site Styles
+@import "_sass/post";
+@import "_sass/others";

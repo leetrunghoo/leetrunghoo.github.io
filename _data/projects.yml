@@ -84,15 +84,15 @@ pet:
   - I was impressed by Polymer when watching Google IO 2014. This project is built from scratch for self-learning purpose.
   - Not maintained for long time, it has some bugs now.
   picture:
-    - url: /assets/img/projects/cc1.jpg
+    - url: /assets/img/projects/cc1.png
       caption: login screen
-    - url: /assets/img/projects/cc2.jpg
+    - url: /assets/img/projects/cc2.png
       caption: register screen
-    - url: /assets/img/projects/cc3.jpg
+    - url: /assets/img/projects/cc3.png
       caption: logined user
-    - url: /assets/img/projects/cc4.jpg
+    - url: /assets/img/projects/cc4.png
       caption: list of other users
-    - url: /assets/img/projects/cc5.jpg
+    - url: /assets/img/projects/cc5.png
       caption: chit chat time!
 
 
@@ -109,15 +109,17 @@ company:
   - This is a mobile web app for E-commerce, using REST to communicate with server-side. It's a subproject of SportMozo project which is an E-commerce website.
   - Responsible for developing the web app on my own, report to PM.
   picture:
-    - url: /assets/img/projects/sport1.jpg
+    - url: /assets/img/projects/sport1.png
       caption: home page
-    - url: /assets/img/projects/sport2.jpg
+    - url: /assets/img/projects/sport2.png
       caption: sport category - home page
-    - url: /assets/img/projects/sport3.jpg
+    - url: /assets/img/projects/sport3.png
       caption: side menu
-    - url: /assets/img/projects/sport4.jpg
+    - url: /assets/img/projects/sport4.png
+      caption: product detail page
+    - url: /assets/img/projects/sport5.png
       caption: checkout page
-    - url: /assets/img/projects/sport5.jpg
+    - url: /assets/img/projects/sport6.png
       caption: login popup
 
 - name: SmartMozo Website
@@ -149,8 +151,6 @@ company:
   - Moreover, the killer feature is showing the location of shops, customer, and the direction to shop at real-time.
   - I contributed to the SmartMozo since the beginning and really love it because of its great ideas. I had the responsibility to choose which frameworks/libraries are used, train and assign tasks to new members, report to PM.
   picture:
-    - url: /assets/img/projects/sm-lib.jpg
-      caption: A diagram shows which libraries/frameworks are used
     - url: /assets/img/projects/sm1.jpg
       caption: promotions, e-coupons, events are showing on map
     - url: /assets/img/projects/sm2.jpg
@@ -161,6 +161,8 @@ company:
       caption: recommended products
     - url: /assets/img/projects/sm5.jpg
       caption: vote & comment
+    - url: /assets/img/projects/sm-lib.jpg
+      caption: A diagram shows which libraries/frameworks are used
       
 - name: Biglabs Website
   important: true

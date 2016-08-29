@@ -145,6 +145,7 @@ gulp.task('default', ['styles', 'scripts', 'browser-sync'], function() {
     gulp.watch(['*.html',
         '_posts/**',
         '_data/**',
+        'about/**',
         'cv/**',
         'assets/img/**',
         '_layouts/**',
