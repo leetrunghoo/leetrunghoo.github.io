@@ -1,5 +1,6 @@
 pet:
 - name: Learn English
+  id: learn-english
   important: true
   link: https://learnenglish.leetrunghoo.com
   source: https://github.com/leetrunghoo/learnenglish
@@ -10,19 +11,20 @@ pet:
   description:
   - Learn English is a Progressive Web App for learning English that I made for personal use and for learning new tech.
   - For more information, please read this blog https://leetrunghoo.com/project/introduce-learn-english-progressive-web-app/
-  picture:
+  pictures:
     - url: /assets/img/hero/learnenglish.jpg
       caption: using http://ami.responsivedesign.is to check the responsive website
     - url: /assets/img/projects/learnenglish1.jpg
       caption: list of lessons
-    - url: /assets/img/projects/sport3.jpg
+    - url: /assets/img/projects/learnenglish2.jpg
       caption: lesson's detail
-    - url: /assets/img/projects/sport4.jpg
+    - url: /assets/img/projects/learnenglish3.jpg
       caption: about/setting popup
-    - url: /assets/img/projects/sport5.jpg
+    - url: /assets/img/projects/learnenglish4.jpg
       caption: The browser shows Add To Home Screen popup when the user assessed this web several times
 
 - name: Leetrunghoo Website
+  id: leetrunghoo-website
   important: true
   link: https://leetrunghoo.com
   source: https://github.com/leetrunghoo/leetrunghoo.github.io
@@ -34,11 +36,12 @@ pet:
   - Using Jekyll to build a static website that hosted by Github Page. In addition, CloudFlare is a free cloud service for https & optimization.
   - Using Gulp for building & deployment Jekyll web instead of Bundle. Gulp is more powerful and easier to use.
   - For more information, please read this blog https://leetrunghoo.com/tech/about-my-website/
-  picture:
+  pictures:
     - url: /assets/img/hero/my-web.jpg
       caption: using http://ami.responsivedesign.is to check the responsive website
 
 - name: Demo Flickr with Rest API
+  id: demo-flickr
   important: false
   link: https://leetrunghoo.com/demo/demo-flickr-with-rest-api/
   source: https://github.com/leetrunghoo/leetrunghoo.github.io/tree/master/demo/flickr
@@ -49,13 +52,14 @@ pet:
   description:
   - Flickr is quite slow and inconvenient when browsing photo. Therefore, I made this demo for experiment how much I can improve Flickr.
   - For more information, please read this blog https://leetrunghoo.com/demo/demo-flickr-with-rest-api/
-  picture:
+  pictures:
     - url: /assets/img/posts/flickr1.jpg
       caption: list of photos - main page
     - url: /assets/img/posts/flickr2.jpg
       caption: popup for photo detail
 
 - name: Take Note (Chrome Extension)
+  id: takenote
   important: false
   link: https://chrome.google.com/webstore/detail/take-note/olehhaaggejlnmnbgkjcaphdikbfnlbl
   source: https://github.com/leetrunghoo/NoteExt
@@ -64,7 +68,7 @@ pet:
   tech: Chrome JS APIs, JS, HTML5, CSS3, WebRTC
   description:
   - This is a simple Chrome extension which is used to quickly take note and record voice note. This is for self-learning and for fun!
-  picture:
+  pictures:
     - url: /assets/img/projects/takenote1.jpg
       caption: list notes
     - url: /assets/img/projects/takenote2.jpg
@@ -73,6 +77,7 @@ pet:
       caption: recording a voice note
 
 - name: Chit Chat
+  id: chitchat
   important: false
   link: https://chit.firebaseapp.com/
   source: https://github.com/leetrunghoo/chitchat
@@ -83,7 +88,7 @@ pet:
   - This is a Web app for chatting by using Polymer & Firebase. User can speak to write text, and hear what other write.
   - I was impressed by Polymer when watching Google IO 2014. This project is built from scratch for self-learning purpose.
   - Not maintained for long time, it has some bugs now.
-  picture:
+  pictures:
     - url: /assets/img/projects/cc1.png
       caption: login screen
     - url: /assets/img/projects/cc2.png
@@ -98,6 +103,7 @@ pet:
 
 company:
 - name: SportMozo Web App
+  id: sportmozo-webapp
   important: false
   link: https://sportmozo.com/mobile-web-china/
   company: Biglabs
@@ -108,7 +114,7 @@ company:
   description:
   - This is a mobile web app for E-commerce, using REST to communicate with server-side. It's a subproject of SportMozo project which is an E-commerce website.
   - Responsible for developing the web app on my own, report to PM.
-  picture:
+  pictures:
     - url: /assets/img/projects/sport1.png
       caption: home page
     - url: /assets/img/projects/sport2.png
@@ -123,6 +129,7 @@ company:
       caption: login popup
 
 - name: SmartMozo Website
+  id: smartmozo-website
   important: false
   link: http://www.smartmozo.com/
   company: Biglabs
@@ -132,11 +139,12 @@ company:
   tech: CSS3, HTML5, jQuery, Full Responsive
   description:
   - This is a static responsive website for introducing SmartMozo. I made it within 3 weeks.
-  picture:
+  pictures:
     - url: /assets/img/projects/smw.jpg
       caption: using http://ami.responsivedesign.is to check the responsive website
 
 - name: SmartMozo Web App
+  id: smartmozo-webapp
   important: true
   link: http://www.smartmozo.com/aeon/#map
   company: Biglabs
@@ -150,7 +158,7 @@ company:
   - The customer can use this web app to see the indoor map of a mall, it also shows the promotions, e-coupons, events that happening in a mall on the map. 
   - Moreover, the killer feature is showing the location of shops, customer, and the direction to shop at real-time.
   - I contributed to the SmartMozo since the beginning and really love it because of its great ideas. I had the responsibility to choose which frameworks/libraries are used, train and assign tasks to new members, report to PM.
-  picture:
+  pictures:
     - url: /assets/img/projects/sm1.jpg
       caption: promotions, e-coupons, events are showing on map
     - url: /assets/img/projects/sm2.jpg
@@ -165,6 +173,7 @@ company:
       caption: A diagram shows which libraries/frameworks are used
       
 - name: Biglabs Website
+  id: biglabs-website
   important: true
   link: http://www.big-labs.com
   company: Biglabs
@@ -175,7 +184,7 @@ company:
   description:
   - My first done project in Biglabs is a responsive website. It has the information of the company, people, products, register and a simple CMS to input/edit the information.
   - Responsible for developing the web from the ground up including front-end, back-end, CMS, database, deployment. Thanks to that, I've learned a lot, especially front-end skills, and I'm in love with it.
-  picture:
+  pictures:
     - url: /assets/img/projects/bl1.jpg
       caption: using http://ami.responsivedesign.is to check the responsive website
     - url: /assets/img/projects/bl2.jpg
@@ -186,6 +195,7 @@ company:
       caption: simple CMS that I made for edit the information
 
 - name: EBOSS
+  id: eboss
   important: false
   url:
   company: Fisoft
@@ -196,7 +206,7 @@ company:
   description:
   - EBOSS is an ERP system runs on web (web app) which has many modules such as Financial Accounting, Manufacturing, Inventory... 
   - I involved in all software development life cycle.
-  picture:
+  pictures:
     - url: /assets/img/projects/eboss1.jpg
       caption:
     - url: /assets/img/projects/eboss2.jpg

@@ -34,35 +34,92 @@ title: Trung Ho (leetrunghoo)
             </div>
         </div>
         <div class="filter-projects">
-            <button class="button button--primary">All</button>
-            <button class="button">Company Projects</button>
-            <button class="button">Pet Projects</button>
-            <button class="button">Others</button>
+            <button id="btnAll" class="button button--primary" data-filter="all">All</button>
+            <button id="btnCompany" class="button" data-filter="company-project">Company Projects</button>
+            <button id="btnPet" class="button" data-filter="pet-project">Pet Projects</button>
+            <button id="btnOther" class="button" data-filter="other-project">Others</button>
         </div>
         {% assign projects = site.data.projects %}
-        <div class="wraper">
+        <div class="wraper remodal-bg">
            <div id="projects">
                 {% for project in projects.company %}
-                <a href="#{{project.name}}" ><img class="grid-item " src="{{ project.picture[0].url }}" alt="{{ project.name }}" ></a>
+                <a href="#popup-{{project.id}}" class="grid-item company-project">
+                    <img class="card-shadow" src="{{ project.pictures[0].url }}" alt="{{ project.name }}" />
+                    <div class="grid-item-cover">
+                        <div class="grid-item-cover-bg"></div>
+                        <div class="grid-item-cover-content">
+                            <div class="project-name">{{ project.name }}</div>
+                            <div class="project-type">Company project</div>
+                        </div>
+                    </div>
+                </a>
+                <div data-remodal-id="popup-{{project.id}}" class="remodal">
+                    <button data-remodal-action="close" class="remodal-close"></button>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            {% for pic in project.pictures %}
+                            <div class="swiper-slide">
+                                <div class="swiper-slide-bg swiper-lazy" data-background="{{ pic.url }}">
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                                <div class="caption">{{ pic.caption }}</div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <h2>{{project.name}}</h2>
+                    <h3>{{project.company}} - {{project.time}}</h3>
+                    <h4>{{project.link}}</h4>
+                    <p>Team size: {{project.team}}</p>
+                    <p>Role: {{project.role}}</p>
+                    {% for desc in project.description %}
+                        <p>{{desc}}</p>
+                    {% endfor %}
+                    <br/>
+                    <button data-remodal-action="cancel" class="button">close</button>
+                </div>
                 {% endfor %}
                 {% for project in projects.pet %}
-                <a href="#{{project.name}}" ><img class="grid-item " src="{{ project.picture[0].url }}" alt="{{ project.name }}" ></a>
+                <a href="#popup-{{project.id}}" class="grid-item pet-project">
+                    <img class="card-shadow" src="{{ project.pictures[0].url }}" alt="{{ project.name }}" />
+                    <div class="grid-item-cover">
+                        <div class="project-name">{{ project.name }}</div>
+                        <div class="project-type">Company project</div>
+                    </div>
+                </a>
+                <div data-remodal-id="popup-{{project.id}}" class="remodal">
+                    <button data-remodal-action="close" class="remodal-close"></button>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            {% for pic in project.pictures %}
+                            <div class="swiper-slide">
+                                <div class="swiper-slide-bg swiper-lazy" data-background="{{ pic.url }}">
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                                <div class="caption">{{ pic.caption }}</div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <h2>{{project.name}}</h2>
+                    <h3>{{project.company}} - {{project.time}}</h3>
+                    <h4>{{project.link}}</h4>
+                    <p>Team size: {{project.team}}</p>
+                    <p>Role: {{project.role}}</p>
+                    {% for desc in project.description %}
+                        <p>{{desc}}</p>
+                    {% endfor %}
+                    <br/>
+                    <button data-remodal-action="cancel" class="button">close</button>
+                </div>
                 {% endfor %}
            </div>
         </div>
         
         <!-- Swiper -->
-        <!-- <div class="swiper-container project-container">
-            <div class="swiper-wrapper">
-                {% for project in projects.company %}
-                <div data-background="{{ project.picture[0].url }}"  class="swiper-slide swiper-lazy">
-                    <div class="swiper-lazy-preloader"></div>
-                    <div class="project-name">{{ project.name }}</div>
-                </div>
-                {% endfor %}
-            </div>
-            <div class="swiper-pagination"></div>
-        </div> -->
+        
     </section>
     
     <section class="section--postsWrapper">
@@ -74,7 +131,7 @@ title: Trung Ho (leetrunghoo)
                 <ul class="blockGroup-list">
                     {% for post in site.posts %}
                     <li class="block">
-                        <div class="postArticle-wrapper">
+                        <div class="postArticle-wrapper card-shadow">
                             <article class="postArticle postArticle--short">
                                 {% if post.image.hero %}
                                 <a href="{{ post.url }}">

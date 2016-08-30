@@ -99,11 +99,6 @@
         background: $white;
         width: 100%;
         padding-bottom: 2*$leading;
-        box-shadow: 0 1px 4px rgba(0, 0, 0, .2);
-        &:hover {
-            transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 10px 1px rgba(0, 0, 0, .2);
-        }
     }
     .postArticle a {
         color: $black;

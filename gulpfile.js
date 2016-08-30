@@ -145,11 +145,13 @@ gulp.task('default', ['styles', 'scripts', 'browser-sync'], function() {
     gulp.watch(['*.html',
         '_posts/**',
         '_data/**',
-        'about/**',
-        'cv/**',
-        'assets/img/**',
         '_layouts/**',
-        '_includes/**'
+        '_includes/**',
+        'assets/img/**',
+        'assets/js/min/**',
+        'demo/*/**',
+        'about/**',
+        'cv/**'
     ], ['jekyll-build']);
     gulp.watch("_site/index.html").on('change', browserSync.reload);
 });
