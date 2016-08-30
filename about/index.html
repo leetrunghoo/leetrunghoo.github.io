@@ -47,9 +47,11 @@ title: Trung Ho (leetrunghoo)
                     <img class="card-shadow" src="{{ project.pictures[0].url }}" alt="{{ project.name }}" />
                     <div class="grid-item-cover">
                         <div class="grid-item-cover-bg"></div>
-                        <div class="grid-item-cover-content">
-                            <div class="project-name">{{ project.name }}</div>
-                            <div class="project-type">Company project</div>
+                        <div class="grid-item-cover-content-container">
+                            <div class="grid-item-cover-content">
+                                <div class="project-name">{{ project.name }}</div>
+                                <div class="project-desc">company project</div>
+                            </div>
                         </div>
                     </div>
                 </a>
@@ -84,8 +86,13 @@ title: Trung Ho (leetrunghoo)
                 <a href="#popup-{{project.id}}" class="grid-item pet-project">
                     <img class="card-shadow" src="{{ project.pictures[0].url }}" alt="{{ project.name }}" />
                     <div class="grid-item-cover">
-                        <div class="project-name">{{ project.name }}</div>
-                        <div class="project-type">Company project</div>
+                        <div class="grid-item-cover-bg"></div>
+                        <div class="grid-item-cover-content-container">
+                            <div class="grid-item-cover-content">
+                                <div class="project-name">{{ project.name }}</div>
+                                <div class="project-desc">pet project</div>
+                            </div>
+                        </div>
                     </div>
                 </a>
                 <div data-remodal-id="popup-{{project.id}}" class="remodal">

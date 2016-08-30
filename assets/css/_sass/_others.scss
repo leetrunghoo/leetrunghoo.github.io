@@ -252,8 +252,9 @@ a[target="_blank"]:not(.no-underline) {
     height: 350px;
     position: relative;
     .swiper-slide {
-        .swiper-slide-bg{
-            background: $gray-lightest no-repeat center center;
+        cursor: pointer;
+        .swiper-slide-bg {
+            background: white no-repeat center center;
             background-size: contain;
             height: 300px;
             width: 100%;
@@ -262,6 +263,8 @@ a[target="_blank"]:not(.no-underline) {
         }
     }
     .caption {
+        text-align: center;
+        width: 100%;
         position: absolute;
         bottom: 27px;
         opacity: 0.7;
@@ -274,6 +277,22 @@ a[target="_blank"]:not(.no-underline) {
         bottom: 0px;
         .swiper-pagination-bullet-active {
             background-color: $green;
+        }
+    }
+    @media (min-width: $screen-sm-min) {
+        height: 500px;
+        .swiper-slide {
+            .swiper-slide-bg {
+                height: 450px;
+            }
+        }
+    }
+    @media (min-width: $screen-md-min) {
+        height: 600px;
+        .swiper-slide {
+            .swiper-slide-bg {
+                height: 550px;
+            }
         }
     }
 }
@@ -307,9 +326,7 @@ a[target="_blank"]:not(.no-underline) {
     &:hover {
         cursor: pointer;
         box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
-        > img {
-
-        }
+        > img {}
     }
     @media (min-width: $screen-sm-min) {
         width: calc(50% - 10px);
@@ -327,7 +344,6 @@ a[target="_blank"]:not(.no-underline) {
         width: 100%;
         height: 100%;
         text-align: center;
-
         .grid-item-cover-bg {
             opacity: 0;
             background-color: $black;
@@ -337,14 +353,30 @@ a[target="_blank"]:not(.no-underline) {
         }
         .grid-item-cover-content-container {
             display: table;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
             .grid-item-cover-content {
-                display: table-cell;
+                display: none;
                 vertical-align: middle;
+                color: white;
+                .project-name {
+                    font-size: $font-M;
+                }
+                .project-desc {
+                    font-size: $font-S;
+                }
             }
         }
         &:hover {
             .grid-item-cover-bg {
-                opacity: 0.7;
+                opacity: 0.8;
+            }
+            .grid-item-cover-content {
+                display: table-cell;
             }
         }
     }
@@ -356,8 +388,15 @@ a[target="_blank"]:not(.no-underline) {
     .remodal {
         margin: 0;
         padding: 35px 0 35px 0;
-    }
-    .remodal-close:before {
-        font-size: 35px;
+        max-width: 100%;
+        @media (min-width: $screen-md-min) {
+            max-width: 768px;
+        }
+        @media (min-width: $screen-lg-min) {
+            max-width: 992px;
+        }
+        .remodal-close:before {
+            font-size: 35px;
+        }
     }
 }
