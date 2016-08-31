@@ -17,27 +17,31 @@ title: Trung Ho (leetrunghoo)
     </section>
 
     {% include aboutme.html %}
-    <!--<section class="section--last">
-        <div class="container container--content">
-        <div class="content-body">
-            {% for work in site.data.cv.works %}
-                <h2>{{ work.company }}</h2>
-                <h4>{{ work.time }}</h4>
-                <h4>{{ work.position }}</h4>
-            {% endfor %}
-        </div>
-    </div>-->
+
+    <section class="section--last">
+        <!-- <div class="container container--content">
+            <div class="content-body">
+                {% for work in site.data.cv.works %}
+                    <h2>{{ work.company }}</h2>
+                    <h4>{{ work.time }}</h4>
+                    <h4>{{ work.position }}</h4>
+                {% endfor %}
+            </div>
+        </div> -->
+
+        {% include projects.html %}
     </section>
+    
     <section class="section--postsWrapper">
         <div class="container">
             <div class="blockGroup">
                 <div class="section-title">
-                    Latest Posts:
+                    <h2>Latest Posts</h2>
                 </div>
                 <ul class="blockGroup-list">
                     {% for post in site.posts %}
                     <li class="block">
-                        <div class="postArticle-wrapper">
+                        <div class="postArticle-wrapper card-shadow">
                             <article class="postArticle postArticle--short">
                                 {% if post.image.hero %}
                                 <a href="{{ post.url }}">

@@ -3,6 +3,10 @@
 
 <script async src="{{ site.baseurl_js }}min/main.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+<script>
+	//aload.js - Loads images, background images, scripts, styles, iframes, videos and audios asynchronously
+  	function aload(t){"use strict";var e="data-aload";return t=t||window.document.querySelectorAll("["+e+"]"),void 0===t.length&&(t=[t]),[].forEach.call(t,function(t){t["LINK"!==t.tagName?"src":"href"]=t.getAttribute(e),t.removeAttribute(e)}),t}
+</script>
 
 {% if page.layout != 'post' %} 
 <!-- only for home page -->

@@ -21,6 +21,7 @@ projectsList:
   description:
   - Learn English is a Progressive Web App for learning English that I made for personal use and for learning new tech.
   - For more information, please read this blog https://leetrunghoo.com/project/introduce-learn-english-progressive-web-app/
+  cover: /assets/img/hero/learnenglish.jpg
   pictures:
     - url: /assets/img/hero/learnenglish.jpg
       caption: using http://ami.responsivedesign.is to check the responsive website
@@ -52,6 +53,7 @@ projectsList:
   - Using Jekyll to build a static website that hosted by Github Page. In addition, CloudFlare is a free cloud service for https & optimization.
   - Using Gulp for building & deployment Jekyll web instead of Bundle. Gulp is more powerful and easier to use.
   - For more information, please read this blog https://leetrunghoo.com/tech/about-my-website/
+  cover: /assets/img/hero/my-web.jpg
   pictures:
     - url: /assets/img/hero/my-web.jpg
       caption: using http://ami.responsivedesign.is to check the responsive website
@@ -70,13 +72,14 @@ projectsList:
   description:
   - Flickr is quite slow and inconvenient when browsing photo. Therefore, I made this demo for experiment how much I can improve Flickr.
   - For more information, please read this blog https://leetrunghoo.com/demo/demo-flickr-with-rest-api/
+  cover: /assets/img/posts/flickr1.jpg
   pictures:
     - url: /assets/img/posts/flickr1.jpg
       caption: list of photos - main page
     - url: /assets/img/posts/flickr2.jpg
       caption: popup for photo detail
 
-- name: Take Note (Chrome Extension)
+- name: Take Note
   id: takenote
   type: pet-projects
   shortDesc: pet project
@@ -88,6 +91,7 @@ projectsList:
   tech: Chrome JS APIs, JS, HTML5, CSS3, WebRTC
   description:
   - This is a simple Chrome extension which is used to quickly take note and record voice note. This is for self-learning and for fun!
+  cover: /assets/img/projects/takenote1.jpg
   pictures:
     - url: /assets/img/projects/takenote1.jpg
       caption: list notes
@@ -110,6 +114,7 @@ projectsList:
   - This is a Web app for chatting by using Polymer & Firebase. User can speak to write text, and hear what the other wrote.
   - I was impressed when Google introduced Polymer at IO 2014 and did this project for experiment. This project is built from scratch for self-learning purpose.
   - Not maintained for long time, it has some bugs now.
+  cover: /assets/img/projects/cc1.png
   pictures:
     - url: /assets/img/projects/cc1.png
       caption: login screen
@@ -138,6 +143,7 @@ projectsList:
   description:
   - This is a mobile web app for E-commerce, using REST to communicate with server-side. It's a subproject of SportMozo project which is an E-commerce website.
   - Responsible for developing the web app on my own, report to PM.
+  cover: /assets/img/projects/sport1.png
   pictures:
     - url: /assets/img/projects/sport1.png
       caption: home page
@@ -167,6 +173,7 @@ projectsList:
   tech: CSS3, HTML5, jQuery, Full Responsive
   description:
   - This is a static responsive website for introducing SmartMozo. I made it within 3 weeks.
+  cover: /assets/img/projects/smw.jpg
   pictures:
     - url: /assets/img/projects/smw.jpg
       caption: using http://ami.responsivedesign.is to check the responsive website
@@ -188,6 +195,7 @@ projectsList:
   - The customer can use this web app to see the indoor map of a mall, it also shows the promotions, e-coupons, events that happening in a mall on the map. 
   - Moreover, the killer feature is showing the location of shops, customer, and the direction to shop at real-time.
   - I contributed to the SmartMozo since the beginning and really love it because of its great ideas. I had the responsibility to choose which frameworks/libraries are used, train and assign tasks to new members, report to PM.
+  cover: /assets/img/projects/sm1.jpg
   pictures:
     - url: /assets/img/projects/sm1.jpg
       caption: promotions, e-coupons, events are showing on map
@@ -218,6 +226,7 @@ projectsList:
   description:
   - My first done project in Biglabs is a responsive website. It has the information of the company, people, products, register and a simple CMS to input/edit the information.
   - Responsible for developing the web from the ground up including front-end, back-end, CMS, database, deployment. Thanks to that, I've learned a lot, especially front-end skills, and I'm in love with it.
+  cover: /assets/img/projects/bl1.jpg
   pictures:
     - url: /assets/img/projects/bl1.jpg
       caption: using http://ami.responsivedesign.is to check the responsive website
@@ -242,8 +251,45 @@ projectsList:
   description:
   - EBOSS is an ERP system runs on web (web app) which has many modules such as Financial Accounting, Manufacturing, Inventory... 
   - I involved in all software development life cycle.
+  cover: /assets/img/projects/eboss1.jpg
   pictures:
     - url: /assets/img/projects/eboss1.jpg
       caption:
     - url: /assets/img/projects/eboss2.jpg
       caption:
+
+- name: Granado Espada
+  id: granado-espada
+  type: others
+  shortDesc: piano
+  time: Feb 27, 2016
+  description:
+  - This is a song that I dreamed I could play it when I played game Granado Espada 8 years ago. Now the dream came true. :)
+  - My piano is Casio PX-860. I recorded to MIDI file. Actually, the sound is much better when I hear it through the piano's speaker. 
+  - Recorded live version https://youtu.be/HRTLTbbQjiA
+  cover: http://img.youtube.com/vi/OXvPeNVvEK4/mqdefault.jpg
+  videos: 
+    youtube: OXvPeNVvEK4
+
+- name: Cha - MTV
+  id: cha
+  type: others
+  shortDesc: cover for fun
+  time: Jan 9, 2016
+  description:
+  - Đang ngồi cafe cóc thì có xe kẹo kéo chạy ngang phát bài này =] kết ngay từ khúc intro rồi, bài hay vậy mà giờ mình mới biết. :P Hứng lên là cover liền!
+  - p/s, tiếng trống khúc sau là do mình vỗ tay vào đàn, thu riêng sau khi hát chính.
+  cover: http://img.youtube.com/vi/cJ7J8ThwxZk/mqdefault.jpg
+  videos: 
+    youtube: cJ7J8ThwxZk
+
+- name: Say you do - Tiên Tiên
+  id: say-you-do
+  type: others
+  shortDesc: cover for fun
+  time: May 6, 2015
+  description:
+  - Short cover for fun.
+  cover: http://img.youtube.com/vi/BnE80RCRApM/mqdefault.jpg
+  videos: 
+    youtube: BnE80RCRApM

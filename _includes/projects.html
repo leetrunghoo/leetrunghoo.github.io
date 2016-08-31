@@ -1,6 +1,6 @@
 <div class="blockGroup">
     <div class="section-title">
-        <h2>What I've done:</h2>
+        <h2>What I've done</h2>
     </div>
 </div>
 <div class="filter-projects">
@@ -14,7 +14,7 @@
     <div id="projects">
         {% for project in projects %}
         <a href="#popup-{{project.id}}" class="grid-item {{ project.type }}">
-            <img class="card-shadow" src="{{ project.pictures[0].url }}" alt="{{ project.name }}" />
+            <img class="card-shadow" src="{{ project.cover }}" alt="{{ project.name }}" />
             <div class="grid-item-cover">
                 <div class="grid-item-cover-bg"></div>
                 <div class="grid-item-cover-content-container">
@@ -27,6 +27,7 @@
         </a>
         <div data-remodal-id="popup-{{project.id}}" class="remodal">
             <button data-remodal-action="close" class="remodal-close"></button>
+            {% if project.pictures %}
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     {% for pic in project.pictures %}
@@ -40,6 +41,7 @@
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
+            {% endif %}
             <div class="content-container">
                 {% if project.link %}
                 <h2><a href="{{project.link}}" target="_blank">{{project.name}}</a></h2> {% else %}
@@ -70,8 +72,9 @@
                 </div>{% endif %} {% for desc in project.description %}
                 <p>{{desc}}</p>
                 {% endfor %} {% if project.videos %}
-                <p>Demo video: </p>
-                <iframe width="526" height="330" src="https://www.youtube.com/embed/{{project.videos.youtube}}" frameborder="0" allowfullscreen></iframe>{% endif %}
+                {% if project.type != 'others' %}<p>Demo video: </p>{% endif %}
+                <br/>
+                <iframe width="100%" height="400" style="max-width: 710px" data-aload="https://www.youtube.com/embed/{{project.videos.youtube}}?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen></iframe>{% endif %}
             </div>
             <button data-remodal-action="cancel" class="button">close</button>
         </div>

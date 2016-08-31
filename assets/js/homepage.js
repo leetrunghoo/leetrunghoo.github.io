@@ -9,14 +9,14 @@ $(function() {
             $section.find('.section-gradient').removeClass('opacity-0');
         }, 200);
     });
-    
+
 
     // Masonry
     var mapProjects = {};
     $('.filter-projects button').each(function(i, ele) {
         var filter = $(this).data('filter');
         if (filter !== 'all') {
-            mapProjects[filter] = $('#projects > a.'+ filter);
+            mapProjects[filter] = $('#projects > a.' + filter);
         }
     })
 
@@ -37,7 +37,7 @@ $(function() {
     // filter projects
     $('.filter-projects button').click(function() {
         console.log(mapProjects);
-        if($(this).hasClass('button--primary')) {
+        if ($(this).hasClass('button--primary')) {
             return;
         }
         $(this).siblings().removeClass('button--primary');
@@ -47,16 +47,16 @@ $(function() {
         if (filter === 'all') {
             for (key_filter in mapProjects) {
                 if (mapProjects.hasOwnProperty(key_filter)) {
-                    if (mapProjects[key_filter].length > 0 && $('#projects a.'+key_filter).length === 0) {
-                        console.log('append',mapProjects[key_filter]);
+                    if (mapProjects[key_filter].length > 0 && $('#projects a.' + key_filter).length === 0) {
+                        console.log('append', mapProjects[key_filter]);
                         $projects.append(mapProjects[key_filter]);
                         $projects.masonry('appended', mapProjects[key_filter]);
                     }
                 }
             }
         } else {
-            $projects.masonry('remove', $('#projects a:not(.'+filter+')'));
-            if (mapProjects[filter].length > 0 && $('#projects a.'+filter).length === 0) {
+            $projects.masonry('remove', $('#projects a:not(.' + filter + ')'));
+            if (mapProjects[filter].length > 0 && $('#projects a.' + filter).length === 0) {
                 $projects.append(mapProjects[filter]);
                 $projects.masonry('appended', mapProjects[filter]);
             }
@@ -66,7 +66,7 @@ $(function() {
 
     var listSwiper = {};
     // open popup event
-    $(document).on('opened', '.remodal', function () {
+    $(document).on('opened', '.remodal', function() {
         // init swiper in project popup
         var remodalId = $(this).data('remodal-id');
         if (!listSwiper[remodalId]) {
@@ -81,6 +81,18 @@ $(function() {
             });
             listSwiper[remodalId] = true;
         }
+        // load youtube iframe
+
+        $(this).find('iframe').each(function(i, iframe) {
+            aload(iframe[0]);
+        })
     });
+    // stop playing video after closing popup
+    $(document).on('closed', '.remodal', function(e) {
+        $('iframe').each(function(){
+          this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
+        });
+    });
+
 
 });

@@ -34,7 +34,7 @@ skills:
     - name: Tools
       description: Sublime Text, Netbeans
     - name: Patterns and Techniques
-      description: OOP, MVC, MVVM, REST, Performance Optimisation Techniques, SEO
+      description: OOP, MVC, MVVM, REST, Performance Optimisation Techniques
     - name: Others
       description: Gulp, SASS, jQuery, Backbone, Polymer, Requirejs, Git/Svn, JIRA
   - type: Languages Skills
