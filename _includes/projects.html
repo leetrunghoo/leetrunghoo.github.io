@@ -1,0 +1,80 @@
+<div class="blockGroup">
+    <div class="section-title">
+        <h2>What I've done:</h2>
+    </div>
+</div>
+<div class="filter-projects">
+    <button id="btnAll" class="button button--primary" data-filter="all">All</button>
+    {% for type in site.data.projects.projectsType %}
+    <button class="button" data-filter="{{ type.id }}">{{ type.name }}</button>
+    {% endfor %}
+</div>
+{% assign projects = site.data.projects.projectsList %}
+<div class="wraper remodal-bg">
+    <div id="projects">
+        {% for project in projects %}
+        <a href="#popup-{{project.id}}" class="grid-item {{ project.type }}">
+            <img class="card-shadow" src="{{ project.pictures[0].url }}" alt="{{ project.name }}" />
+            <div class="grid-item-cover">
+                <div class="grid-item-cover-bg"></div>
+                <div class="grid-item-cover-content-container">
+                    <div class="grid-item-cover-content">
+                        <div class="project-name">{{ project.name }}</div>
+                        <div class="project-desc">{{ project.shortDesc }}</div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <div data-remodal-id="popup-{{project.id}}" class="remodal">
+            <button data-remodal-action="close" class="remodal-close"></button>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    {% for pic in project.pictures %}
+                    <div class="swiper-slide">
+                        <div class="swiper-slide-bg swiper-lazy" data-background="{{ pic.url }}">
+                            <div class="swiper-lazy-preloader"></div>
+                        </div>
+                        <div class="caption">{{ pic.caption }}</div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="content-container">
+                {% if project.link %}
+                <h2><a href="{{project.link}}" target="_blank">{{project.name}}</a></h2> {% else %}
+                <h2>{{project.name}}</h2> {% endif %} {% if project.time %}
+                <div class="sub">
+                    <span class="sub-title">Time:</span> {{project.time}}
+                </div>
+                {% endif %} {% if project.company %}
+                <div class="sub">
+                    <span class="sub-title">Company:</span> {{project.company}}
+                </div>
+                {% endif %} {% if project.team %}
+                <div class="sub">
+                    <span class="sub-title">Team:</span> {{project.team}}
+                </div>
+                {% endif %} {% if project.role %}
+                <div class="sub">
+                    <span class="sub-title">Role:</span> {{project.role}}
+                </div>
+                {% endif %} {% if project.tech %}
+                <div class="sub full-width">
+                    <span class="sub-title">Technology:</span> {{project.tech}}
+                </div>
+                {% endif %} {% if project.source %}
+                <div class="sub full-width">
+                    <span class="sub-title">Source code:</span>
+                    <a href="{{project.source}}" target="_blank">{{project.source}}</a>
+                </div>{% endif %} {% for desc in project.description %}
+                <p>{{desc}}</p>
+                {% endfor %} {% if project.videos %}
+                <p>Demo video: </p>
+                <iframe width="526" height="330" src="https://www.youtube.com/embed/{{project.videos.youtube}}" frameborder="0" allowfullscreen></iframe>{% endif %}
+            </div>
+            <button data-remodal-action="cancel" class="button">close</button>
+        </div>
+        {% endfor %}
+    </div>
+</div>

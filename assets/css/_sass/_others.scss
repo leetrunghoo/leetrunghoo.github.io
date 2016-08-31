@@ -252,7 +252,8 @@ a[target="_blank"]:not(.no-underline) {
     height: 350px;
     position: relative;
     .swiper-slide {
-        cursor: pointer;
+        cursor: move;
+        cursor: grab;
         .swiper-slide-bg {
             background: white no-repeat center center;
             background-size: contain;
@@ -288,10 +289,10 @@ a[target="_blank"]:not(.no-underline) {
         }
     }
     @media (min-width: $screen-md-min) {
-        height: 600px;
+        height: 550px;
         .swiper-slide {
             .swiper-slide-bg {
-                height: 550px;
+                height: 500px;
             }
         }
     }
@@ -308,18 +309,19 @@ a[target="_blank"]:not(.no-underline) {
 }
 
 .wraper {
-    padding: 0 5px;
+    padding: 0 10px;
 }
 
 .grid-item {
-    width: calc(100% - 10px);
+    width: calc(100% - 20px);
     max-height: 500px;
     background: $gray-lightest no-repeat center center;
     background-size: contain;
-    margin: 5px;
+    margin: 10px;
     transition: box-shadow .25s;
     > img {
         width: 100%;
+        max-height: 500px;
         font-size: 0;
         vertical-align: middle;
     }
@@ -329,13 +331,13 @@ a[target="_blank"]:not(.no-underline) {
         > img {}
     }
     @media (min-width: $screen-sm-min) {
-        width: calc(50% - 10px);
+        width: calc(50% - 20px);
     }
     @media (min-width: $screen-md-min) {
-        width: calc(33.33% - 10px);
+        width: calc(33.33% - 20px);
     }
     @media (min-width: $screen-lg-min) {
-        width: calc(25% - 10px);
+        width: calc(25% - 20px);
     }
     .grid-item-cover {
         position: absolute;
@@ -387,16 +389,47 @@ a[target="_blank"]:not(.no-underline) {
     padding: 0;
     .remodal {
         margin: 0;
-        padding: 35px 0 35px 0;
+        padding: 35px 0 30px 0;
         max-width: 100%;
+        .remodal-close:before {
+            font-size: 35px;
+        }
+        .content-container {
+            padding: 0 20px;
+            font-size: $font-XS2;
+            h2 {
+                padding-top: 0;
+            }
+            .sub {
+                display: inline-block;
+                vertical-align: middle;
+                // width: 100%;
+                // height: 30px;
+                margin-bottom: 10px;
+                text-align: left;
+                font-size: $font-XS2;
+                margin-right: 30px;
+                // margin-right: -3px;
+                &.full-width {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+            .sub-title {
+                font-weight: bold;
+                color: $gray;
+            }
+            p {
+                text-align: left;
+                font-size: $font-XS1;
+                line-height: $font-S;
+            }
+        }
         @media (min-width: $screen-md-min) {
             max-width: 768px;
         }
         @media (min-width: $screen-lg-min) {
-            max-width: 992px;
-        }
-        .remodal-close:before {
-            font-size: 35px;
+            max-width: 900px;
         }
     }
 }

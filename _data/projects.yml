@@ -1,6 +1,16 @@
-pet:
+projectsType:
+- id: pet-projects
+  name: pet projects
+- id: company-projects
+  name: company projects
+- id: others
+  name: others
+
+projectsList:
 - name: Learn English
   id: learn-english
+  type: pet-projects
+  shortDesc: pet project
   important: true
   link: https://learnenglish.leetrunghoo.com
   source: https://github.com/leetrunghoo/learnenglish
@@ -22,9 +32,14 @@ pet:
       caption: about/setting popup
     - url: /assets/img/projects/learnenglish4.jpg
       caption: The browser shows Add To Home Screen popup when the user assessed this web several times
+  videos: 
+    youtube: L_4ZDqVbOKo
+
 
 - name: Leetrunghoo Website
   id: leetrunghoo-website
+  type: pet-projects
+  shortDesc: pet project
   important: true
   link: https://leetrunghoo.com
   source: https://github.com/leetrunghoo/leetrunghoo.github.io
@@ -33,6 +48,7 @@ pet:
   team: alone
   tech: Jekyll, SASS, jQuery, Gulp, Github Page, CloudFlare, Full Responsive
   description:
+  - Almost built up from scratch. I’m a big fan of lightweight and simplicity therefore I want to keep the UI clear & clean. I’m not a web designer but I don’t want my website is just a copy of others. So I’ve spent much effort for every detail in my website to keep it simple and cool.
   - Using Jekyll to build a static website that hosted by Github Page. In addition, CloudFlare is a free cloud service for https & optimization.
   - Using Gulp for building & deployment Jekyll web instead of Bundle. Gulp is more powerful and easier to use.
   - For more information, please read this blog https://leetrunghoo.com/tech/about-my-website/
@@ -42,13 +58,15 @@ pet:
 
 - name: Demo Flickr with Rest API
   id: demo-flickr
+  type: pet-projects
+  shortDesc: pet project
   important: false
   link: https://leetrunghoo.com/demo/demo-flickr-with-rest-api/
   source: https://github.com/leetrunghoo/leetrunghoo.github.io/tree/master/demo/flickr
   blog: https://leetrunghoo.com/demo/demo-flickr-with-rest-api/
   time: 2016
   team: alone
-  tech: Flickr Rest API, JQuery, Masonry, Infinite Loading, Full Responsive
+  tech: Flickr Rest API, jQuery, Masonry, Infinite Loading, Full Responsive
   description:
   - Flickr is quite slow and inconvenient when browsing photo. Therefore, I made this demo for experiment how much I can improve Flickr.
   - For more information, please read this blog https://leetrunghoo.com/demo/demo-flickr-with-rest-api/
@@ -60,6 +78,8 @@ pet:
 
 - name: Take Note (Chrome Extension)
   id: takenote
+  type: pet-projects
+  shortDesc: pet project
   important: false
   link: https://chrome.google.com/webstore/detail/take-note/olehhaaggejlnmnbgkjcaphdikbfnlbl
   source: https://github.com/leetrunghoo/NoteExt
@@ -78,6 +98,8 @@ pet:
 
 - name: Chit Chat
   id: chitchat
+  type: pet-projects
+  shortDesc: pet project
   important: false
   link: https://chit.firebaseapp.com/
   source: https://github.com/leetrunghoo/chitchat
@@ -85,8 +107,8 @@ pet:
   team: alone
   tech: Polymer, Firebase, Web Components, Web Speech API
   description:
-  - This is a Web app for chatting by using Polymer & Firebase. User can speak to write text, and hear what other write.
-  - I was impressed by Polymer when watching Google IO 2014. This project is built from scratch for self-learning purpose.
+  - This is a Web app for chatting by using Polymer & Firebase. User can speak to write text, and hear what the other wrote.
+  - I was impressed when Google introduced Polymer at IO 2014 and did this project for experiment. This project is built from scratch for self-learning purpose.
   - Not maintained for long time, it has some bugs now.
   pictures:
     - url: /assets/img/projects/cc1.png
@@ -101,16 +123,18 @@ pet:
       caption: chit chat time!
 
 
-company:
+
 - name: SportMozo Web App
   id: sportmozo-webapp
+  type: company-projects
+  shortDesc: company project
   important: false
   link: https://sportmozo.com/mobile-web-china/
   company: Biglabs
   time: 2015-2016
   team: 1 developer, 1 designer
   role: Front-end developer
-  tech: REST, HTML5, SASS, Framework7, RequireJS, i18next, jQuery, Mobile only
+  tech: REST, HTML5, SASS, Framework7, RequireJS
   description:
   - This is a mobile web app for E-commerce, using REST to communicate with server-side. It's a subproject of SportMozo project which is an E-commerce website.
   - Responsible for developing the web app on my own, report to PM.
@@ -127,9 +151,13 @@ company:
       caption: checkout page
     - url: /assets/img/projects/sport6.png
       caption: login popup
+  videos: 
+    youtube: LYT7mDVGomY
 
 - name: SmartMozo Website
   id: smartmozo-website
+  type: company-projects
+  shortDesc: company project
   important: false
   link: http://www.smartmozo.com/
   company: Biglabs
@@ -145,13 +173,15 @@ company:
 
 - name: SmartMozo Web App
   id: smartmozo-webapp
+  type: company-projects
+  shortDesc: company project
   important: true
   link: http://www.smartmozo.com/aeon/#map
   company: Biglabs
   time: 2014-2015
   team: 2-3 developers, 1 designer
   role: Leader of the front-end team
-  tech: REST, HTML5, CSS3, Backbone, jQuery, RequireJS, Intel App Framework, Leafletjs, Atmosphere-JS, Mobile only
+  tech: REST, Backbone, jQuery, RequireJS, Intel App Framework, Leafletjs, Atmosphere-JS
   description:
   - This is a mobile web app uses REST to communicate with server-side. It's a subproject of SmartMozo project. 
   - SmartMozo applies O2O model to attract shoppers online and bring them to the physical mall and create the best shopping experience for shoppers. 
@@ -171,9 +201,13 @@ company:
       caption: vote & comment
     - url: /assets/img/projects/sm-lib.jpg
       caption: A diagram shows which libraries/frameworks are used
+  videos: 
+    youtube: IPQ6e0h-ZAY
       
 - name: Biglabs Website
   id: biglabs-website
+  type: company-projects
+  shortDesc: company project
   important: true
   link: http://www.big-labs.com
   company: Biglabs
@@ -196,8 +230,10 @@ company:
 
 - name: EBOSS
   id: eboss
+  type: company-projects
+  shortDesc: company project
   important: false
-  url:
+  link:
   company: Fisoft
   time: 2009-2012
   team: over 10 people
@@ -211,5 +247,3 @@ company:
       caption:
     - url: /assets/img/projects/eboss2.jpg
       caption:
-
-
