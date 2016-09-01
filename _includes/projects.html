@@ -71,8 +71,10 @@
                     <a href="{{project.source}}" target="_blank">{{project.source}}</a>
                 </div>{% endif %} {% for desc in project.description %}
                 <p>{{desc}}</p>
-                {% endfor %} {% if project.videos %}
-                {% if project.type != 'others' %}<p>Demo video: </p>{% endif %}
+                {% endfor %} {% if project.tech %}
+                <p>For more information, please read this blog: <a href="project.blog" target="_blank">{{project.blog}}</a></p>
+                {% endif %} {% if project.videos %} {% if project.type != 'others' %}
+                <p>Demo video: </p>{% endif %}
                 <br/>
                 <iframe width="100%" height="400" style="max-width: 710px" data-aload="https://www.youtube.com/embed/{{project.videos.youtube}}?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen></iframe>{% endif %}
             </div>

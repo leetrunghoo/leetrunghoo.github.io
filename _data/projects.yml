@@ -20,7 +20,6 @@ projectsList:
   tech: Nodejs, Crawling/Scraping, Service Worker, Materializecss, SASS, Web Speech API, Gulp, Full Responsive
   description:
   - Learn English is a Progressive Web App for learning English that I made for personal use and for learning new tech.
-  - For more information, please read this blog https://leetrunghoo.com/project/introduce-learn-english-progressive-web-app/
   cover: /assets/img/hero/learnenglish.jpg
   pictures:
     - url: /assets/img/hero/learnenglish.jpg
@@ -35,7 +34,6 @@ projectsList:
       caption: The browser shows Add To Home Screen popup when the user assessed this web several times
   videos: 
     youtube: L_4ZDqVbOKo
-
 
 - name: Leetrunghoo Website
   id: leetrunghoo-website
@@ -52,10 +50,9 @@ projectsList:
   - Almost built up from scratch. I’m a big fan of lightweight and simplicity therefore I want to keep the UI clear & clean. I’m not a web designer but I don’t want my website is just a copy of others. So I’ve spent much effort for every detail in my website to keep it simple and cool.
   - Using Jekyll to build a static website that hosted by Github Page. In addition, CloudFlare is a free cloud service for https & optimization.
   - Using Gulp for building & deployment Jekyll web instead of Bundle. Gulp is more powerful and easier to use.
-  - For more information, please read this blog https://leetrunghoo.com/tech/about-my-website/
-  cover: /assets/img/hero/my-web.jpg
+  cover: /assets/img/hero/my-web.png
   pictures:
-    - url: /assets/img/hero/my-web.jpg
+    - url: /assets/img/hero/my-web.png
       caption: using http://ami.responsivedesign.is to check the responsive website
 
 - name: Demo Flickr with Rest API
@@ -71,8 +68,7 @@ projectsList:
   tech: Flickr Rest API, jQuery, Masonry, Infinite Loading, Full Responsive
   description:
   - Flickr is quite slow and inconvenient when browsing photo. Therefore, I made this demo for experiment how much I can improve Flickr.
-  - For more information, please read this blog https://leetrunghoo.com/demo/demo-flickr-with-rest-api/
-  cover: /assets/img/posts/flickr1.jpg
+  cover: /assets/img/projects/flickr-cover.jpg
   pictures:
     - url: /assets/img/posts/flickr1.jpg
       caption: list of photos - main page
@@ -114,7 +110,7 @@ projectsList:
   - This is a Web app for chatting by using Polymer & Firebase. User can speak to write text, and hear what the other wrote.
   - I was impressed when Google introduced Polymer at IO 2014 and did this project for experiment. This project is built from scratch for self-learning purpose.
   - Not maintained for long time, it has some bugs now.
-  cover: /assets/img/projects/cc1.png
+  cover: /assets/img/projects/cc-cover.png
   pictures:
     - url: /assets/img/projects/cc1.png
       caption: login screen
