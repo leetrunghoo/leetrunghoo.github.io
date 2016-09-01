@@ -111,7 +111,7 @@ gulp.task("resizeImages", function() {
         .pipe(gulp.dest("assets/img/thumbnail"));
     gulp.src("assets/img/projects/*.{jpg,png}")
         .pipe(parallel(
-            imageResize({ width: 1080 }),
+            imageResize({ width: 1080, height: 1080}),
             os.cpus().length
         ))
         .pipe(gulp.dest("assets/img/projects"));
