@@ -70,7 +70,7 @@ projectsList:
   - Flickr is quite slow and inconvenient when browsing photo. Therefore, I made this demo for experiment how much I can improve Flickr.
   cover: /assets/img/projects/flickr-cover.jpg
   pictures:
-    - url: /assets/img/posts/flickr1.jpg
+    - url: /assets/img/hero/flickr.jpg
       caption: list of photos - main page
     - url: /assets/img/posts/flickr2.jpg
       caption: popup for photo detail
