@@ -88,7 +88,7 @@
     height: 100%;
     background: url(/assets/img/welcome.jpg) no-repeat center top;
     background-size: cover;
-    @media (max-width: $screen-xs-max) {
+    @media (max-width: $screen-sm-min) {
         background-image: url(/assets/img/welcome-small.jpg);
     }
 }
@@ -195,6 +195,10 @@ a[target="_blank"]:not(.no-underline) {
 
 .top-0 {
     top: 0;
+}
+
+.no-padding {
+    padding: 0;
 }
 
 .author-avatar {
@@ -312,7 +316,9 @@ a[target="_blank"]:not(.no-underline) {
     padding: 0 10px;
 }
 
+
 /** Masonry **/
+
 .grid-item {
     width: calc(100% - 20px);
     max-height: 500px;
@@ -432,6 +438,84 @@ a[target="_blank"]:not(.no-underline) {
         }
         @media (min-width: $screen-lg-min) {
             max-width: 900px;
+        }
+    }
+}
+
+// about detail
+table.table-aboutme {
+    td {
+        border: 0;
+        .time {}
+    }
+}
+
+.section-about-detail {
+    background-color: white;
+    .container {
+        .about-block {
+            padding: 0;
+            margin: 20px 0;
+            h3 {
+                text-align: center;
+            }
+            h4 {
+                margin-bottom: 10px;
+            }
+            p {
+                font-size: $font-XS2;
+                margin-top: 10px;
+            }
+            ul {
+                padding: 0;
+                margin: 0;
+                font-size: $font-XS2;
+                &.timeline {
+                    li {
+                        width: 100%;
+                        list-style: none;
+                        display: inline-block;
+                        margin-bottom: 20px;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                        > div {
+                            display: inline-block;
+                            position: relative;
+                            height: 100px;
+                            width: 50%;
+                            vertical-align: middle;
+                            float: left;
+                        }
+                        .year {
+                            padding: 0 20px 0 0;
+                            line-height: 100px;
+                            text-align: right;
+                            min-width: 170px;
+                            font-weight: bold;
+                            white-space: nowrap;
+                        }
+                        .box-content {
+                            padding: 0 0 0 20px;
+                            border-left: 2px solid #ddd;
+                        }
+                        @media (min-width: $screen-lg-min) {
+                            > div {
+                                height: 70px;
+                            }
+                            .year {
+                                line-height: 70px;
+                            }
+                        }
+                    }
+                }
+                &.skills {
+                    padding-left: 30px;
+                    li {
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
 }
