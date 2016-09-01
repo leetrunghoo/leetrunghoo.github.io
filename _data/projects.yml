@@ -50,9 +50,9 @@ projectsList:
   - Almost built up from scratch. I’m a big fan of lightweight and simplicity therefore I want to keep the UI clear & clean. I’m not a web designer but I don’t want my website is just a copy of others. So I’ve spent much effort for every detail in my website to keep it simple and cool.
   - Using Jekyll to build a static website that hosted by Github Page. In addition, CloudFlare is a free cloud service for https & optimization.
   - Using Gulp for building & deployment Jekyll web instead of Bundle. Gulp is more powerful and easier to use.
-  cover: /assets/img/hero/my-web.png
+  cover: /assets/img/hero/my-web.jpg
   pictures:
-    - url: /assets/img/hero/my-web.png
+    - url: /assets/img/hero/my-web.jpg
       caption: using http://ami.responsivedesign.is to check the responsive website
 
 - name: Demo Flickr with Rest API
