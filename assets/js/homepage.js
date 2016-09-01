@@ -16,14 +16,14 @@ $(function() {
     $('.filter-projects button').each(function(i, ele) {
         var filter = $(this).data('filter');
         if (filter !== 'all') {
-            mapProjects[filter] = $('#projects > a.' + filter);
+            mapProjects[filter] = $('#listProjects > a.' + filter);
         }
     })
 
     var flagCom = true;
     var flagPet = true;
     var flagOther = true;
-    var $projects = $('#projects');
+    var $projects = $('#listProjects');
     $projects.masonry({
         transitionDuration: '0.5s',
         itemSelector: '.grid-item',
@@ -47,7 +47,7 @@ $(function() {
         if (filter === 'all') {
             for (key_filter in mapProjects) {
                 if (mapProjects.hasOwnProperty(key_filter)) {
-                    if (mapProjects[key_filter].length > 0 && $('#projects a.' + key_filter).length === 0) {
+                    if (mapProjects[key_filter].length > 0 && $('#listProjects a.' + key_filter).length === 0) {
                         console.log('append', mapProjects[key_filter]);
                         $projects.append(mapProjects[key_filter]);
                         $projects.masonry('appended', mapProjects[key_filter]);
@@ -55,8 +55,8 @@ $(function() {
                 }
             }
         } else {
-            $projects.masonry('remove', $('#projects a:not(.' + filter + ')'));
-            if (mapProjects[filter].length > 0 && $('#projects a.' + filter).length === 0) {
+            $projects.masonry('remove', $('#listProjects a:not(.' + filter + ')'));
+            if (mapProjects[filter].length > 0 && $('#listProjects a.' + filter).length === 0) {
                 $projects.append(mapProjects[filter]);
                 $projects.masonry('appended', mapProjects[filter]);
             }

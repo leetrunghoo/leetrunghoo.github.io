@@ -11,7 +11,7 @@
 </div>
 {% assign projects = site.data.projects.projectsList %}
 <div class="wraper remodal-bg">
-    <div id="projects">
+    <div id="listProjects">
         {% for project in projects %}
         <a href="#popup-{{project.id}}" class="grid-item {{ project.type }}">
             <img class="card-shadow" src="{{ project.cover }}" alt="{{ project.name }}" />

@@ -31,52 +31,6 @@ __Responsibility:__
 
 {% endfor %}
 
-## Projects
-{% assign projects = site.data.projects %}
-
-{% for project in projects.company %}
-
-{% if project.important %}
-### {{ project.name }} 
-{% if project.link %} __Link:__ <{{ project.link }}>{:target="_blank"} {% endif %}
-
-__Company:__ {{ project.company }}
-
-__Time:__ {{ project.time }}
-
-__Team size:__ {{ project.team }}
-
-__Position:__ {{ project.role }}
-
-__Technologies:__ {{ project.tech }}
-
-__Description:__ 
-{% for description in project.description %}
-- {{ description }}{% endfor %}
-{% endif %}
-
-{% endfor %}
-
-{% for project in projects.pet %}
-
-{% if project.important %}
-### {{ project.name }} [[pet project]]({{project.source}}){:target="_blank"}
-
-{% if project.link %} __Link:__ <{{ project.link }}>{:target="_blank"} {% endif %}
-
-{% if project.source %} __Source code:__ <{{ project.source }}>{:target="_blank"} {% endif %}
-
-__Time:__ {{ project.time }}
-
-__Technologies:__ {{ project.tech }}
-
-__Description:__ 
-{% for description in project.description %}
-- {{ description }}{% endfor %}
-{% endif %}
-
-{% endfor %}
-
 ## Skills and Techniques
 
 {% for skill in cv.skills %}
@@ -84,6 +38,34 @@ __Description:__
 {{ skill.description }}
 {% for detail in skill.details %}
 - __{{ detail.name }}:__ {{ detail.description }}{% endfor %}
+{% endfor %}
+
+## Projects
+{% assign projects = site.data.projects.projectsList %}
+
+{% for project in projects %}
+
+{% if project.important %}
+### {{ project.name }} 
+{% if project.link %} __Link:__ <{{ project.link }}>{:target="_blank"} {% endif %}
+
+{% if project.source %} __Source code:__ <{{ project.source }}>{:target="_blank"} {% endif %}
+
+{% if project.company %} __Company:__ {{ project.company }} {% endif %}
+
+{% if project.time %} __Time:__ {{ project.time }} {% endif %}
+
+{% if project.team %} __Team size:__ {{ project.team }} {% endif %}
+
+{% if project.role %} __Position:__ {{ project.role }} {% endif %}
+
+{% if project.tech %} __Technologies:__ {{ project.tech }} {% endif %}
+
+__Description:__ 
+{% for description in project.description %}
+- {{ description }}{% endfor %}
+{% endif %}
+
 {% endfor %}
 
 ## Education
@@ -107,4 +89,3 @@ __{{person.name}}__
 : Phone: {{person.phone}}
 : Email: {{person.email}}
 {% endfor %}
-
