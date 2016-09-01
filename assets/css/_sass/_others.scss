@@ -452,6 +452,9 @@ table.table-aboutme {
 
 .section-about-detail {
     background-color: white;
+    padding: 0 0 3.5rem;
+    position: relative;
+    z-index: $zIndex-4--posts-wrapper;
     .container {
         .about-block {
             padding: 0;
@@ -516,6 +519,66 @@ table.table-aboutme {
                     }
                 }
             }
+        }
+    }
+}
+
+.section-theysay {
+    background: $frontpage-body-bg;
+    padding: 1.5rem 0 3.5rem;
+    position: relative;
+    z-index: $zIndex-4--posts-wrapper;
+    .testimonial {
+        margin-bottom: 45px;
+        text-align: left;
+        .testimonial-content {
+            position: relative;
+            padding: 18px 23px;
+            line-height: 1.2;
+            color: white;
+            background-color: $gray-dark;
+            &:before {
+                position: absolute;
+                bottom: -14px;
+                left: 110px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 14px 14px 0 0;
+                content: '';
+                border-color: $gray-dark transparent transparent;
+            }
+        }
+        .testimonial-author {
+            margin-top: 20px;
+            line-height: 1.1;
+            height: 150px;
+            .testimonial-icon {
+                float: left;
+            }
+            .name {
+                font-weight: bold;
+                font-size: $font-S;
+                display: block;
+            }
+            .caption {
+                font-size: 12px;
+                font-weight: $font-XS2;
+            }
+        }
+        .testimonial-photo {
+            position: relative;
+            float: left;
+            margin-left: 20px;
+            width: 150px;
+            height: 150px;
+            background: white no-repeat center center;
+            background-size: cover;
+            border-radius: 50%;
+        }
+        .testimonial-author-txt {
+            margin-left: 180px;
+            padding-top: 60px;
         }
     }
 }

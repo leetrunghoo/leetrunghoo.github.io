@@ -1,0 +1,28 @@
+<section id="testimonial" class="section-theysay">
+    <div class="blockGroup">
+        <div class="section-title">
+            <h2>What they say</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row ">
+            {% for say in site.data.cv.theysay %}
+            <div class="col-lg-4 col-sm-6">
+                <div class="testimonial">
+                    <div class="testimonial-content font-alt">
+                        {{ say.message }}
+                    </div>
+                    <div class="testimonial-author testimonial-with-photo">
+                        <div class="testimonial-photo" style="background-image: url({{ say.avatar }})"></div>
+                        <div class="testimonial-author-txt">
+                            <span class="name">{{ say.name }}</span>
+                            <span class="caption text-secondary">{{ say.position }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            
+        </div>
+    </div>
+</section>
