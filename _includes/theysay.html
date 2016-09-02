@@ -17,12 +17,14 @@
                         <div class="testimonial-author-txt">
                             <span class="name">{{ say.name }}</span>
                             <span class="caption text-secondary">{{ say.position }}</span>
+                            <br/> {% if say.email %}
+                            <a title="email" href="mailto:{{ say.email }}" class="no-underline icon-mail2" target="_blank"></a>{% endif %} {% if say.linkedin %}
+                            <a title="linkedin" href="https://linkedin.com/in/{{ say.linkedin }}" class="no-underline icon-linkedin" target="_blank"></a>{% endif %}
                         </div>
                     </div>
                 </div>
             </div>
             {% endfor %}
-            
         </div>
     </div>
 </section>

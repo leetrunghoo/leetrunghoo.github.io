@@ -578,7 +578,19 @@ table.table-aboutme {
         }
         .testimonial-author-txt {
             margin-left: 180px;
-            padding-top: 60px;
+            padding-top: 50px;
+            a {
+                line-height: 30px;
+                padding-right: 20px;
+                font-size: $font-S;
+                color: $black;
+                &.icon-linkedin:hover {
+                    color: #0077b5;
+                }
+                &.icon-mail2:hover {
+                    color: #dc4e41;
+                }
+            }
         }
     }
 }

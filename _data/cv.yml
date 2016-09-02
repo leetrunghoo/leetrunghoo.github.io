@@ -45,7 +45,7 @@ skills:
     - name: Vietnamese
       description: native
   - type: Soft Skills
-    description: Communication skills, Teamwork skills, Self-study skills, Public Speaking.
+    description: Communication skills, Teamwork skills, Self-taught skills, Public Speaking.
     details:
 
 works:
@@ -54,7 +54,7 @@ works:
   time: Jan 2013 - May 2016
   description:
   - Becoming the main Web Dev for Biglabs (the only one for a long time), involved in many projects, products.
-  - Self-learning latest front-end technologies to develop cutting-edge websites/web apps with great UI/UX.
+  - Self-taught latest front-end technologies to develop cutting-edge websites/web apps with great UI/UX.
   - Interviewer.
 - company: Fisoft
   position: Java Developer
@@ -94,14 +94,20 @@ theysay:
   avatar: /assets/img/avatar/quetran.jpg
   position: Head of R&D at Biglabs.
   message: Trung is a fast learner and pays attention to detail. He starts a project with a lot of energy and enthusiasm, but they will decrease with time. He needs to be filled up the energy at the end of a phase.
+  email: que.tran@big-labs.com
+  linkedin:
 
 - name: An Tran
   avatar: /assets/img/avatar/antran.jpg
   position: Leader/PM at Biglabs.
   message: Well, Trung is a funny and easygoing guy to work with. Over several completed projects, he proves himself a hardcore front-end developer with a practical and result-oriented mindset that brings tangible and valuable benefit to our company. Cannot recommend him enough.
+  email: an.tran@big-labs.com
+  linkedin: an-tran-8624695
 
 - name: Hai Ngo
   avatar: /assets/img/avatar/haingo.jpg
   position: Leader/PM at Biglabs.
   message: Trung is friendly when works with other members. He has good skills in web developing and active in high work load environment.
+  email: hai.ngo@big-labs.com
+  linkedin: hai-ngo-196b206a
 

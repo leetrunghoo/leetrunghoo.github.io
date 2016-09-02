@@ -254,6 +254,8 @@ projectsList:
     - url: /assets/img/projects/eboss2.jpg
       caption:
 
+
+
 - name: Granado Espada
   id: granado-espada
   type: others
@@ -261,7 +263,7 @@ projectsList:
   time: Feb 27, 2016
   description:
   - This is a song that I dreamed I could play it when I played game Granado Espada 8 years ago. Now the dream came true. :)
-  - My piano is Casio PX-860. I recorded to MIDI file. Actually, the sound is much better when I hear it through the piano's speaker. 
+  - Self-taught for a half year. My piano is Casio PX-860. I recorded to MIDI file. Actually, the sound is much better when I hear it through the piano's speaker. 
   - Recorded live version https://youtu.be/HRTLTbbQjiA
   cover: http://img.youtube.com/vi/OXvPeNVvEK4/mqdefault.jpg
   videos: 
