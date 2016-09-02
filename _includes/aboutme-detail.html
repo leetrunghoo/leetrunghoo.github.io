@@ -9,8 +9,10 @@
                         <ul class="timeline">
                             {% for work in cv.works %}
                             <li class="">
-                                <div class="year">
-                                    {{ work.time }}
+                                <div class="year u-table">
+                                    <div class="u-tableCell u-verticalAlignMiddle">
+                                        {{ work.time }}
+                                    </div>
                                 </div>
                                 <div class="box-content u-table">
                                     <div class="u-tableCell u-verticalAlignMiddle">
@@ -29,8 +31,10 @@
                         <ul class="timeline">
                             {% for edu in cv.education %}
                             <li class="">
-                                <div class="year">
-                                    {{ edu.time }}
+                                <div class="year u-table">
+                                    <div class="u-tableCell u-verticalAlignMiddle">
+                                        {{ edu.time }}
+                                    </div>
                                 </div>
                                 <div class="box-content u-table">
                                     <div class="u-tableCell u-verticalAlignMiddle">
@@ -47,7 +51,7 @@
             <div class="col-sm-12 col-md-6">
                 <div class="about-block">
                     <h3>Skills and Techniques</h3> {% for skill in cv.skills %}
-                    <h4>{{ skill.type }}</h4> 
+                    <h4>{{ skill.type }}</h4>
                     <p>{{ skill.description }}</p>
                     {% if skill.details %}
                     <ul class="skills">
@@ -55,8 +59,7 @@
                         <li><b>{{ detail.name }}:</b> {{ detail.description }}</li>
                         {% endfor %}
                     </ul>
-                    {% endif %}
-                    {% endfor %}
+                    {% endif %} {% endfor %}
                 </div>
             </div>
         </div>

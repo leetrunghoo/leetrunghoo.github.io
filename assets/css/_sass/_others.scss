@@ -7,7 +7,10 @@
     }
 }
 
-[data-aload] { background-image: none !important; }
+[data-aload] {
+    background-image: none !important;
+}
+
 
 /* brand name */
 
@@ -254,7 +257,24 @@ a[target="_blank"]:not(.no-underline) {
 
 .home-page {
     section {
-        min-height: 480px;
+        // &:before {
+        //     z-index: -999;
+        //     display: block;
+        //     content: "";
+        //     width: 42px;
+        //     height: 42px;
+        //     position: absolute;
+        //     left: 50%;
+        //     top: 20%;
+        //     margin-left: -21px;
+        //     margin-top: -21px;
+        //     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%236c6c6c'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+        //     background-position: 50%;
+        //     background-size: 100%;
+        //     background-repeat: no-repeat;
+        //     transform-origin: 50%;
+        //     animation: swiper-preloader-spin 1s steps(12, end) infinite;
+        // }
     }
 }
 
@@ -499,22 +519,20 @@ table.table-aboutme {
                         }
                         .year {
                             padding: 0 20px 0 0;
-                            line-height: 100px;
                             text-align: right;
-                            min-width: 170px;
                             font-weight: bold;
-                            white-space: nowrap;
                         }
                         .box-content {
                             padding: 0 0 0 20px;
                             border-left: 2px solid #ddd;
                         }
-                        @media (min-width: $screen-lg-min) {
-                            > div {
-                                height: 70px;
-                            }
+                        @media (max-width: $screen-xs-min) {
                             .year {
-                                line-height: 70px;
+                                padding: 0 10px 0 0;
+                                font-size: $font-XS;
+                            }
+                            .box-content {
+                                padding: 0 0 0 10px;
                             }
                         }
                     }

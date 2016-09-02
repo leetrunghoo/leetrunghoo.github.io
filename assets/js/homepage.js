@@ -44,9 +44,11 @@ $(function() {
         console.info('load section: ' + sectionId);
         var $section = $('#' + sectionId);
         $section.children('.opacity-0').removeClass('opacity-0');
+        // lazyload by aload
         $section.find('*[data-aload]').each(function(i, ele) {
             aload(ele);
         });
+     
         if (sectionId === 'about') {
 
         } else if (sectionId === 'aboutDetail') {
@@ -54,6 +56,11 @@ $(function() {
         } else if (sectionId === 'testimonial') {
 
         } else if (sectionId === 'portfolio') {
+            NProgress.start();
+            $section.imagesLoaded(function(ele) {
+                NProgress.done();
+            });
+
             var mapProjects = {};
             $('.filter-projects button').each(function(i, ele) {
                 var filter = $(this).data('filter');

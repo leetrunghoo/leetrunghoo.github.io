@@ -1,7 +1,7 @@
 
-console.log('%c =========== HELLO THERE ==========', 'color: green; font-weight: bold;');
-console.log('%c        welcome to my website', 'color: green;');
-console.log('%c ==================================', 'color: green;');
+console.log('%c =========== HELLO THERE ==========', 'color: #009688; font-weight: bold;');
+console.log('%c        welcome to my website', 'color: #009688;');
+console.log('%c ==================================', 'color: #009688;');
 
 // plugins
 $.fn.typingAnimation = function(callback) {
