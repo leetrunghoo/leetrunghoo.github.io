@@ -136,7 +136,7 @@ $(function() {
     // scroll animation when click anchor
     var layoutContent = document.querySelector('article');
     var ua = navigator.userAgent.toLowerCase();
-    if (ua.indexOf("ucbrowser") === -1) { // not UCBrowser
+    if (ua.indexOf("ucbrowser") < 0) { // not UCBrowser
         $('a[href*=#]:not([href=#])').click(function() {
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                 var target = $(this.hash);

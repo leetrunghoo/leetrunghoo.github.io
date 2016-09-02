@@ -1,5 +1,5 @@
-<section id="blog" class="section--postsWrapper">
-    <div class="container">
+<section id="blogs" class="section--postsWrapper">
+    <div class="container animate-opacity opacity-0">
         <div class="blockGroup">
             <div class="section-title">
                 <h2>Latest Posts</h2>
@@ -11,12 +11,12 @@
                         <article class="postArticle postArticle--short">
                             {% if post.image.hero %}
                             <a href="{{ post.url }}">
-                                <div class="postArticle-image desaturate" style="background-image:url('{{ post.image.hero }}')">
+                                <div class="postArticle-image desaturate" data-aload style="background-image:url('{{ post.image.hero }}')">
                                 </div>
                             </a>
                             {% else %}
                             <a href="{{ post.url }}">
-                                <div class="postArticle-image" style="background-image:url('{{site.baseurl}} assets/img/logo-150.png')">
+                                <div class="postArticle-image" data-aload style="background-image:url('{{site.baseurl}} assets/img/logo-150.png')">
                                 </div>
                             </a>
                             {% endif %}

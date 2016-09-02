@@ -1,21 +1,21 @@
 <section id="portfolio" class="section--last">
-    <div class="blockGroup">
-        <div class="section-title">
-            <h2>What I've done</h2>
-        </div>
-    </div>
-    <div class="filter-projects">
-        <button id="btnAll" class="button button--primary" data-filter="all">All</button>
-        {% for type in site.data.projects.projectsType %}
-        <button class="button" data-filter="{{ type.id }}">{{ type.name }}</button>
-        {% endfor %}
-    </div>
     {% assign projects = site.data.projects.projectsList %}
-    <div class="wraper remodal-bg">
+    <div class="wraper remodal-bg animate-opacity opacity-0">
+        <div class="blockGroup">
+            <div class="section-title">
+                <h2>What I've done</h2>
+            </div>
+        </div>
+        <div class="filter-projects">
+            <button id="btnAll" class="button button--primary" data-filter="all">All</button>
+            {% for type in site.data.projects.projectsType %}
+            <button class="button" data-filter="{{ type.id }}">{{ type.name }}</button>
+            {% endfor %}
+        </div>
         <div id="listProjects">
             {% for project in projects %}
             <a href="#popup-{{project.id}}" class="grid-item {{ project.type }}">
-                <img class="card-shadow" src="{{ project.cover }}" alt="{{ project.name }}" />
+                <img class="card-shadow" data-aload="{{ project.cover }}" alt="{{ project.name }}" />
                 <div class="grid-item-cover">
                     <div class="grid-item-cover-bg"></div>
                     <div class="grid-item-cover-content-container">
