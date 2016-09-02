@@ -160,7 +160,8 @@
 
 .postMeta-wrapper {
   margin-top: $leading;
-  display: inline-block;
+  display: inline;
+  width: 100%;
   font-size: $font-XS;
   text-transform: uppercase;
 }
