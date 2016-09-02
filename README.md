@@ -1,13 +1,11 @@
 Personal website, a static web built by Jekyll. 
 
-It's still under construction :)
-
 Todo: 
 
 - [x] Landing page
 - [x] Blog feature
-- [ ] Portfolio
-- [ ] Write more blogs :smile:
+- [x] Portfolio - CV page
+- [x] Write more blogs :smile:
 
 
 ## How to run
