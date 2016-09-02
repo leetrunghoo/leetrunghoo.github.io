@@ -1,5 +1,4 @@
 $(function() {
-
     // add typing animation for home page
     $('#welcomeContainer').typingAnimation(function() {
         setTimeout(function() {
@@ -16,7 +15,6 @@ $(function() {
             arrSections.push(ele.id);
         }
     });
-    console.log(arrSections);
 
     // check current scroll for loading sections
     var currentScrollTop = $(document).scrollTop();
@@ -37,19 +35,16 @@ $(function() {
             if (docScrollTop > nextOffset) {
                 loadSection(nextSectionId);
                 arrSections.splice(0, 1); // remove loaded section ID
-                console.log('---------arrSections after',arrSections);
             }
         }
     });
 
 
     function loadSection(sectionId) {
-        console.log('load ', sectionId);
+        console.info('load section: ' + sectionId);
         var $section = $('#' + sectionId);
         $section.children('.opacity-0').removeClass('opacity-0');
-        console.log('aload.length ',$section.find('*[data-aload]').length);
         $section.find('*[data-aload]').each(function(i, ele) {
-            console.log(ele);
             aload(ele);
         });
         if (sectionId === 'about') {

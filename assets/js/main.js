@@ -1,3 +1,8 @@
+
+console.log('%c =========== HELLO THERE ==========', 'color: green; font-weight: bold;');
+console.log('%c        welcome to my website', 'color: green;');
+console.log('%c ==================================', 'color: green;');
+
 // plugins
 $.fn.typingAnimation = function(callback) {
     if (this.length === 0) {
