@@ -29,17 +29,26 @@ Finally, I would like to thank the authors and contributors of below awesome lib
 Jekyll (for building static web)    
 <http://jekyllrb.com>{:target="_blank"}{:target="_blank"}
 
+Github Page (for hosting from your GitHub repository)  
+<https://pages.github.com>{:target="_blank"}
+
 Mickey Theme (Jekyll theme that I use to get start my own website)  
 <https://github.com/vincentchan/mickey>{:target="_blank"}
 
-Github Page (for hosting from your GitHub repository)  
-<https://pages.github.com>{:target="_blank"}
+Sass (preprocessor css)  
+<http://sass-lang.com>{:target="_blank"}
 
 jQuery (don't need to explain :D)  
 <http://jquery.com>{:target="_blank"}
 
-Sass (preprocessor css)  
-<http://sass-lang.com>{:target="_blank"}
+Masonry (cascading grid layout)
+<http://masonry.desandro.com>{:target="_blank"}
+
+Swiper (modern mobile touch slider)
+<http://idangero.us/swiper>{:target="_blank"}
+
+Remodal (simple popup)
+<http://vodkabears.github.io/remodal>{:target="_blank"}
 
 Gulp (task runner)  
 <http://gulpjs.com>{:target="_blank"}
@@ -50,7 +59,6 @@ Gulp plugins:
 : gulp-clean-css 
 : gulp-rename
 : gulp-sass
-: gulp-changed
 : gulp-concat
 : gulp-uglify
 : gulp-uncss
@@ -97,3 +105,12 @@ Icomoon (icons)
 
 Unsplash (Free high-resolution photos)  
 <https://unsplash.com>{:target="_blank"}
+
+---
+
+## Update: September 2, 2016
+
+Now my website is done, I added CV, About, Testimonial, and Portfolio sections. It scores __100/100 Google PageSpeed Insights__ after I setTimeout 5s for loading Google Analytics script (it's not important for my website).
+
+I'm really happy with it. :smile:
+

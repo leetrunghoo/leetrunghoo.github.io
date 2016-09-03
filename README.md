@@ -40,54 +40,62 @@ I would like to thank the authors and contributors of below awesome libs/tools/a
 
 ### TECHNOLOGY
 
-Jekyll (for building static web)  
-<http://jekyllrb.com>
-
-Mickey Theme (Jekyll theme that I use to get start my own website)  
-<https://github.com/vincentchan/mickey>
+Jekyll (for building static web)    
+<http://jekyllrb.com>{:target="_blank"}{:target="_blank"}
 
 Github Page (for hosting from your GitHub repository)  
-<https://pages.github.com>
+<https://pages.github.com>{:target="_blank"}
 
-jQuery (don't need to explain :D)  
-<http://jquery.com>
+Mickey Theme (Jekyll theme that I use to get start my own website)  
+<https://github.com/vincentchan/mickey>{:target="_blank"}
 
 Sass (preprocessor css)  
-<http://sass-lang.com>
+<http://sass-lang.com>{:target="_blank"}
+
+jQuery (don't need to explain :D)  
+<http://jquery.com>{:target="_blank"}
+
+Masonry (cascading grid layout)
+<http://masonry.desandro.com>{:target="_blank"}
+
+Swiper (modern mobile touch slider)
+<http://idangero.us/swiper>{:target="_blank"}
+
+Remodal (simple popup)
+<http://vodkabears.github.io/remodal>{:target="_blank"}
 
 Gulp (task runner)  
-<http://gulpjs.com>
+<http://gulpjs.com>{:target="_blank"}
 
 Gulp plugins:  
-- concurrent-transform 
-- gulp-autoprefixer 
-- gulp-clean-css 
-- gulp-rename
-- gulp-sass
-- gulp-changed
-- gulp-concat
-- gulp-uglify
-- gulp-uncss
-- gulp-image-resize
-- gulp-imagemin
+: concurrent-transform 
+: gulp-autoprefixer 
+: gulp-clean-css 
+: gulp-rename
+: gulp-sass
+: gulp-concat
+: gulp-uglify
+: gulp-uncss
+: gulp-image-resize
+: gulp-imagemin
 
 Browsersync (for live-server & for testing UI in multi-devices) 
-<http://www.browsersync.io>
+<http://www.browsersync.io>{:target="_blank"}
 
 Snap svg (for svg animation)
-<http://snapsvg.io>
+<http://snapsvg.io>{:target="_blank"}
 
 Cloudflare (for https & optimization)  
-<https://www.cloudflare.com>
+<https://www.cloudflare.com>{:target="_blank"}
 
 Disqus (free commenting service)  
-<https://disqus.com>
+<https://disqus.com>{:target="_blank"}
 
 Codepen (for marking code example)  
-<http://codepen.io>
+<http://codepen.io>{:target="_blank"}
 
 Codrops (a web design and development blog that has great inspirational articles for font-end dev)
-<http://tympanus.net/codrops>
+<http://tympanus.net/codrops>{:target="_blank"}
 
 ---
 
