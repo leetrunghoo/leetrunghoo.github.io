@@ -9,6 +9,14 @@ $(function() {
         }, 200);
     });
 
+    var layoutContent = document.querySelector('article');
+    $('#moveToAbout').click(function() {
+        var offset = $(layoutContent).scrollTop() + $('#about').offset().top;
+        $('html, body').animate({
+            scrollTop: offset
+        }, 700, 'easeOutQuint');
+    });
+
     var arrSections = []; // array of unloaded section ID
     $('section').each(function(i, ele) {
         if (i > 0) {
@@ -20,7 +28,7 @@ $(function() {
     var currentScrollTop = $(document).scrollTop();
     for (var i = 0; i < arrSections.length; i++) {
         var checkingSectionId = arrSections[0]; // removed '0' element
-        if (currentScrollTop > $('#'+checkingSectionId).offset().top - window.innerHeight / 2) {
+        if (currentScrollTop > $('#' + checkingSectionId).offset().top - window.innerHeight / 2) {
             loadSection(checkingSectionId);
             arrSections.splice(0, 1); // remove loaded section ID
         }
@@ -31,7 +39,7 @@ $(function() {
         if (arrSections.length > 0) {
             var nextSectionId = arrSections[0];
             var docScrollTop = $(document).scrollTop();
-            var nextOffset = $('#'+nextSectionId).offset().top - window.innerHeight / 2;
+            var nextOffset = $('#' + nextSectionId).offset().top - window.innerHeight / 2;
             if (docScrollTop > nextOffset) {
                 loadSection(nextSectionId);
                 arrSections.splice(0, 1); // remove loaded section ID
@@ -48,7 +56,7 @@ $(function() {
         $section.find('*[data-aload]').each(function(i, ele) {
             aload(ele);
         });
-     
+
         if (sectionId === 'about') {
 
         } else if (sectionId === 'aboutDetail') {
