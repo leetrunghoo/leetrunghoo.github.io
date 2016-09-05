@@ -12,6 +12,7 @@ title: "CV of Trung Ho (leetrunghoo)"
 - Phone: {{ basic.phone }}
 - Address: {{ basic.address }}
 - Email: {{ basic.email }}
+- Skype: {{ basic.skype }}
 - Website: {{ basic.website }}
 
 ## Objective
