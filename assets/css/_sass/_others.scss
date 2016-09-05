@@ -90,7 +90,6 @@
 
 /** typing animation **/
 
-.display-none,
 .typingAnimation {
     display: none;
 }
@@ -98,12 +97,15 @@
 .cursor-typing {
     &:after {
         content: "|";
+        font-size: 1.3em;
     }
 }
 
 .cursor-typed {
     &:after {
+        width: 100%;
         content: "|";
+        font-size: 1.3em;
         @include animation_blink();
     }
 }
