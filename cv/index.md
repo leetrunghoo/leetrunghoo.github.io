@@ -7,7 +7,7 @@ title: "CV of Trung Ho (leetrunghoo)"
 {% assign cv = site.data.cv %}
 ## Basic Infomation
 {% assign basic = cv.basic %}
-- Name: __{{ basic.name }}__
+- Fullname: __{{ basic.name }}__
 - Date of birth: {{ basic.dob }}
 - Phone: {{ basic.phone }}
 - Address: {{ basic.address }}
