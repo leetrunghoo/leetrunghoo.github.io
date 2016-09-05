@@ -86,26 +86,6 @@
     }
 }
 
-.section-backgroundImage .welcome-img {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: url(/assets/img/welcome.jpg) no-repeat center top;
-    background-size: cover;
-    @media (max-width: $screen-sm-min) {
-        background-image: url(/assets/img/welcome-small.jpg);
-    }
-}
-
-#welcomeContainer {
-    font-family: $title-primary-font;
-    background-color: transparent;
-    h2 {
-        font-weight: normal;
-        padding: 0;
-        margin: 0;
-    }
-}
 
 
 /** typing animation **/
@@ -275,6 +255,32 @@ a[target="_blank"]:not(.no-underline) {
         //     transform-origin: 50%;
         //     animation: swiper-preloader-spin 1s steps(12, end) infinite;
         // }
+    }
+}
+
+.section-backgroundImage .welcome-img {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url(/assets/img/welcome.jpg) no-repeat center top;
+    background-size: cover;
+    @media (max-width: $screen-sm-min) {
+        background-image: url(/assets/img/welcome-small.jpg);
+    }
+}
+
+#welcomeContainer {
+    font-family: $title-primary-font;
+    background-color: transparent;
+    h2 {
+        font-weight: normal;
+        padding: 0;
+        margin: 0;
+    }
+
+    .trigger {
+        z-index: inherit;
+        font-size: 1.2em;
     }
 }
 

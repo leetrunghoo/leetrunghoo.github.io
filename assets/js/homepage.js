@@ -10,7 +10,7 @@ $(function() {
     });
 
     var layoutContent = document.querySelector('article');
-    $('#moveToAbout').click(function() {
+    $('#welcomeContainer').on('click', '.trigger', function() {
         var offset = $(layoutContent).scrollTop() + $('#about').offset().top;
         $('html, body').animate({
             scrollTop: offset
