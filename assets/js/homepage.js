@@ -1,9 +1,10 @@
 $(function() {
     // add typing animation for home page
-    $('#welcomeContainer').typingAnimation(function() {
+    var $typingElement = $('#welcomeContainer .container');
+    $typingElement.typingAnimation(function() {
         setTimeout(function() {
-            $('#welcomeContainer').addClass('color-white');
-            var $section = $('#welcomeContainer').parent();
+            $typingElement.addClass('color-white');
+            var $section = $('#welcome');
             $section.find('.section-backgroundImage').removeClass('opacity-0');
             $section.find('.section-gradient').removeClass('opacity-0');
         }, 200);
