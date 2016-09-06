@@ -60,7 +60,7 @@ projectsList:
   type: pet-projects
   shortDesc: pet project
   important: false
-  link: https://leetrunghoo.com/demo/demo-flickr-with-rest-api/
+  link: https://leetrunghoo.com/demo/flickr/
   source: https://github.com/leetrunghoo/leetrunghoo.github.io/tree/master/demo/flickr
   blog: https://leetrunghoo.com/demo/demo-flickr-with-rest-api/
   time: 2016
