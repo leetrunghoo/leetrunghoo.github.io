@@ -7,8 +7,10 @@ $(function() {
             var $section = $('#welcome');
             $section.find('.section-backgroundImage').removeClass('opacity-0');
             $section.find('.section-gradient').removeClass('opacity-0');
-        }, 200);
+            $('#welcomeContainer .trigger').removeClass('hide');
+        }, 500);
     });
+
 
     var layoutContent = document.querySelector('article');
     $('#welcomeContainer').on('click', '.trigger', function() {
@@ -38,33 +40,33 @@ $(function() {
     // lazyload when scrolling
     $(document).scroll(function() {
         if (arrSections.length > 0) {
-            var nextSectionId = arrSections[0];
+            var sectionId = arrSections[0];
+            var nextSectionId = arrSections[1];
             var docScrollTop = $(document).scrollTop();
-            var nextOffset = $('#' + nextSectionId).offset().top - window.innerHeight / 2;
+            var nextOffset = $('#' + sectionId).offset().top - window.innerHeight / 2;
             if (docScrollTop > nextOffset) {
-                loadSection(nextSectionId);
+                loadSection(sectionId, nextSectionId);
                 arrSections.splice(0, 1); // remove loaded section ID
             }
         }
     });
 
 
-    function loadSection(sectionId) {
+    function loadSection(sectionId, nextSectionId) {
         console.info('load section: ' + sectionId);
         var $section = $('#' + sectionId);
+        var $nextSection = $('#' + nextSectionId);
         $section.children('.opacity-0').removeClass('opacity-0');
         // lazyload by aload
         $section.find('*[data-aload]').each(function(i, ele) {
             aload(ele);
         });
+        // preload resource of next section for better experience
+        $nextSection.find('*[data-aload]').each(function(i, ele) {
+            aload(ele);
+        });
 
-        if (sectionId === 'about') {
-
-        } else if (sectionId === 'aboutDetail') {
-
-        } else if (sectionId === 'testimonial') {
-
-        } else if (sectionId === 'portfolio') {
+        if (sectionId === 'portfolio') {
             NProgress.start();
             $section.imagesLoaded(function(ele) {
                 NProgress.done();
@@ -149,8 +151,6 @@ $(function() {
                     this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
                 });
             });
-        } else if (sectionId === 'blogs') {
-
         }
     }
 
