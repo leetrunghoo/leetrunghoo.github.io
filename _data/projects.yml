@@ -292,22 +292,22 @@ projectsList:
 #   videos: 
 #     youtube: xAZe8DBH1PY
 
-- name: Mơ - Vũ Cát Tường
-  id: mo
-  type: others
-  shortDesc: cover for fun
-  time: Jan 19, 2016
-  description:
-  - Đây là Trung 
-  - Trung đang cover bài "Mơ" của Vũ Cát Tường
-  - Trung hát ko hay, nhưng Trung vẫn hát.
-  - Trung thật can đảm.
-  - Hãy như Trung.
-  - =]]
-  - Đang kết bài này quá nên Trung cover cho vui thôi, ko tập gì nhiều, hát sai lời tè le :P
-  cover: https://img.youtube.com/vi/X-vYB_Z9zEM/mqdefault.jpg
-  videos: 
-    youtube: X-vYB_Z9zEM
+# - name: Mơ - Vũ Cát Tường
+#   id: mo
+#   type: others
+#   shortDesc: cover for fun
+#   time: Jan 19, 2016
+#   description:
+#   - Đây là Trung 
+#   - Trung đang cover bài "Mơ" của Vũ Cát Tường
+#   - Trung hát ko hay, nhưng Trung vẫn hát.
+#   - Trung thật can đảm.
+#   - Hãy như Trung.
+#   - =]]
+#   - Đang kết bài này quá nên Trung cover cho vui thôi, ko tập gì nhiều, hát sai lời tè le :P
+#   cover: https://img.youtube.com/vi/X-vYB_Z9zEM/mqdefault.jpg
+#   videos: 
+#     youtube: X-vYB_Z9zEM
 
 - name: Cha - MTV
   id: cha

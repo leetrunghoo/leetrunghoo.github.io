@@ -53,8 +53,8 @@ Thanks to [Web App Manifest](https://developer.mozilla.org/en-US/docs/Web/Manife
 
 ## About the project:
 
-- This is an opensource project, Github link: <https://github.com/leetrunghoo/learnenglish>
-- Firsly I need the content for my web app so I wrote a simple crawler/scraper runs on Nodejs to scrape the data from <http://www.talkenglish.com>, then all json data are uploaded to Github.
+- This is an opensource project, Github link: <https://github.com/leetrunghoo/learnenglish>{:target="_blank"}
+- Firsly I need the content for my web app so I wrote a simple crawler/scraper runs on Nodejs to scrape the data from <http://www.talkenglish.com>{:target="_blank"}, then all json data are uploaded to Github.
 - I want to keep this project simple and lightweight so currently I'm using: 
 	- Nodejs (for running crawler on backend & development enviroment)
 	- Service Worker (for PWA, I use sw-precache for generating sw file)
@@ -83,7 +83,7 @@ __Requirement:__ installed nodejs & npm
 	gulp
 	```
 
-	Or with flag --production for production.<br/>
+	Or with flag --production when it's ready for production.<br/>
 	```
 	gulp --production
 	```
