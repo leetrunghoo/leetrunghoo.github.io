@@ -67,17 +67,17 @@ Remodal (simple popup)
 Gulp (task runner)  
 <http://gulpjs.com>
 
-Gulp plugins:  
-: concurrent-transform 
-: gulp-autoprefixer 
-: gulp-clean-css 
-: gulp-rename
-: gulp-sass
-: gulp-concat
-: gulp-uglify
-: gulp-uncss
-: gulp-image-resize
-: gulp-imagemin
+Gulp plugins:
+- concurrent-transform 
+- gulp-autoprefixer 
+- gulp-clean-css 
+- gulp-rename
+- gulp-sass
+- gulp-concat
+- gulp-uglify
+- gulp-uncss
+- gulp-image-resize
+- gulp-imagemin
 
 Browsersync (for live-server & for testing UI in multi-devices) 
 <http://www.browsersync.io>
