@@ -19,9 +19,9 @@ Employers find resumes boring, they had probably seen thousand and thousands of 
 
 Having your own website allows you to control what people will find when they search for you. When you have your own website, you have an opportunity to demonstrate a portfolio of information about you and to provide further information so employers can learn more about you.
 
-A website gives you creative freedom to express your personality in ways that are not be possible through your resume. Everything from the bio paragraph you write to the design options you choose for your website says something about you, and gives recruiters more chances to decide if they want to bring you in for an interview.
+A website gives you creative freedom to express your personality in ways that are not possible through your resume. Everything from the bio paragraph you write to the design options you choose for your website says something about you and gives recruiters more chances to decide if they want to bring you in for an interview.
 
-Having an informative, well designed website also sends a message that you take your career seriously. On the other hand, if a site is unprofessional or contains content an employer will not appreciate, it can be harmful.
+Having an informative, well-designed website also sends a message that you take your career seriously. On the other hand, if a site is unprofessional or contains content an employer will not appreciate, it can be harmful.
 
 ## You are establishing your expertise in your field
 

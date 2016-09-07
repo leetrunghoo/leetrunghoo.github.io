@@ -33,6 +33,6 @@ This kick off phrase took me more time than I thought. But I like what I'm doing
 
 This blog was written a half year ago, many things were changed. I recommend you read these blogs:
 
-<https://leetrunghoo.com/life/im-back/> it's about why I discontinued to develop my website last year and what I learned from my mistakes
+<https://leetrunghoo.com/life/im-back/> about why I discontinued developing my website last year and what I learned from my mistakes
 
 <https://leetrunghoo.com/tech/about-my-website/> about what technique I use for building my website
