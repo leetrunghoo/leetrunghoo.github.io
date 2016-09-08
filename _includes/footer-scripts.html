@@ -9,12 +9,14 @@
 </script>
 
 {% if page.layout == 'home' %} 
-<!-- only for home page -->
+<!-- for home page -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.0/imagesloaded.pkgd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.1.0/masonry.pkgd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.0/remodal.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.min.js"></script>
 <script async src="{{ site.baseurl_js }}min/homepage.min.js"></script>
+{% elsif page.layout == 'cv' %} 
+<!-- not import any script for CV page-->
 {% else %}
 <!-- for blog page -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script>
