@@ -5,9 +5,9 @@ excerpt: "Having a website of your own equals entering into an invaluable commun
 categories: Life
 tags: life experience
 image:
-  hero: /assets/img/hero/my-web.png
+  hero: /assets/img/hero/my-web.jpg
   heroStyle:
-  thumbnail: /assets/img/thumbnail/my-web.png
+  thumbnail: /assets/img/thumbnail/my-web.jpg
   thumbnailStyle:
 bgGradientOpacity: darker
 ---
