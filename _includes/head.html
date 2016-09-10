@@ -30,14 +30,14 @@
   <meta name="twitter:creator" content="@{{ site.author.twitter }}">
   <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}">
   <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <meta name="twitter:image" content="{% if page.image.thumbnail %}{{ page.image.thumbnail| prepend: site.url_public }}{% else %}{{ site.avatar | prepend: site.url_public }}{% endif %}">
+  <meta name="twitter:image" content="{% if page.image.hero %}{{ page.image.hero| prepend: site.url_public }}{% else %}{{ site.avatar | prepend: site.url_public }}{% endif %}">
   <meta name="twitter:url" content="{{ page.url | replace:'index.html','' | prepend: site.url_public }}">
 
   <!-- Open graph -->
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}">
   <meta property="og:type" content="{% if page.date %}blog{% else %}website{% endif %}">
   <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url_public }}">
-  <meta property="og:image" content="{% if page.image.thumbnail %}{{ page.image.thumbnail| prepend: site.url_public }}{% else %}{{ site.avatar | prepend: site.url_public }}{% endif %}">
+  <meta property="og:image" content="{% if page.image.hero %}{{ page.image.hero| prepend: site.url_public }}{% else %}{{ site.avatar | prepend: site.url_public }}{% endif %}">
   <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <meta property="og:site_name" content="{{ site.name }}">
   <meta property="og:locale" content="{{ site.locale }}">

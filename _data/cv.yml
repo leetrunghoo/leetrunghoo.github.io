@@ -8,7 +8,7 @@ basic:
   website: https://leetrunghoo.com
   github: https://github.com/leetrunghoo
 
-objective: Seeking position of a Front End Developer or Full-stack Javascript Developer in a product-based software company. Where I would be able to put to use the knowledge gained in the web development and push the limits of the web.
+objective: Seeking a position of a Front End Developer or Full-stack Javascript Developer in a product-based software company. Where I would be able to put to use the knowledge gained in the web development and push the limits of the web.
 
 skills_detail:
 - name: HTML5
@@ -37,7 +37,7 @@ skills:
     - name: Patterns and Techniques
       description: OOP, MVC, MVVM, REST, Performance Optimisation Techniques
     - name: Others
-      description: Gulp, SASS, Jekyll, Backbone, Polymer, Service Worker, Git, JIRA
+      description: Gulp, Bootstrap, SASS, Jekyll, Backbone, Polymer, Service Worker, Git, JIRA
   - type: Languages Skills
     description:
     details:

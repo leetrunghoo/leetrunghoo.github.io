@@ -5,9 +5,9 @@ excerpt: "This is a Progressive Web App for learning English"
 categories: Project
 tags: PetProject ProgressiveWebApp
 image:
-  hero: /assets/img/hero/learnenglish.jpg
+  hero: /assets/img/hero/learnenglish.png
   heroStyle: 
-  thumbnail: /assets/img/thumbnail/learnenglish.jpg
+  thumbnail: /assets/img/thumbnail/learnenglish.png
   thumbnailStyle:
 bgGradientOpacity: darker
 ---
