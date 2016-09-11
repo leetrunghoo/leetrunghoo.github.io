@@ -20,9 +20,9 @@ projectsList:
   tech: Nodejs, Crawling/Scraping, Service Worker, Materializecss, SASS, Web Speech API, Gulp, Full Responsive
   description:
   - Learn English is a Progressive Web App for learning English that I made for personal use and for learning new tech.
-  cover: /assets/img/hero/learnenglish.jpg
+  cover: /assets/img/hero/learnenglish.png
   pictures:
-    - url: /assets/img/hero/learnenglish.jpg
+    - url: /assets/img/hero/learnenglish.png
       caption: using http://ami.responsivedesign.is to check the responsive website
     - url: /assets/img/projects/learnenglish1.jpg
       caption: list of lessons
