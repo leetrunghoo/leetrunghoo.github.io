@@ -21,8 +21,8 @@
             window.scrollTo(0, 0);
         }
 
-        if (classie.has(container, 'notrans')) {
-            classie.remove(container, 'notrans');
+        if ($(container).hasClass('notrans')) {
+            $(container).removeClass('notrans');
             return false;
         }
 
@@ -40,12 +40,12 @@
     function toggle(reveal) {
         isAnimating = true;
         if (reveal) {
-            classie.add(container, 'modify');
+            $(container).addClass('modify');
             $('#menu-button').addClass('change-color');
         } else {
             noscroll = true;
             // disable_scroll();
-            classie.remove(container, 'modify');
+            $(container).removeClass('modify');
             $('#menu-button').removeClass('change-color');
         }
 
@@ -66,8 +66,7 @@
 
     if (pageScroll) {
         isRevealed = true;
-        classie.add(container, 'notrans');
-        classie.add(container, 'modify');
+        $(container).addClass('notrans modify');
         $('#menu-button').addClass('change-color');
     }
 
@@ -79,7 +78,7 @@
     $('.modal-toggle-wrapper').click(function() {
         $(this).toggleClass('active');
         if ($(this).hasClass('active')) {
-            disable_scroll()
+            disable_scroll();
             $('#menu-button-container').fadeOut();
         } else {
             enable_scroll();
@@ -103,7 +102,7 @@
         var strTitle = ((typeof this.attr('title') !== 'undefined') ? this.attr('title') : 'Social Share'),
             strParam = 'width=' + intWidth + ',height=' + intHeight + ',resizable=' + strResize,
             objWindow = window.open(this.attr('href'), strTitle, strParam).focus();
-    }
+    };
 
     $('.shareButton').on('click', function(e) {
         $(this).sharePopup(e);

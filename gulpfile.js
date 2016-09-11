@@ -19,7 +19,7 @@ var gulp = require('gulp'),
  * Note: need to generate css first to include inline css when Jekyll builds
  */
 gulp.task('jekyll-build', function(done) {
-    var jekyll = process.platform === "win32" ? "jekyll.bat" : "jekyll"
+    var jekyll = process.platform === "win32" ? "jekyll.bat" : "jekyll";
     return cp.spawn(jekyll, ['build', '--config=_config.yml'], { stdio: 'inherit' })
         .on('close', done);
 });
@@ -115,7 +115,7 @@ gulp.task("resizeImages", function() {
         .pipe(gulp.dest("assets/img/projects"));
 });
 
-/** 
+/**
  * Optimize images
  * note: need to install imagemagick. Ex on Linux or MacOS: brew install imagemagick
  */
@@ -137,7 +137,7 @@ gulp.task("optimizeImages",  function() {
  * Watch _site generation, reload BrowserSync
  */
 gulp.task('default', ['styles', 'scripts', 'browser-sync'], function() {
-    gulp.watch('assets/js/*.js', ['scripts']); 
+    gulp.watch('assets/js/*.js', ['scripts']);
     gulp.watch('assets/css/**/*.scss', ['styles']);
     gulp.watch('assets/img/hero/*.{jpg,png}', ['resizeImages']);
     gulp.watch(['*.html',

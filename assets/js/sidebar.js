@@ -5,14 +5,13 @@
         openbtn = document.getElementById('open-button'),
         closebtn = document.getElementById('close-button'),
         isOpen = false,
-
         morphEl = document.getElementById('morph-shape'),
-        s = Snap(morphEl.querySelector('svg'));
-    path = s.select('path');
-    initialPath = this.path.attr('d'),
-        steps = morphEl.getAttribute('data-morph-open').split(';');
-    stepsTotal = steps.length;
-    isAnimating = false;
+        s = Snap(morphEl.querySelector('svg')),
+        path = s.select('path'),
+        initialPath = path.attr('d'),
+        steps = morphEl.getAttribute('data-morph-open').split(';'),
+        stepsTotal = steps.length,
+        isAnimating = false;
 
     function init() {
         initEvents();
@@ -38,7 +37,7 @@
         if (isAnimating) return false;
         isAnimating = true;
         if (isOpen) {
-            classie.remove(bodyEl, 'show-menu');
+            $(bodyEl).removeClass('show-menu');
             // animate path
             setTimeout(function() {
                 // reset path
@@ -48,7 +47,7 @@
             }, 300);
         } else {
             // disable_scroll();
-            classie.add(bodyEl, 'show-menu');
+            $(bodyEl).addClass('show-menu');
             // animate path
             var pos = 0,
                 nextStep = function(pos) {

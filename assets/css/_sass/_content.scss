@@ -132,7 +132,8 @@
         text-transform: uppercase;
     }
     .postArticle-title,
-    .block-postMeta, .block-tag {
+    .block-postMeta,
+    .block-tag {
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -213,41 +214,39 @@
 }
 
 //// Post footer area
-.postFooter {
+footer.postFooter {
     text-align: center;
     min-height: 40px;
-}
-
-.section--prePost {
-    width: 100%;
-    top: 0;
-    position: relative;
-}
-
-.section--prePost .section-title a {
-    background: transparent;
-    color: rgba($white, 0.9);
-    &:hover {
-        color: rgba($white, 1);
+    .section--prePost {
+        width: 100%;
+        top: 0;
+        position: relative;
+        height: 11 * $leading;
+        .section-title {
+            a {
+                background: transparent;
+                color: rgba($white, 0.9);
+                &:hover {
+                    color: rgba($white, 1);
+                }
+                h2 {
+                    margin: 0;
+                    padding: 0;
+                    display: inline-block;
+                }
+            }
+        }
+        .section-backgroundImage {
+            height: 11 * $leading;
+            img {
+                min-height: 11 * $leading;
+                position: relative !important;
+                top: 0;
+            }
+        }
     }
 }
 
-.section--prePost .section-title h2 {
-    margin: 0;
-    display: inline-block;
-}
-
-.section--prePost,
-.section--prePost .section-backgroundImage {
-    height: 11 * $leading;
-}
-
-.section--prePost .section-backgroundImage img {
-    min-height: 11 * $leading;
-    position: relative !important;
-    top: 0;
-}
- 
 ul.socialAccountList {
     @include clearfix();
     list-style: none;

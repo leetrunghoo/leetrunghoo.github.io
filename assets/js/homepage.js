@@ -78,7 +78,7 @@ $(function() {
                 if (filter !== 'all') {
                     mapProjects[filter] = $('#listProjects > a.' + filter);
                 }
-            })
+            });
 
             var flagCom = true;
             var flagPet = true;
@@ -91,8 +91,8 @@ $(function() {
                 percentPosition: true
             });
             $projects.imagesLoaded().progress(function() {
-                $projects.masonry("layout")
-            })
+                $projects.masonry("layout");
+            });
 
             // filter projects
             $('.filter-projects button').click(function() {
@@ -104,7 +104,7 @@ $(function() {
 
                 var filter = $(this).data('filter');
                 if (filter === 'all') {
-                    for (key_filter in mapProjects) {
+                    for (var key_filter in mapProjects) {
                         if (mapProjects.hasOwnProperty(key_filter)) {
                             if (mapProjects[key_filter].length > 0 && $('#listProjects a.' + key_filter).length === 0) {
                                 $projects.append(mapProjects[key_filter]);
@@ -143,12 +143,12 @@ $(function() {
                 // load youtube iframe
                 $(this).find('iframe').each(function(i, iframe) {
                     aload(iframe[0]);
-                })
+                });
             });
             // stop playing video after closing popup
             $(document).on('closed', '.remodal', function(e) {
                 $('iframe').each(function() {
-                    this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
+                    this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
                 });
             });
         }
