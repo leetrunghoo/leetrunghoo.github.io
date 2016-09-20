@@ -1,0 +1,141 @@
+.page {
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    padding: 10px;
+    .page-container {
+        @include vertical-align();
+        padding: 10px 10px 0 10px;
+        border: $border-solid;
+        border-radius: 5px;
+        width: $screen-xs;
+        @media (max-width: $screen-xs) {
+            width: 100%;
+        }
+        .page-title {
+            font-size: $font-M;
+            border-bottom: $border-solid;
+            text-align: left;
+        }
+    }
+}
+
+.form {
+    text-align: left;
+    padding: 10px 0;
+    .form-group {
+        height: 40px;
+        line-height: 40px;
+        > * {
+            display: inline-block;
+            vertical-align: middle;
+            &:first-child {
+                width: 35%;
+                min-width: 100px;
+                text-align: right;
+                margin-right: 10px;
+            }
+            &:last-child {
+                font-size: $font-XS;
+            }
+        }
+        > input[type="text"],
+        input[type="password"] {
+            width: 200px;
+            max-width: 55%;
+        }
+    }
+    .form-group-action {
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+
+.error {
+    color: $red;
+    font-size: $font-XS;
+    text-align: center;
+}
+
+.createUser-container {
+    .page {
+        padding: 0;
+    }
+}
+
+.home-container,
+.viewUser-container {
+    padding-top: 34px;
+    @media (max-width: $screen-xs) {
+        padding-top: 80px;
+    }
+}
+
+.user-management {
+    .tool-bar {
+        margin: 20px 0;
+        > div {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .user-bar {}
+        .search-bar {
+            float: right;
+            input {
+                width: 120px;
+                height: 29px;
+            }
+            @media (max-width: $screen-xs) {
+                float: none;
+                margin: 10px
+            }
+        }
+        @media (max-width: $screen-xs) {
+            text-align: center;
+        }
+    }
+}
+
+.viewUser-wraper {
+    text-align: center;
+    .viewUser-title {
+        padding-top: 20px;
+        font-size: $font-L;
+    }
+    .viewUser-info {
+        padding: 20px 0;
+        > * {
+            display: inline-block;
+            vertical-align: top;
+            max-width: 50%;
+            @media (max-width: $screen-sm) {
+                max-width: 100%;
+                .viewUser-info-list-wraper {
+                    text-align: center;
+                    .viewUser-info-list {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        .viewUser-info-avatar {
+            background: url('/img/cat.jpg') no-repeat center center;
+            background-size: cover;
+            height: 200px;
+            width: 200px;
+        }
+        .viewUser-info-list-wraper {
+            .viewUser-info-list {
+                max-width: $screen-xs;
+                text-align: left;
+                li {
+                    padding: 5px;
+                }
+            }
+        }
+        .viewUser-info-desc {
+            padding: 0 20px;
+            text-align: left;
+        }
+    }
+}
