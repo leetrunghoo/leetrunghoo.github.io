@@ -90,7 +90,13 @@ $(function() {
                 }
                 $projects.masonry('layout');
             });
+        } else if (sectionId === 'blogs') {
+            NProgress.start();
+            $section.imagesLoaded(function(ele) {
+                NProgress.done();
+            });
         }
+
     }
 
     // scroll to top after reload/go back 
