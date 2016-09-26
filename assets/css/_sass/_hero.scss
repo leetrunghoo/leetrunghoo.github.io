@@ -26,10 +26,10 @@
 
 .section--first,
 .section-backgroundImage {
-  height: 19 * $leading;
+  height: 24 * $leading;
 
   @media (max-width: $screen-xs-max) {
-    height: 14 * $leading;
+    height: 20 * $leading;
   }
 }
 
@@ -39,16 +39,6 @@
 
   @media (max-width: $screen-xs-max) {
     height: 10 * $leading;
-  }
-}
-
-.section--about,
-.section-backgroundImage,
-.section--about ~ .post-featuredImage {
-  height: 24 * $leading;
-
-  @media (max-width: $screen-xs-max) {
-    height: 16 * $leading;
   }
 }
 

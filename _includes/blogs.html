@@ -1,36 +1,34 @@
 <section id="blogs" class="section--postsWrapper">
     <div class="container animate-opacity opacity-0">
-        <div class="blockGroup">
-            <div class="section-title">
-                <h2>Latest Posts</h2>
-            </div>
-            <ul class="blockGroup-list">
-                {% for post in site.posts %}
-                <li class="block">
-                    <div class="postArticle-wrapper card-shadow">
-                        <article class="postArticle postArticle--short">
-                            {% if post.image.hero %}
-                            <a href="{{ post.url }}">
-                                <div class="postArticle-image desaturate" data-aload style="background-image:url('{{ post.image.hero }}')">
-                                </div>
-                            </a>
-                            {% else %}
-                            <a href="{{ post.url }}">
-                                <div class="postArticle-image" data-aload style="background-image:url('{{site.baseurl}} assets/img/logo-150.png')">
-                                </div>
-                            </a>
-                            {% endif %}
-                            <a class="postArticle-title" href="{{ post.url }}">{{ post.title }}</a>
-                        </article>
-                        <div class="block-tag">
-                            {% if post.tags %} {% for tag in post.tags %}
-                            <span class="tag">#{{ tag }}</span> {% endfor %} {% endif %}
-                        </div>
-                        <div class="block-postMeta">{{ post.date | date_to_string }}</div>
-                    </div>
-                </li>
-                {% endfor %}
-            </ul>
+        <div class="section-title">
+            <h2>Latest Posts</h2>
         </div>
+        <ul class="row list-blogs">
+            {% for post in site.posts %}
+            <li class="col-md-6 col-sm-12">
+                <div class="postArticle-wrapper card-shadow">
+                    <article class="postArticle postArticle--short">
+                        {% if post.image.hero %}
+                        <a href="{{ post.url }}">
+                            <div class="postArticle-image desaturate" data-aload style="background-image:url('{{ post.image.hero }}')">
+                            </div>
+                        </a>
+                        {% else %}
+                        <a href="{{ post.url }}">
+                            <div class="postArticle-image" data-aload style="background-image:url('{{site.baseurl}} assets/img/logo-150.png')">
+                            </div>
+                        </a>
+                        {% endif %}
+                        <a class="postArticle-title" href="{{ post.url }}">{{ post.title }}</a>
+                    </article>
+                    <div class="block-tag">
+                        {% if post.tags %} {% for tag in post.tags %}
+                        <span class="tag">#{{ tag }}</span> {% endfor %} {% endif %}
+                    </div>
+                    <div class="block-postMeta">{{ post.date | date_to_string }}</div>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
     </div>
 </section>
