@@ -269,6 +269,18 @@ projectsList:
   videos: 
     youtube: OXvPeNVvEK4
 
+- name: Personal Branding
+  id: personal-branding
+  type: others
+  shortDesc: Presentation at iziEnglish Community 
+  time: Sept 25, 2016
+  description:
+  - This is my fourth presentation at iziEnglish Community. It was good. Although I expected more than that, I'm happy with it because I know my sharing knowledge is helpful and I inspired some people.
+  - Thanks to personal branding, I've changed my mind, from "what will be, will be" thinking to "what I want to be, will be" thinking.
+  cover: https://img.youtube.com/vi/lf0U1Wb3pRA/mqdefault.jpg
+  videos: 
+    youtube: lf0U1Wb3pRA
+
 - name: Left-handed people
   id: left-handed
   type: others
