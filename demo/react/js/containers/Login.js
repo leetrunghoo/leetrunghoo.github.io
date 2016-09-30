@@ -33,8 +33,8 @@ export default class Login extends Component {
 
   render() {
     return (
-      <div className="page">
-        <div className="page-container">
+      <div className="popup-page">
+        <div className="popup-page-content has-border">
           <div className="page-title">Login</div>
           <form className="form" onSubmit={this.handleSubmit}>
             <div className="form-group">

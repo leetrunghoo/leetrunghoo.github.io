@@ -9,7 +9,7 @@ export default class UserView extends Component {
 		let timeFormat = timeago();
 		let user = storage.getUserById(this.props.location.query.id);
 	    return (
-	      	<div className="viewUser-container">
+	      	<div className="viewUser-container container">
 	      		<MainHeader/>
 	       		<div className="viewUser-wraper">
 		       		<div className="viewUser-title">User Detail</div>

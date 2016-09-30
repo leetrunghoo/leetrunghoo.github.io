@@ -33,10 +33,10 @@ export default class UserCreate extends Component {
     }
     render() {
         return (
-	      	<div className="createUser-container">
+	      	<div className="createUser-container container">
 	      		<MainHeader/>
-	       		<div className="page">
-                    <div className="page-container">
+	       		<div className="popup-page">
+                    <div className="popup-page-content has-border">
                         <div className="page-title">Add New User</div>
     	       		    <form className="form" onSubmit={this.handleSubmit}>
         		        	<div className="form-group"><div>Name:</div> <input type="text" ref="name"/></div>
