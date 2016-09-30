@@ -8,12 +8,12 @@ export default class UserTable extends Component {
     super();
     this.state = { selectedUsersId: []}
   }
-  handleSelect(index) {
+  handleSelectRow(userId) {
       let arr = this.state.selectedUsersId;
-      if (arr.indexOf(index) > -1) {
-        arr.splice(arr.indexOf(index), 1);
+      if (arr.indexOf(userId) > -1) {
+        arr.splice(arr.indexOf(userId), 1);
       } else {
-        arr.push(index);
+        arr.push(userId);
       }
       this.setState({selectedUsersId: arr})
       this.props.onSelectRow(arr);
@@ -24,7 +24,7 @@ export default class UserTable extends Component {
       if (user.name.indexOf(this.props.filterText) === -1) {
         return;
       }
-      rows.push(<UserRow user={user} key={user.id} onSelectUserRow={this.handleSelect.bind(this, user.id)} />);
+      rows.push(<UserRow user={user} key={user.id} onSelectUserRow={this.handleSelectRow.bind(this, user.id)} />);
     }.bind(this));
 
     return (
@@ -49,9 +49,6 @@ export default class UserTable extends Component {
 };
 
 class UserRow extends Component {
-  constructor() {
-    super();
-  }
   render() {
     let timeFormat = timeago();
     let disabled = (this.props.user.email === auth.getLoggedEmail());
