@@ -33,6 +33,9 @@
   <meta name="twitter:image" content="{% if page.image.hero %}{{ page.image.hero| prepend: site.url_public }}{% else %}{{ site.avatar | prepend: site.url_public }}{% endif %}">
   <meta name="twitter:url" content="{{ page.url | replace:'index.html','' | prepend: site.url_public }}">
 
+  <!-- For FB Instant Articles -->
+  <meta property="fb:pages" content="626340740873895" />
+
   <!-- Open graph -->
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}">
   <meta property="og:type" content="{% if page.date %}blog{% else %}website{% endif %}">
