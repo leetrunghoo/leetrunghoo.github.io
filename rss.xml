@@ -21,8 +21,27 @@
 				{% endif %}
 				<content:encoded>
 					<![CDATA[
-					{{ post.content | xml_escape }}
-					]]>
+			        <!doctype html>
+			        <html lang="en" prefix="op: http://media.facebook.com/op#">
+			          <head>
+			            <meta charset="utf-8">
+			            <link rel="canonical" href="http://example.com/article.html">
+			            <meta property="op:markup_version" content="v1.0">
+			          </head>
+			          <body>
+			            <article>
+			              <header>
+			                {{ post.title }}
+			              </header>
+			              <!— Article body goes here -->
+						  {{ post.content }}
+			              <footer>
+			                <!— Article footer goes here -->
+			              </footer>
+			            </article>
+			          </body>
+			        </html>
+			        ]]>
 				</content:encoded>
 				<image>
 				    <url>{{ site.url_public }}{{ post.image.thumbnail | xml_escape }}</url>

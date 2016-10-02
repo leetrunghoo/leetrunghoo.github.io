@@ -16,13 +16,9 @@
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url_public }}">
 
-  {% if page.next.url %}
-    <link rel="next" href="{{ page.next.url | replace:'index.html','' | prepend: site.url_public }}" title="{{ page.next.title }}">
-  {% endif %}
-
-  {% if page.previous.url %}
-    <link rel="prev" href="{{ page.previous.url | replace:'index.html','' | prepend: site.url_public }}" title="{{ page.previous.title }}">
-  {% endif %}
+  <!-- For FB Instant Articles -->
+  <meta property="fb:pages" content="626340740873895" />
+  <meta property="op:markup_version" content="v1.0">
 
   <!-- Twitter card -->
   <meta name="twitter:card" content="summary_large_image">
@@ -32,9 +28,6 @@
   <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <meta name="twitter:image" content="{% if page.image.hero %}{{ page.image.hero| prepend: site.url_public }}{% else %}{{ site.avatar | prepend: site.url_public }}{% endif %}">
   <meta name="twitter:url" content="{{ page.url | replace:'index.html','' | prepend: site.url_public }}">
-
-  <!-- For FB Instant Articles -->
-  <meta property="fb:pages" content="626340740873895" />
 
   <!-- Open graph -->
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}">
@@ -84,6 +77,14 @@
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}assets/img/logo-150.png">
   <link rel="shortcut icon" href="{{ site.baseurl }}assets/img/favicon.ico">
+
+  {% if page.next.url %}
+    <link rel="next" href="{{ page.next.url | replace:'index.html','' | prepend: site.url_public }}" title="{{ page.next.title }}">
+  {% endif %}
+
+  {% if page.previous.url %}
+    <link rel="prev" href="{{ page.previous.url | replace:'index.html','' | prepend: site.url_public }}" title="{{ page.previous.title }}">
+  {% endif %}
 
   <!-- CSS -->
   <!-- <link rel="stylesheet" href="{{ site.baseurl }}assets/css/main.css"> -->
