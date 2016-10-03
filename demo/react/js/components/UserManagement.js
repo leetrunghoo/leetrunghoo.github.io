@@ -32,6 +32,7 @@ export default class UserManagement extends Component {
         <div className='tool-bar'>
           <UserBar selectedUsersId={this.state.selectedUsersId} users={this.state.users} onDeleteUsers={this.handleDeleteUser}/>
           <SearchBar
+            filterText={this.state.filterText}
             onUserInput={this.handleUserInput}
           />
         </div>
