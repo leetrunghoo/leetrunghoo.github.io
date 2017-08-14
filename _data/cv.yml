@@ -37,7 +37,7 @@ skills:
     - name: Patterns and Techniques
       description: OOP, MVC, MVVM, REST, Performance Optimisation Techniques
     - name: Others
-      description: React, Webpack, Gulp, Bootstrap, SASS, Jekyll, Backbone, Polymer, Service Worker, Git, JIRA
+      description: Gulp, Bootstrap, SASS, Jekyll, Backbone, Polymer, Service Worker, Git, JIRA
   - type: Languages Skills
     description:
     details:
