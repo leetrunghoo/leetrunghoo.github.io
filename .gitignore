@@ -1,6 +1,7 @@
 _site
 .sass-cache
 Gemfile.lock
+package-lock.json
 .DS_Store
 
 # node

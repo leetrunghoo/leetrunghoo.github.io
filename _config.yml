@@ -22,9 +22,9 @@ baseurl_js:          /assets/js/
 avatar:              /assets/img/avatar/trungho.jpg
 icon:                /assets/img/logo-150.png
 disqus:              leetrunghoo # get it on https://disqus.com/admin/
-gems:
+plugins:
   - jemoji
-
+  - jekyll-sitemap
 future:              true
 highlighter:         rouge
 markdown:            kramdown
