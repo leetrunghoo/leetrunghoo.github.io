@@ -17,17 +17,15 @@ skills_detail:
   score: 9
 - name: Javascript
   score: 9
-- name: Nodejs
-  score: 7
 - name: Java
-  score: 7
+  score: 5
 
 skills:
   - type: Computer Skills
     description:
     details:
     - name: Languages Known
-      description: HTML5, CSS3, Javascript, Nodejs, Java
+      description: HTML5, CSS3, Javascript, Java
     - name: Database
       description: MySQL, MongoDB
     - name: OS
@@ -37,12 +35,12 @@ skills:
     - name: Patterns and Techniques
       description: OOP, MVC, MVVM, REST, Performance Optimisation Techniques
     - name: Others
-      description: React, Webpack, Gulp, Bootstrap, SASS, Jekyll, Backbone, Polymer, Service Worker, Git, JIRA
+      description: React, Vue, Webpack, Gulp, Bootstrap, SASS, Jekyll, Backbone, Service Worker, Git, JIRA
   - type: Languages Skills
     description:
     details:
     - name: English
-      description: fluent (IELTS 6.0)
+      description: fluent (IELTS 6.5)
     - name: Vietnamese
       description: native
   - type: Soft Skills
@@ -56,7 +54,7 @@ works:
   description:
   - Working in a team to build products for startup companies based in europe.
 - company: Biglabs
-  position: Senior Web/Front End Developer
+  position: Senior Web Developer
   time: Jan 2013 - May 2016
   description:
   - Becoming the main Web Dev for Biglabs (the only one for a long time), involved in many projects, products.
