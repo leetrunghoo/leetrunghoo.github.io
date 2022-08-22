@@ -17,8 +17,6 @@ skills_detail:
     score: 9
   - name: Javascript
     score: 9
-  - name: Java
-    score: 5
 
 skills:
   - type: Computer Skills
@@ -32,10 +30,8 @@ skills:
         description: MacOS, Linux, Windows
       - name: Tools
         description: VS Code
-      - name: Patterns and Techniques
-        description: OOP, MVC, MVVM, REST, Performance Optimisation Techniques
       - name: Others
-        description: React, Nextjs, Webpack, Gulp, SASS, Git, JIRA
+        description: React, Nextjs, Webpack, Gulp, SASS, Git, JIRA, SEO
   - type: Languages Skills
     description:
     details:
@@ -93,11 +89,18 @@ references:
     email: trung.phan@nfq.asia
 
 theysay:
-  - name: Que Tran
-    avatar: /assets/img/avatar/quetran.jpg
-    position: Head of R&D at Biglabs.
-    message: Trung is a fast learner and pays attention to detail. He starts a project with a lot of energy and enthusiasm, but they will decrease with time. He needs to be filled up the energy at the end of a phase.
-    email: que.tran@big-labs.com
+  - name: Bao Vu
+    avatar: /assets/img/avatar/bao.vu.jpg
+    position: Line Manager at NFQ Asia.
+    message: Trung is a fast learner and pays attention to detail. He works with a lot of energy and enthusiasm. A Team play and a trustworthy person.
+    email: bao.vu@nfq.asia
+    linkedin:
+
+  - name: Trung Phan
+    avatar: /assets/img/avatar/trung.phan.jpg
+    position: PM at NFQ Asia.
+    message: Trung is always doing good, deliver the expected work, supportive and help connecting other team members with his social skills. He is also proactively jump-in to help.
+    email: trung.phan@nfq.asia
     linkedin:
 
   - name: An Tran
@@ -106,10 +109,3 @@ theysay:
     message: Well, Trung is a funny and easygoing guy to work with. Over several completed projects, he proves himself a hardcore front-end developer with a practical and result-oriented mindset that brings tangible and valuable benefit to our company. Cannot recommend him enough.
     email: an.tran@big-labs.com
     linkedin: an-tran-8624695
-
-  - name: Hai Ngo
-    avatar: /assets/img/avatar/haingo.jpg
-    position: Leader/PM at Biglabs.
-    message: Trung is friendly when works with other members. He has good skills in web developing and active in high work load environment.
-    email: hai.ngo@big-labs.com
-    linkedin: hai-ngo-196b206a
