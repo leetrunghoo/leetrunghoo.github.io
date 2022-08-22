@@ -399,9 +399,9 @@ projectsList:
   time: Jun 13, 2021
   description:
   - Mashup gồm 3 bài
-  1. Sao anh chưa về nhà
-  2. Từ thích thích thành thương thương
-  3. Phải chăng em đã yêu
+    - Sao anh chưa về nhà
+    - Từ thích thích thành thương thương
+    - Phải chăng em đã yêu
   cover: https://img.youtube.com/vi/uSDaX-KnFrM/mqdefault.jpg
   videos: 
     youtube: uSDaX-KnFrM
