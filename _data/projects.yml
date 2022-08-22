@@ -343,3 +343,65 @@ projectsList:
   cover: https://img.youtube.com/vi/BnE80RCRApM/mqdefault.jpg
   videos: 
     youtube: BnE80RCRApM
+    
+
+
+- name: Cha - MTV
+  id: cha
+  type: others
+  shortDesc: cover for fun
+  time: Jan 9, 2016
+  description:
+  - Đang ngồi cafe cóc thì có xe kẹo kéo chạy ngang phát bài này =] kết ngay từ khúc intro rồi, bài hay vậy mà giờ mình mới biết. :P Hứng lên là cover liền!
+  - p/s, tiếng trống khúc sau là do mình vỗ tay vào đàn, thu riêng sau khi hát chính.
+  cover: https://img.youtube.com/vi/cJ7J8ThwxZk/mqdefault.jpg
+  videos: 
+    youtube: cJ7J8ThwxZk
+
+- name: Say you do - Tiên Tiên
+  id: say-you-do
+  type: others
+  shortDesc: cover for fun
+  time: May 6, 2015
+  description:
+  - Short cover for fun.
+  cover: https://img.youtube.com/vi/BnE80RCRApM/mqdefault.jpg
+  videos: 
+    youtube: BnE80RCRApM
+
+- name: Last Christmas - short cover
+  id: last-christmas
+  type: others
+  shortDesc: cover for fun
+  time: Dec 23, 2016
+  description:
+  - Christmas is coming!
+  - I've not played the piano for very long time so I took this chance to practice and for fun :D
+  cover: https://img.youtube.com/vi/5UHNThWuqTQ/mqdefault.jpg
+  videos: 
+    youtube: 5UHNThWuqTQ
+
+- name: Này em ơi - cover
+  id: nay-em-oi
+  type: others
+  shortDesc: cover for fun
+  time: Oct 29, 2017
+  description:
+  - Just for fun :D
+  cover: https://img.youtube.com/vi/AL8sODBF-58/mqdefault.jpg
+  videos: 
+    youtube: AL8sODBF-58
+
+- name: Mashup "Sao anh từ thích thích thành đã yêu"
+  id: mashup-1
+  type: others
+  shortDesc: cover with my wife
+  time: Jun 13, 2021
+  description:
+  - Mashup gồm 3 bài
+  1. Sao anh chưa về nhà
+  2. Từ thích thích thành thương thương
+  3. Phải chăng em đã yêu
+  cover: https://img.youtube.com/vi/uSDaX-KnFrM/mqdefault.jpg
+  videos: 
+    youtube: uSDaX-KnFrM
