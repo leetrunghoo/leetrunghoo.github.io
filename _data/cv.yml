@@ -91,21 +91,21 @@ references:
 theysay:
   - name: Bao Vu
     avatar: /assets/img/avatar/bao.vu.jpg
-    position: Line Manager at NFQ Asia.
+    position: Line Manager at NFQ Asia
     message: Trung is a fast learner and pays attention to detail. He works with a lot of energy and enthusiasm. A team player and a trustworthy person.
     email: bao.vu@nfq.asia
     linkedin:
 
   - name: Trung Phan
     avatar: /assets/img/avatar/trung.phan.jpg
-    position: PM at NFQ Asia.
+    position: PM at NFQ Asia
     message: Trung is always doing good, deliver the expected work, supportive and help connecting other team members with his social skills. He is also proactively jump-in to help.
     email: trung.phan@nfq.asia
     linkedin:
 
   - name: An Tran
     avatar: /assets/img/avatar/antran.jpg
-    position: Leader/PM at Biglabs.
+    position: Leader/PM at Biglabs
     message: Well, Trung is a funny and easygoing guy to work with. Over several completed projects, he proves himself a hardcore front-end developer with a practical and result-oriented mindset that brings tangible and valuable benefit to our company. Cannot recommend him enough.
     email: an.tran@big-labs.com
     linkedin: an-tran-8624695
