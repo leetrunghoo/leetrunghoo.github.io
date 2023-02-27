@@ -31,7 +31,7 @@ skills:
       - name: Tools
         description: VS Code
       - name: Others
-        description: React, Nextjs, Webpack, Gulp, SASS, Git, JIRA, SEO
+        description: React, Nextjs, TypeScript, Webpack, Gulp, SASS, Git, JIRA, SEO
   - type: Languages Skills
     description:
     details:
@@ -44,7 +44,7 @@ skills:
     details:
 
 works:
-  - company: NFQ Asia
+  - company: NFQ
     position: Senior Front End Developer
     time: Oct 2016 - Present
     description:
@@ -57,12 +57,11 @@ works:
     description:
       - Becoming the main Web developer of Biglabs, involved in many projects, products.
       - Self-taught latest front-end technologies to develop cutting-edge websites/web apps with great UI/UX.
-      - Being interviewer to help the company recruits new members.
   - company: Fisoft
     position: Java Developer
     time: Oct 2009 - May 2012
     description:
-      - Working in a team as a Java developer to build eBOSS (an ERP system) for nearly 3 years.
+      - Working in a team to build eBOSS (an ERP system).
       - Participating in analysis and design phases.
 
 education:
