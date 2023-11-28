@@ -4,7 +4,7 @@ basic:
   phone: (+84)909773420
   address: Tan Binh dist, Ho Chi Minh city, Vietnam
   email: leetrunghoo@gmail.com
-  skype: ho_quang_trung
+  skype: leetrunghoo
   website: https://leetrunghoo.com
   github: https://github.com/leetrunghoo
 
@@ -44,9 +44,15 @@ skills:
     details:
 
 works:
+  - company: Book Village
+    position: Senior Front End Developer
+    time: Mar 2023 - Present
+    description:
+      - Working remotely for a French startup to build a marketplace website from scratch.
+      - Released successfully the website to market. Now focusing on better SEO and improvement.
   - company: NFQ
     position: Senior Front End Developer
-    time: Oct 2016 - Present
+    time: Oct 2016 - Feb 2023
     description:
       - Working in a team to build products for many startup companies based in Europe.
       - Responsible for developing the FE side (React developer).
